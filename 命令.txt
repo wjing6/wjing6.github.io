@@ -1,0 +1,12 @@
+指定路径
+ git init
+
+git remote add wjweb https://github.com/wjing6/wjing6.github.io.git
+
+git pull --rebase wjweb master
+
+git add .
+
+git commit -m "update"
+ 
+git push -u wjweb master
