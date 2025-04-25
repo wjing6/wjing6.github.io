@@ -3,10 +3,14 @@
 
 git remote add wjweb https://github.com/wjing6/wjing6.github.io.git
 
-git pull --rebase wjweb master
-
 git add .
 
 git commit -m "update"
  
-git push -u wjweb master
+git push -u wjweb main
+
+
+master和main分支合并:
+git branch -a
+git merge remotes/origin/main --allow-unrelated-histories 
+https://zhuanlan.zhihu.com/p/557304573
