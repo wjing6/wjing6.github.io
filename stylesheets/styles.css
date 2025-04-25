@@ -16,7 +16,7 @@ p, ul, ol, table, pre, dl {
 }
 
 h1, h2, h3 {
-  line-height:1.1;
+  line-height:1.3;
 }
 
 h1 {
@@ -55,8 +55,9 @@ a:hover small {
 }
 
 .wrapper {
-  width:800px;
-  margin:0 auto;
+  width:700px;
+  margin:0;
+
 }
 
 blockquote {
@@ -177,7 +178,7 @@ section {
 }
 
 small {
-  font-size:11px;
+  font-size:12px;
 }
 
 hr {
@@ -200,16 +201,19 @@ footer {
   div.wrapper {
     width:auto;
     margin:0;
+  
   }
 
   header, section, footer {
     float:none;
     position:static;
     width:auto;
+    
   }
 
   header {
     padding-right:320px;
+   
   }
 
   section {
