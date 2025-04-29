@@ -3,11 +3,13 @@
   <head>
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
     <title>Jing  Wang’s Homepage</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxcss@latest/dist/box.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -36,113 +38,66 @@
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
 
-    <style>
-      button.accordion {
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 100%;
-      color:#1f1f1f;
-      float: left;
-      margin-left: 1px;
-      }
 
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: #a6e3e9;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      background-color: #a6e3e9;
-      }
-      .social-row {
-        display: left;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width:fit-content;
-      }
-    </style>
-    <!---justify-content: space-between-->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-       <!--   <h1>Jing Wang</h1>
-        <p>Ph.D. of Computer Science<br>Shanghai Jiao Tong University</p>
-        <p>Research Affiliate<br><a href="http://epcc.sjtu.edu.cn/">Emerging Parallel Computing Center (EPCC) </a></p> --of in Department of Computer Science and Engineering in SJTU 
-        <p>Research Lab<br><a href="https://www.cs.sjtu.edu.cn/sail/index-cn.html">Sustainable Architectures and Infrastructure Laboratory (SAIL)</a></p>  
-      -->
-      <!--   <p>Fellow<br><a href="https://glabor.org/user/tyleransom/">Global Labor Organization (GLO)</a></p> -->
 
-      <!--    <h3><a href="https://wangjing-home.github.io/">Home</a></h3>
-        <h3><a href="https://wangjing-home.github.io/research.html">Research</a></h3>
-        <h3><a href="https://wangjing-home.github.io/research/CV.pdf">CV</a></h3>  
-        <h3><a href="https://wangjing-home.github.io/code.html">Code</a></h3> 
-        <h3><a href="https://wangjing-home.github.io/teaching.html">Teaching</a></h3> 
-        <h3><a href="https://wangjing-home.github.io/personal.html">Personal</a></h3> -->
-        <h2><a href="index.html"><b> About Me</b></a></h2>
-        <h2><a href="projects.html"><b> Projects</b></a></h2>
-        <h2><a href="publications.html"><b> Publications </b></a></h2>
-        <h2><a href="services.html"><b> Services</b></a></h2>
-        <h2><a href="teaching.html"><b> Teaching</b></a></h2> 
+    <!-- <div class="navbar"> -->
+      <!-- <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a> -->
+    <!-- <a href="index.html"><b> About Me</b></a>
+    <a href="projects.html"><b> Projects</b></a>
+    <a href="publications.html"><b> Publications </b></a>
+    <a href="services.html"><b> Services</b></a>
+    <a href="teaching.html"><b> Teaching</b></a>
+      <a href="#contact">Contact</a>  -->
 
+  <!-- </div> -->
+  <nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="navbar-brand">Jing Wang</a>
+        <ul class="navbar-menu">
+            
+            <li class="dropdown">
+              <a href="index.html">About Me</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#interests">Research interests</a></li>
+                  <li><a href="#workexperience">Work experience</a></li>
+                  <li><a href="#honors">Selected honors</a></li>
+                  <li><a href="#aca-services">Services</a></li>
+                  <li><a href="#projects">Projects</a></li>
+              </ul>
+          </li>
+            <li><a href="publications.html">Publications</a></li>
+            
+            <li><a href="teaching.html">Teaching</a></li>
 
-   
-
-
-    <b>Social</b><br>
-        <div class="social-row">
-          <a href="jing618@sjtu.edu.cn" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
-          <a href="https://scholar.google.com/citations?user=WV5Ak_YAAAAJ" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
-          <a href="https://orcid.org/0000-0001-7260-0521" target="_blank"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
-          <!--  <a href="http://ideas.repec.org/f/pra541.html"><i class="fa fa-fw fa-share-alt-square"></i> RePEc</a><br>   -->
-          <a href="https://github.com/wjing6" target="_blank"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
-          <!--<a href="http://twitter.com/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter </a><br> -->
-          <!--<a href="http://linkedin.com/in/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br> -->
-          <br>
-        </div>
-
-
-        <b>CV: </b>
-        <div class="social-row">
-          <a href="myresearch/CV_Jing_Wang_englishxx.pdf"  target="_blank"><i class="fa fa-file-pdf-o"></i> English version</a>
-          <br>
-          <a href="myresearch/王靖-中文简历-202303.pdf"  target="_blank"><i class="fa fa-file-pdf-o"></i> 中文版</a> 
-        </div>
-        <br>
-
-    <!--
-    <p><b>Contact:</b><br>Department of Computer Science<br>Shanghai Jiao Tong University<br>Minhang, Shanghai</p>
-    <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/wjing6">orderedlist</a></small></p> -->
-      </header>
+            <li><a href="#contact">Contacts</a></li>
+        </ul>
+        <button class="navbar-toggle" id="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
 
 
+<main>
+<!--自我介绍-->
+<div class="box" id="aboutme">
 
-
-      <section>
+      <section id="introduction">
         <table border="0">
-
+          <h1>Jing Wang (王靖) </h1>  
           <tr>
+            <td width="30%">
+              <img src="wangjing-photo4-nanjing.jpg" width="100%">
+            </td>
             <td width="70%">
-              <h1>Jing Wang (王靖) </h1>  
+               
               <b>Postdoc (Assistent Researcher) </b>  <br>
               School of Computer Science <br>
               Shanghai Jiao Tong University<br><br>
@@ -157,9 +112,7 @@
               <p><b></b></p>
         
             </td>
-            <td width="30%">
-              <img src="wangjing-photo4-nanjing.jpg" width="100%">
-            </td>
+          
           </tr>
         </table>
 
@@ -169,12 +122,24 @@
       </p> 
 
 
-      <h1>Research Interests:</h1>
+      <h1 id="interests" >Research Interests:</h1>
       <p>
-      My primary research area is <b>Memory Systems for Emerging Applications (short as <i>MemSea</i>)</b>. I work hard to build wisdom, high-performance, and sustainable memory subsystems for next-generation computer architectures on the basis of heterogeneous computing, memory, storage, and network devices. Our design can serve a variety of big-data applications, including multi-modality AI training, AI content generation (AIGC), large language model (LLM), retrieval-augmented generation (RAG), graph processing, metaverse, cloud gaming, scientific computing, and others.
+      My primary research area is <b>Memory System for Emerging Application (short as <i style="text-decoration: underline">MemSea</i>)</b>. I work hard to build wisdom, high-performance, and sustainable memory subsystems for next-generation computer architectures on the basis of heterogeneous computing, memory, storage, and network devices. Our design can serve a variety of big-data applications, including multi-modality AI training, AI content generation (AIGC), large language model (LLM), retrieval-augmented generation (RAG), graph processing, metaverse, cloud gaming, scientific computing, and others.
       </p> 
 
-      <h1>Work experience:</h1>
+      <p>We have made some progress on far memory system design, graph processing acceleration,  resource scheduling in the cloud, task rearrangement at the edge, etc. Now, we are mainly working on the following fields:
+        <ul>
+          <li>System design on flat disaggregated memory </li>
+            <li>Acceleration of Graph-based AI workload</li>
+            <li>Exploration of out-of-xPU memory architecture </li>
+            <li>Compilation optimization of FPGA Architecture</li>
+        </ul>
+
+        (If you are interested in these research areas, please feel free to <a href="#contact"> contact me now</a>! Looking forward to your communication and joining!)
+      
+      </p>
+
+      <h1 id="workexperience" >Work experience:</h1>
       <ul>
         <li>2024.01 – now   <b>Postdoc. (Assistent Researcher)</b>, School of Computer Science, SJTU. 
               <ul>
@@ -194,33 +159,234 @@
 
     <li>2014.9 – 2018.7 <b>Bachelor</b> , Software Engineering, NWPU.
       <ul>
-        <li> <a href="https://www.cs.sjtu.edu.cn/sail/index.html">SAIL lab</a> in <a href="http://epcc.sjtu.edu.cn">EPCC</a> </li>
         <li><a href="https://ruanjian.nwpu.edu.cn/">School of Software and Microelectronics </a> in Northwestern Polytechnical University(<a href="https://www.nwpu.edu.cn/">NWPU</a>) </li>
       </ul>
     </li> 
 
       </ul>
 
-      <h1>Selected Honors:</h1>
+
+      <h1 id="honors" >Selected Honors:</h1>
       <ul> 
         <li>Granted by Shanghai "Super Postdoc" Incentive Program, 2024~2026.</li>
-        <li>Gold Award of China International College Students'Innovation Competition(CICSIC), 2023.</li>
+        <li>Gold Award of China International College Students'Innovation Competition (CICSIC), 2023.</li>
         <li>Champion of National Champion of Dyson Design Award, 2022.</li>
-        <li>Gold Award in Shanghai, "Internet +" College Student Innovation and Entrepreneurship Competition, 2022.</li>
+        <li>Gold Award in Shanghai, China International College Students "Internet +" Innovation and Entrepreneurship Competition, 2022.</li>
         <li>Second Prize, the Second Weining Health Smart Healthcare Challenge, 2020.</li>
         <li>First price of BenchCouncil International Artificial Intelligence System Challenges, 2019.</li>
         <li>Second price of CCF TCARCH, 2019.</li>
-        <li>Outstanding thesis Aware of NWPU, 2018.</li>
+        <li>Outstanding Thesis Aware of NWPU, 2018.</li>
+        <li>Outstanding Students Scholarship, National Encouragement Scholarship, NWPU, 2015-2017.</li>
       </ul>
-      
-     <!--<p>I am working on exploring how to construct and optimize an efficient disaggregated memory system that can perceive user-level applications with fine-grained granularity to efficiently utilize lower-layer hardware and achieve overall high performance and flexibility. Following the optimization method of performance improvement and resource collocation, we constructed a disaggregated memory system with enhanced parallel capability, efficient resource utilization, and flexible system scheduling. We will continue to contribute to memory management on disaggregated architecture. </p>
-    --> 
- 
+    
 
-     
+      <h1 id="aca-services">Acadamic Services </h1>
+      <h2> CCF Services</h2>
+      <ul> 
+        <li>中国计算机学会体系结构专委 "执行委员"</li>
+        <li>中国计算机学会分布式系统专委 "执行委员"</li>
+        <li>中国计算机学会存储专委 "执行委员"</li>
+      </ul>
+      <h2>Activity Services</h2>
+      <ul> 
+        <li>Volunteer of CCF Chips 2024</li>
+        <li>Volunteer of CCF Chips 2024</li>
+        <li>Web \& Submission co-Chair of APPT (International Symposium on Advanced Parallel Processing Technology), 2021.</li>
+        <li>Online Host of ACA (Advanced Computer Architecture), 2020</li>
+        <li>Student Volunteer of CIIF'20,  NPC'19, YOCSEF'19</li>
+      </ul>
+      <h2> Reviewers</h2>
+      <ul> 
+        <li>TPDS</li>
+        <li>TSUSC</li>
+        <li>THPC</li>
+        <li>Chips</li>
+          <li>Assiciated Reviews: MICRO, ISCA, HPCA, ASPLOS, SC, ICCD</li>
+      </ul>
+</div>
 
-      </section>
+<!--项目-->
+<div class="box" id="projects">
+<section  class="content-section">
+  <h1 >Research Projects:</h1>
+
+  <h2><a id="project-gov" class="anchor" href="#computercode" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Government Research Projects</h2>
+  <div class="container-project" >
+    <div id="project-g1" class="box-project" >
+      <h3 style="color: rgb(2, 74, 118);">动态图计算机的高效高层次综合系统</h3>
+      <h3>任务负责人</h3>
+      <p>国家重点研发“青年科学家”项目, No.2024YFB4504300,  2024-12 至 2027-11.</p>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+  
+    <div id="project-g2" class="box-project" >
+      <h3 style="color: gray;">面向稀疏神经网络的编程框架组件（已结题）</h3>
+      <h3 style="color: gray;">参与人</h3>
+      <p>科学技术部高技术研究发展中心, 科技创新2030—重大项目子课题, No.2021AD010104, 2021-12 至 2024-11.</p>
+    </div>
+
+    <div id="project-g3" class="box-project">
+      <h3 style="color: gray;">面向图计算的通用计算机技术与系统（已结题）</h3>
+      <h3 style="color: gray;">参与人</h3>
+      <p>科技部, 国家重点研发项目, No.2018YFB1003503, 2018-05 至 2021-04.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <h2><a id="project-fund" class="anchor" href="#computercode" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. National Research Funds</h2>
+  <div class="container-project" >
+
+    <div id="project-f1" class="box-project" >
+      <h3 style="color: rgb(2, 74, 118);">基于可重构智能芯片的多模态边缘计算关键技术与系统平台研究</h3>
+      <h3>主要参与人</h3>
+      <p>国家自然科学基金委员会, 联合基金项目, No.U24A20234, 2025-01-01 至 2028-12-31.</p>
+    </div>
+
+    <div id="project-f2" class="box-project" >
+      <h3 style="color: rgb(2, 74, 118);">向数算融合的高效能计算系统理论与关键技术</h3>
+      <h3>主要参与人</h3>
+      <p>国家自然科学基金委员会, 专项项目, No.62441225, 2025-01-01 至 2027-12-31.</p>
+    </div>
+
+    <div id="project--f3" class="box-project" >
+      <h3 style="color: gray;">多程序图计算下的可扩展异构资源管理（已结题）</h3>
+      <h3 style="color: gray;">参与人</h3>
+      <p>国家自然科学基金委员会, 面上项目, No.61972247, 2020-01-01 至 2023-12-31.</p>
+    </div>
+  </div>
+
+
+<br>
+
+<h2><a id="project-entre" class="anchor" href="#computercode" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Entrepreneurial Research Projects</h2>
+
+<div class="container-project" >
+  <div id="project-e1" class="box-project" >
+    <h3>内存高效的图检索增强生成技术研究</h3>
+    <h3>技术负责人</h3>
+    <p> 蚂蚁集团, CCF-蚂蚁科研基金图计算专项, CCF-AFSGRF20240205, 2024-08 至 2025-08.</p>
+  </div>
+
+  <div id="project-e2" class="box-project" >
+    <h3>基于异构共享内存池的高性能可扩展GPU图计算系统(已结题)</h3>
+    <h3 style="color: gray;">技术负责人 </h3>
+    <p>北京字跳网络技术有限公司, 学术合作项目, CT20230525001744, 2023-06 至 2024-05. </p>
+  </div>
+
+  <div id="project--e3" class="box-project" >
+    <h3 style="color: gray;">面向云视频处理的分离式内存资源分配优化(已结题)</h3>
+    <h3 style="color: gray;">技术负责人</h3>
+    <p>阿里云计算有限公司, 阿里巴巴创新研究计划（AIR）项目, ATS54DHZ1210007,  2021-05 至 2022-05.</p>
+  </div>
+</div>
+</section>
+
+</div>
+
+
+
+
+
+<!-- <div class="box" id="sample-boxes">
+<section id="service1" class="content-section">
+  <h1>服务1</h1>
+  <p>这里有关于服务1的内容。</p>
+</section>
+
+<section id="service2" class="content-section">
+  <h1>服务2</h1>
+  <p>这里有关于服务2的内容。</p>
+</section>
+
+<section id="service3" class="content-section">
+  <h1>服务3</h1>
+  <p>这里有关于服务3的内容。</p>
+</section>
+
+</div> -->
+
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <!-- <section id="about">
+      <h1>关于我们</h1>
+      <p>我们是一个充满激情的团队。</p>
+  </section>
+  <section id="services">
+      <h1>我们的服务</h1>
+      <p>提供多种专业服务。</p>
+  </section>
+  <section id="contact">
+      <h1>联系我们</h1>
+      <p>有任何问题，请随时联系我们。</p>
+  </section> -->
+
+
+    <section id="foot-social" class="content-section">
+      <b>Social</b><br>
+        <div class="social-row">
+          <a href="jing618@sjtu.edu.cn" target="_blank"><i class="fa fa-envelope"></i> jing618@sjtu.edu.cn</a><br>
+          
+          <a href="https://scholar.google.com/citations?user=WV5Ak_YAAAAJ" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Google Scholar</a><br>
+          <a href="https://orcid.org/0000-0001-7260-0521" target="_blank"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
+          <!--  <a href="http://ideas.repec.org/f/pra541.html"><i class="fa fa-fw fa-share-alt-square"></i> RePEc</a><br>   -->
+          <a href="https://github.com/wjing6" target="_blank"><i class="fa fa-fw fa-github-square"></i> Personal GitHub</a><br>
+          <a href="https://github.com/wjing6" target="_blank"><i class="fa fa-fw fa-github-square"></i> SAIL Group GitHub</a><br>
+        
+          <!--<a href="http://twitter.com/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter </a><br> -->
+          <!--<a href="http://linkedin.com/in/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br> -->
+          <br>
+        </div>
+      </section>
+
+
+
+      <section id="foot-social" class="content-section">
+      <b>CV: </b>
+        <div class="social-row">
+          <a href="myresearch/CV_Jing_Wang_englishxx.pdf"  target="_blank"><i class="fa fa-file-pdf-o"></i> English version</a>
+          <br>
+          <a href="myresearch/王靖-中文简历-202303.pdf"  target="_blank"><i class="fa fa-file-pdf-o"></i> 中文版</a> 
+        </div>
+      </section>
+      
+      <section id="foot-social" class="content-section">
+        <b>Contact US: </b>
+        <div class="social-row"></div>
+        <a href="https://www.cs.sjtu.edu.cn/sail/index.html">Sustainable Architectures and Intelligence Laboratory (SAIL)</a>
+        <br>
+         <a href="http://epcc.sjtu.edu.cn">Emerging Parallel Computing Center (EPCC)</a>
+          <br>
+
+          <a href="https://www.cs.sjtu.edu.cn/">School of Computer Science</a>
+          <br>
+         <a href="https://www.seiee.sjtu.edu.cn/">School of Electronic and Electrical Engineering (SEIEE)</a> 
+         <br>
+
+
+         <a href="http://sjtu.edu.cn">Shanghai Jiao Tong University (SJTU)</a> 
+      
+      </section>
+  </div>
+  
+
+  <div> 
+    <section id="foot-social" class="content-section" >
+    <p>&copy; MemSea Group, 2025, All rights reserved. </p>
+  </section>
+  </div>
+</footer>
+
+
+    <!-- <script src="javascripts/scale.fix.js"></script> -->
+    <script src="javascripts/script.js"></script>
+
+
+
   </body>
 </html>

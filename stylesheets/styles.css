@@ -1,9 +1,15 @@
 body {
   background-color: #fff;
   padding:50px;
-  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color:#595959;
   font-weight:400;
+
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
   margin:0 0 20px;
 }
 
-p, ul, ol, table, pre, dl {
+p, ol, table, pre, dl {
   margin:0 0 20px;
 }
 
@@ -55,10 +61,200 @@ a:hover small {
 }
 
 .wrapper {
-  width:900px;
+  width:auto;
   margin:0;
 
 }
+.container {
+  display: flex;
+  justify-content: space-between; /* 水平间距 */
+}
+.box {
+  width: 90%; /* 可以根据需要调整宽度 */
+  height: 80px;
+  background-color: transparent;
+  margin-top: 50px;
+}
+
+.boxx {
+  width: 90%; /* 可以根据需要调整宽度 */
+  height: 10px;
+  background-color: lightblue;
+  margin: 200px;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 60px; /* 确保内容不会被导航栏遮挡 */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: all 0.0s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-brand {
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu li a {
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 1rem;
+  }
+
+  .navbar-menu li a {
+      padding: 0.5rem 0;
+  }
+
+  .navbar-toggle {
+      display: block;
+  }
+
+  .navbar-menu.active {
+      display: flex;
+  }
+
+  .dropdown-menu {
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+  }
+
+  .dropdown-menu li a {
+      padding: 0.5rem 0;
+  }
+}
+
+.content-section {
+  padding: 0.5rem 1rem;
+  flex: 1;
+}
+
+
+/* project 项目的框框 */
+.container-project {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem 1rem;
+  flex-wrap: wrap; /* 允许在小屏幕上换行 */
+}
+
+.box-project {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  flex: 1;
+  min-width: 100px; /* 最小宽度，防止在非常小的屏幕上变得太窄 */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container-project {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .box-project {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 0rem;
+  }
+}
+
+/* 固定页脚 */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: auto;
+  padding: 1rem 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.div-gray {
+  background-color: gray;
+}
+
 
 blockquote {
   border-left:1px solid #e5e5e5;
@@ -107,7 +303,7 @@ img {
 
 header {
   width:270px;
-  float:left;
+  float:right;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
 }
@@ -172,8 +368,8 @@ header ul a strong {
 }
 
 section {
-  width:700px;
-  float:right;
+  width:auto;
+  float:left;
   padding-bottom:50px;
 }
 
@@ -188,13 +384,6 @@ hr {
   margin:0 0 20px;
 }
 
-footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
-  -webkit-font-smoothing:subpixel-antialiased;
-}
 
 @media print, screen and (max-width: 960px) {
 
@@ -203,13 +392,12 @@ footer {
     margin:0;
   
   }
-
-  header, section, footer {
-    float:none;
-    position:static;
+  div.mywrapper {
     width:auto;
-    
+    margin-left: 300px;
+  
   }
+
 
   header {
     padding-right:320px;
@@ -273,3 +461,48 @@ footer {
     color:#444;
   }
 }
+
+
+
+button.accordion {
+  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  padding: 0px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 100%;
+  transition: 0.3s;
+  background-color: #f8f8f8;
+  }
+  button.accordion.active, button.accordion:hover {
+  background-color: #f8f8f8;
+  }
+  button.accordion:after {
+  content: " [+] ";
+  font-size: 100%;
+  color:#1f1f1f;
+  float: left;
+  margin-left: 1px;
+  }
+
+  button.accordion.active:after {
+  content: " [\2212] ";
+  }
+  div.panel {
+  padding: 0 20px;
+  margin-top: 5px;
+  display: none;
+  background-color: #a6e3e9;
+  font-size: 100%;
+  }
+  div.panel.show {
+  display: block !important;
+  background-color: #a6e3e9;
+  }
+  .social-row {
+    display: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:fit-content;
+  }
