@@ -4,7 +4,7 @@
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
-    <title>Jing  Wang’s Homepage</title>
+    <title>Jing  Wang's Homepage</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxcss@latest/dist/box.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -64,13 +64,13 @@
     padding: 32px 20px 64px;
   }
   .wrap { max-width: 1080px; margin: 0 auto; }
-  header { text-align: center; margin-bottom: 22px; }
+  header { text-align: center; margin-bottom: 16px; }
   header h1 { font-size: 26px; letter-spacing: .5px; }
   header p { color: var(--ink-2); margin-top: 6px; font-size: 14px; }
 
   /* 搜索栏 */
   .search-bar {
-    display: flex; align-items: center; gap: 10px; margin: 0 auto 12px;
+    display: flex; align-items: center; gap: 10px; margin: 0 auto 16px;
     max-width: 720px; background: var(--card); border: 1px solid var(--line);
     border-radius: 12px; padding: 8px 14px; transition: border-color .2s, box-shadow .2s;
   }
@@ -88,7 +88,7 @@
   .search-bar .clear.show { display: block; }
 
   /* 筛选栏 */
-  .filter-bar { display: flex; gap: 8px; justify-content: center; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+  .filter-bar { display: flex; gap: 8px; justify-content: center; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
   .filter-bar .label { font-size: 13px; color: var(--ink-2); }
   .filter-bar button {
     border: 1px solid var(--line); background: var(--card); color: var(--ink-2);
@@ -219,7 +219,7 @@
 
   <div class="search-bar" data-page-node-id="XTDz9Ni62rn3548yW9tglG">
     <span class="icon" data-page-node-id="CnE7VSxNsDUHG5mPooiLyE">🔍</span>
-    <input id="search" type="text" placeholder="搜索题目 / 作者 / 会议名称 / 级别 / 奖项，如 ICPP、Jing Wang、disaggregated" oninput="onSearch()" data-page-node-id="EcAxSrYo1RuVGwyZSc8gew">
+    <input id="search" type="text" placeholder="搜索题目 / 作者 / 会议名称 / 级别 / 奖项，如 ICPP、Jing Wang、disaggregated" oninput="onSearch()" data-page-node-id="EcAxSrYo1RuVGwyZS[...]
     <button class="clear" id="clearBtn" onclick="clearSearch()" data-page-node-id="M9sh0UKvXp22LgVEr0IbYE">✕</button>
   </div>
 
@@ -243,57 +243,57 @@
 /* fa: 第一作者身份 —— "一作" / "共一"（共同一作）；无该字段表示非第一作者 */
 const DATA = {
   "会议": [
-    {t:"MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading", ab:"ASPLOS", lv:"CCF A", au:"Peng Tang, Jiacheng Liu, Xiaofeng Hou, Yifei Pu, Jing Wang, Pheng-Ann Heng, Chao Li, Minyi Guo", venue:"Proc. the 31st International Conference on Architectural Support for Programming Languages and Operating Systems", date:"2026, Accepted", d:"2026-12", award:"", link:"https://dl.acm.org/doi/10.1145/3779212.3790187"},
-    {t:"AUM: Unleashing the Efficiency Potential of Shared Processors with Accelerator Units for LLM Serving", ab:"HPCA", lv:"CCF A", au:"Xinkai Wang, Chao Li, Yiming Zhuansun, Jinyang Guo, Xiaofeng Hou, Jing Wang, Luping Wang, Weigao Chen, Cheng Huang, Guodong Yang, Liping Zhang, Minyi Guo", venue:"Proc. the 32nd IEEE International Symposium on High-Performance Computer Architecture", date:"2026, Accepted", d:"2026-12", award:"", link:""},
-    {t:"BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale", ab:"HPDC", lv:"CCF A", au:"Chengying Huan, Ziheng Meng, Zhengyi Yang, Yongchao Liu, Jie Zhang, Qing Wang, Jing Wang, Shaonan Ma, Zhibin Wang, Mingxing Zhang, Rong Gu, Baokun Wang, Guihai Chen, Chen Tian", venue:"ACM International Symposium on High-Performance Parallel and Distributed Computing", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3806645.3807585"},
-    {t:"SensE: From Sampled-Input Execution to Stream-Aware Edge Multimodal MoE Inference", ab:"ICCD", lv:"CCF B", au:"Cheng Xu, Xiaofeng Hou, Chao Li, Wenfeng Wang, Xinfeng Xia, Jing Wang, Jiacheng Liu, Minyi Guo", venue:"International Conference on Computer Design", date:"Accepted", d:"2026-11", award:"", link:""},
-    {t:"HACache: Leveraging Read Performance with Cache in a Heterogeneous Array", ab:"ICCD", lv:"CCF B", au:"Yaqi Li, Jialin Liu, Dingcui Yu, Edwin Sha, Qingfeng Zhuge, Jing Wang, Liang Shi", venue:"International Conference on Computer Design", date:"Accepted", d:"2026-11", award:"", link:""},
-    {t:"Graph.hls: A Domain-Specific Language for Easy and Efficient Graph Accelerator Design", ab:"ISCA", lv:"CCF A", au:"Feiyang Wu, Xuxiao Yang, Zhuohang Bian, Jing Wang, Ruifan Xu, Guangyu Sun, Yun Liang, Youwei Zhuo", venue:"International Symposium on Computer Architecture", date:"", d:"2026-10", award:"", link:""},
-    {t:"Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool", ab:"ICPP", lv:"CCF B", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Xinkai Wang, Taolei Wang, Jinyang Guo, Minyi Guo, Jie Meng, Shuangfu Zeng", venue:"Proc. the 55th International Conference on Parallel Processing", date:"September 2026", d:"2026-09", award:"", link:""},
-    {t:"TriCooling-Sim: Efficient Thermal Simulation for High-Density Micro AI Data Centers", ab:"NPC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"Proc. the 21st IFIP International Conference on Network and Parallel Computing", date:"Nov. 2025", d:"2025-11", award:"Best Student Paper Award", link:"https://dl.acm.org/doi/abs/10.1007/978-3-032-10466-3_19"},
-    {t:"CGO: Cloud Game Orchestration via Resource Preception and CODEC Optimization", ab:"NPC", lv:"CCF C", au:"Taolei Wang, Chao Li, Jing Wang, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 21st IFIP International Conference on Network and Parallel Computing", date:"Nov. 2025", d:"2025-11", award:"", link:"https://dl.acm.org/doi/10.1007/978-3-032-10466-3_4"},
-    {t:"AsymServe: Demystifying and Optimizing LLM Serving Efficiency on CPU Acceleration Units", ab:"APPT", lv:"CCF C", au:"Xinkai Wang, Yiming Zhuansun, Chao Li, Jing Wang, Xiaofeng Hou, Lingyu Sun, Luping Wang, Minyi Guo", venue:"Proc. the International Symposium on Advanced Parallel Processing Technology", date:"July 2025", d:"2025-07", award:"", link:"https://doi.org/10.1007/978-981-95-1021-4_17"},
-    {t:"Boosting Data Center Performance via Intelligently Managed Multi-backend Disaggregated Memory", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Yiming Zhuansun, Wang Yuan, Cheng Xu, Xiaofeng Hou, Minyi Guo, Yang Hu, Yaqian Zhao", venue:"Proc. Int. Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2024", d:"2024-11", award:"", link:"https://doi.org/10.1109/SC41406.2024.00043"},
-    {t:"FlowWalker: A Memory-efficient and High-performance GPU-based Dynamic Graph Random Walk Framework", ab:"VLDB", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Cheng Xu, Cheng Chen, Yibo Liu, Jing Wang, Cheng Zhao, Xiaofeng Hou, Minyi Guo, Bingsheng He, Xiaoliang Cong", venue:"Proc. the 50th International Conference on Very Large Databases", date:"Aug. 2024", d:"2024-08", award:"", link:"https://doi.org/10.14778/3659437.3659438"},
-    {t:"M2SN: Adaptive and Dynamic Multi-modal Shortcut Network Architecture for Latency-aware Applications", ab:"ICME", lv:"CCF B", au:"Yifei Pu, Chi Wang, Xiaofeng Hou, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Chao Li", venue:"Proc. the IEEE International Conference on Multimedia and Expo", date:"July 2024", d:"2024-07", award:"Oral", link:"https://doi.org/10.1109/ICME57554.2024.10687384"},
-    {t:"CoCG: Fine-grained Cloud Game Co-location on Heterogeneous Platform", ab:"IPDPS", lv:"CCF B", au:"Taolei Wang, Jing Wang, Chao Li, Cheng Xu, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 38th International Parallel and Distributed Processing Symposium", date:"May 2024", d:"2024-05", award:"", link:"https://ieeexplore.ieee.org/document/10579195"},
-    {t:"Improving the Efficiency of Serverless Computing via Core-Level Power Management", ab:"CCGrid", lv:"CCF C", au:"Du Liu, Jing Wang, Xinkai Wang, Chao Li, Lu Zhang, Xiaofeng Hou, Xiaoxiang Shi, Minyi Guo", venue:"Proc. the 24th ACM/IEEE International Symposium on Cluster, Cloud and Internet Computing", date:"May 2024", d:"2024-05", award:"", link:"https://ieeexplore.ieee.org/document/10701381"},
-    {t:"Not All Resources are Visible: Exploiting Fragmented Shadow Resources in Shared-State Scheduler Architecture", ab:"SoCC", lv:"CCF B", au:"Xinkai Wang, Hao He, Yuancheng Li, Chao Li, Xiaofeng Hou, Jing Wang, Quan Chen, Jingwen Leng, Minyi Guo, Leibo Wang", venue:"Proc. the 14th ACM Symposium on Cloud Computing", date:"Nov. 2023", d:"2023-11", award:"", link:"https://doi.org/10.1145/3620678.3624650"},
-    {t:"HyFarM: Task Orchestration on Hybrid Far Memory for High Performance Per Bit", ab:"ICCD", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Junyi Mei, Hao He, Taolei Wang, Pengyu Wang, Lu Zhang, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu", venue:"Proc. the 40th International Conference on Computer Design", date:"Oct. 2022", d:"2022-10", award:"", link:"https://doi.org/10.1109/ICCD56317.2022.00016"},
-    {t:"Excavating the Potential of Graph Workload on RDMA-based Far Memory Architecture", ab:"IPDPS", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo", venue:"Proc. the 36th International Parallel and Distributed Processing Symposium", date:"May 2022", d:"2022-05", award:"Invited for Journal Publication", link:"https://ieeexplore.ieee.org/document/9820708"},
-    {t:"Oversubscribing GPU Unified Virtual Memory: Implications and Suggestions", ab:"ICPE", lv:"CCF C", au:"Chuanming Shao, Jinyang Guo, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the 13th ACM/SPEC International Conference on Performance Engineering", date:"Apr. 2022", d:"2022-04", award:"Best Paper Award Runner-Up", link:"https://doi.org/10.1145/3489525.3511691"},
-    {t:"Skywalker: Efficient Alias-method-based Graph Sampling and Random Walk on GPUs", ab:"PACT", lv:"CCF B", au:"Pengyu Wang, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Jingwen Leng, Quan Chen, Minyi Guo", venue:"Proc. the 30th International Conference on Parallel Architectures and Compilation Techniques", date:"Sep. 2021", d:"2021-09", award:"", link:"https://doi.org/10.1109/PACT52795.2021.00029"},
-    {t:"DR DRAM: Accelerating Memory-Read-Intensive Applications", ab:"ICCD", lv:"CCF B", au:"Yuhai Cao, Chao Li, Quan Chen, Jingwen Leng, Minyi Guo, Jing Wang, Weigong Zhang", venue:"Proc. the 36th IEEE International Conference on Computer Design", date:"Oct. 2018", d:"2018-10", award:"", link:"https://doi.org/10.1109/ICCD.2018.00053"}
+    {t:"MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading", ab:"ASPLOS", lv:"CCF A", au:"Peng Tang, Jiacheng Liu, Xiaofeng Hou, Yifei Pu, Jing Wang, Pheng-Ann Heng,[...]
+    {t:"AUM: Unleashing the Efficiency Potential of Shared Processors with Accelerator Units for LLM Serving", ab:"HPCA", lv:"CCF A", au:"Xinkai Wang, Chao Li, Yiming Zhuansun, Jinyang Guo, Xiaofeng H[...]
+    {t:"BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale", ab:"HPDC", lv:"CCF A", au:"Chengying Huan, Ziheng Meng, Zhengyi Yang, Yongchao Liu, Jie Zhang, Qing Wang, Jing Wang[...]
+    {t:"SensE: From Sampled-Input Execution to Stream-Aware Edge Multimodal MoE Inference", ab:"ICCD", lv:"CCF B", au:"Cheng Xu, Xiaofeng Hou, Chao Li, Wenfeng Wang, Xinfeng Xia, Jing Wang, Jiacheng L[...]
+    {t:"HACache: Leveraging Read Performance with Cache in a Heterogeneous Array", ab:"ICCD", lv:"CCF B", au:"Yaqi Li, Jialin Liu, Dingcui Yu, Edwin Sha, Qingfeng Zhuge, Jing Wang, Liang Shi", venue:"[...]
+    {t:"Graph.hls: A Domain-Specific Language for Easy and Efficient Graph Accelerator Design", ab:"ISCA", lv:"CCF A", au:"Feiyang Wu, Xuxiao Yang, Zhuohang Bian, Jing Wang, Ruifan Xu, Guangyu Sun, Yu[...]
+    {t:"Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool", ab:"ICPP", lv:"CCF B", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Xinkai Wang, Taolei Wan[...]
+    {t:"TriCooling-Sim: Efficient Thermal Simulation for High-Density Micro AI Data Centers", ab:"NPC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"P[...]
+    {t:"CGO: Cloud Game Orchestration via Resource Preception and CODEC Optimization", ab:"NPC", lv:"CCF C", au:"Taolei Wang, Chao Li, Jing Wang, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 21st IFIP I[...]
+    {t:"AsymServe: Demystifying and Optimizing LLM Serving Efficiency on CPU Acceleration Units", ab:"APPT", lv:"CCF C", au:"Xinkai Wang, Yiming Zhuansun, Chao Li, Jing Wang, Xiaofeng Hou, Lingyu Sun,[...]
+    {t:"Boosting Data Center Performance via Intelligently Managed Multi-backend Disaggregated Memory", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Yiming Zhuansun, Wang Y[...]
+    {t:"FlowWalker: A Memory-efficient and High-performance GPU-based Dynamic Graph Random Walk Framework", ab:"VLDB", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Cheng Xu, Cheng Chen, Yibo Liu, [...]
+    {t:"M2SN: Adaptive and Dynamic Multi-modal Shortcut Network Architecture for Latency-aware Applications", ab:"ICME", lv:"CCF B", au:"Yifei Pu, Chi Wang, Xiaofeng Hou, Cheng Xu, Jiacheng Liu, Jing [...]
+    {t:"CoCG: Fine-grained Cloud Game Co-location on Heterogeneous Platform", ab:"IPDPS", lv:"CCF B", au:"Taolei Wang, Jing Wang, Chao Li, Cheng Xu, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 38th Int[...]
+    {t:"Improving the Efficiency of Serverless Computing via Core-Level Power Management", ab:"CCGrid", lv:"CCF C", au:"Du Liu, Jing Wang, Xinkai Wang, Chao Li, Lu Zhang, Xiaofeng Hou, Xiaoxiang Shi, [...]
+    {t:"Not All Resources are Visible: Exploiting Fragmented Shadow Resources in Shared-State Scheduler Architecture", ab:"SoCC", lv:"CCF B", au:"Xinkai Wang, Hao He, Yuancheng Li, Chao Li, Xiaofeng H[...]
+    {t:"HyFarM: Task Orchestration on Hybrid Far Memory for High Performance Per Bit", ab:"ICCD", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Junyi Mei, Hao He, Taolei Wang, Pengyu Wang, Lu Zhang[...]
+    {t:"Excavating the Potential of Graph Workload on RDMA-based Far Memory Architecture", ab:"IPDPS", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, M[...]
+    {t:"Oversubscribing GPU Unified Virtual Memory: Implications and Suggestions", ab:"ICPE", lv:"CCF C", au:"Chuanming Shao, Jinyang Guo, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the[...]
+    {t:"Skywalker: Efficient Alias-method-based Graph Sampling and Random Walk on GPUs", ab:"PACT", lv:"CCF B", au:"Pengyu Wang, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Jingwen Leng, Quan Chen, Min[...]
+    {t:"DR DRAM: Accelerating Memory-Read-Intensive Applications", ab:"ICCD", lv:"CCF B", au:"Yuhai Cao, Chao Li, Quan Chen, Jingwen Leng, Minyi Guo, Jing Wang, Weigong Zhang", venue:"Proc. the 36th I[...]
   ],
   "期刊": [
-    {t:"Survey of Disaggregated Memory: Cross-Layer Technique Insights for Next-Generation Datacenters", ab:"CSUR", lv:"顶级综述", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Jinyang Guo, Hanzhang Yang, Yiming Zhuansun, Minyi Guo", venue:"ACM Computing Surveys", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3807443"},
-    {t:"DGS: A GPU-based Adaptive Graph Sampling Framework", ab:"TACO", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Xinkai Wang, Jing Wang, Xiaofeng Hou, Minyi Guo, Yongchao Liu, Chuntao Hong", venue:"ACM Transactions on Architecture and Code Optimization", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3817060"},
-    {t:"TriCooling-CAT: A Carbon Analysis Toolkit for SoC-Cluster Micro AI Data Center Design", ab:"TCC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"IEEE Transactions on Cloud Computing", date:"Accepted", d:"2026-11", award:"", link:""},
-    {t:"COMPOSE: Cross-Layer Modeling and Design Space Exploration for Efficient Computational Sensor Systems", ab:"TACO", lv:"CCF A", au:"", venue:"ACM Transactions on Architecture and Code Optimization", date:"Major revision", d:"2026-06", award:"", link:""},
-    {t:"PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving", ab:"TACO", lv:"CCF A", au:"Wenfeng Wang, Xiaofeng Hou, Peng Tang, Hengyi Zhou, Jing Wang, Xinkai Wang, Chao Li, Minyi Guo", venue:"ACM Transactions on Architecture and Code Optimization", date:"Major revision", d:"2026-05", award:"", link:"https://arxiv.org/abs/2603.23049"},
-    {t:"MMBypass: Towards Efficient Multi-modal AI Computing with Adaptive Bypass Network", ab:"JPDC", lv:"CCF B", au:"Yifei Pu, Xinfeng Xia, Chi Wang, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Jingling Yuan, Chao Li", venue:"Journal of Parallel and Distributed Computing", date:"2025, Accepted", d:"2025-12", award:"", link:"https://doi.org/10.1016/j.jpdc.2025.105078"},
-    {t:"Enhancing High-Throughput GPU Random Walks Through Multi-Task Concurrency Orchestration", ab:"TACO", lv:"CCF A", au:"Cheng Xu, Chao Li, Xiaofeng Hou, Junyi Mei, Jing Wang, Pengyu Wang, Shixuan Sun, Minyi Guo, Baoping Hao", venue:"ACM Transactions on Architecture and Code Optimization", date:"Vol 22, Issue 1, 2025", d:"2025-03", award:"", link:"https://doi.org/10.1145/3711820"},
-    {t:"Optimizing GPU-based Graph Sampling and Random Walk for Efficiency and Scalability", ab:"TC", lv:"CCF A", au:"Pengyu Wang, Cheng Xu, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Xiaofeng Hou, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 72, Issue 9, 2023", d:"2023-09", award:"", link:"https://doi.org/10.1109/TC.2023.3251860"},
-    {t:"Fargraph+: Excavating the Parallelism of Graph Processing Workload on RDMA-based Far Memory System", ab:"JPDC", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Yibo Liu, Taolei Wang, Junyi Mei, Lu Zhang, Pengyu Wang, Minyi Guo", venue:"Journal of Parallel and Distributed Computing", date:"July 2023", d:"2023-07", award:"", link:"https://doi.org/10.1016/j.jpdc.2023.02.015"},
-    {t:"Tapping into NFV Environment for Opportunistic Serverless Edge Function Deployment", ab:"TC", lv:"CCF A", au:"Lu Zhang, Weiqi Feng, Chao Li, Xiaofeng Hou, Pengyu Wang, Jing Wang, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 71, Issue 10, 2022", d:"2022-10", award:"", link:"https://doi.org/10.1109/TC.2021.3132776"},
-    {t:"ACE-GCN: A Fast Data-Driven FPGA Accelerator for GCN Embedding", ab:"TRETS", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Pengyu Wang, Chuanming Shao, Jinyang Guo, Jing Wang, Guoyong Shi", venue:"ACM Transactions on Reconfigurable Technology and Systems", date:"Vol 14, Issue 4, 2022", d:"2022-10", award:"", link:"https://doi.org/10.1145/3470536"},
-    {t:"DRAGON: Dynamic Recurrent Accelerator for Graph Online Convolution", ab:"TODAES", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Taolei Wang, Jinyang Guo, Pengyu Wang, Chuanming Shao, Jing Wang, Guoyong Shi, Xiangwen Liu, Hanqing Wu", venue:"ACM Transactions on Design Automation of Electronic Systems", date:"Vol 28, Issue 1, 2022", d:"2022-01", award:"", link:"https://doi.org/10.1145/3524124"},
-    {t:"Grus: Toward Unified-Memory-Efficient, High-Performance Graph Processing on GPU", ab:"TACO", lv:"CCF A", au:"Pengyu Wang, Jing Wang, Chao Li, Jianzong Wang, Haojin Zhu, Minyi Guo", venue:"ACM Transactions on Architecture and Code Optimization", date:"Vol 18, Issue 2, 2021", d:"2021-04", award:"", link:"https://doi.org/10.1145/3444844"},
-    {t:"DR Refresh: Releasing DRAM Potential by Enabling Read Accesses under Refresh", ab:"TC", lv:"CCF A", au:"Yuhai Cao, Chao Li, Jing Wang, Weigong Zhang, Quan Chen, Jingwen Leng, Bin Yao, Yao Shen, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 68, Issue 11, 2019", d:"2019-11", award:"", link:"https://doi.org/10.1109/TC.2019.2914679"},
-    {t:"Edge-Oriented Computing Paradigms: A Survey on Architecture Design and System Management", ab:"CSUR", lv:"顶级综述", au:"Chao Li, Yushu Xue, Jing Wang, Weigong Zhang, Tao Li", venue:"ACM Computing Surveys", date:"Vol 51, Issue 2, 2018", d:"2018-04", award:"", link:""}
+    {t:"Survey of Disaggregated Memory: Cross-Layer Technique Insights for Next-Generation Datacenters", ab:"CSUR", lv:"顶级综述", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Jinyang Guo, Ha[...]
+    {t:"DGS: A GPU-based Adaptive Graph Sampling Framework", ab:"TACO", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Xinkai Wang, Jing Wang, Xiaofeng Hou, Minyi Guo, Yongchao Liu, Chuntao Hong", v[...]
+    {t:"TriCooling-CAT: A Carbon Analysis Toolkit for SoC-Cluster Micro AI Data Center Design", ab:"TCC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:[...]
+    {t:"COMPOSE: Cross-Layer Modeling and Design Space Exploration for Efficient Computational Sensor Systems", ab:"TACO", lv:"CCF A", au:"", venue:"ACM Transactions on Architecture and Code Optimizat[...]
+    {t:"PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving", ab:"TACO", lv:"CCF A", au:"Wenfeng Wang, Xiaofeng Hou, Peng Tang, Hengyi Zhou, Jing Wang, Xinkai Wang, Chao Li, Minyi [...]
+    {t:"MMBypass: Towards Efficient Multi-modal AI Computing with Adaptive Bypass Network", ab:"JPDC", lv:"CCF B", au:"Yifei Pu, Xinfeng Xia, Chi Wang, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Ji[...]
+    {t:"Enhancing High-Throughput GPU Random Walks Through Multi-Task Concurrency Orchestration", ab:"TACO", lv:"CCF A", au:"Cheng Xu, Chao Li, Xiaofeng Hou, Junyi Mei, Jing Wang, Pengyu Wang, Shixuan[...]
+    {t:"Optimizing GPU-based Graph Sampling and Random Walk for Efficiency and Scalability", ab:"TC", lv:"CCF A", au:"Pengyu Wang, Cheng Xu, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Xiaofeng Hou, Mi[...]
+    {t:"Fargraph+: Excavating the Parallelism of Graph Processing Workload on RDMA-based Far Memory System", ab:"JPDC", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Yibo Liu, Taolei Wang, Junyi Me[...]
+    {t:"Tapping into NFV Environment for Opportunistic Serverless Edge Function Deployment", ab:"TC", lv:"CCF A", au:"Lu Zhang, Weiqi Feng, Chao Li, Xiaofeng Hou, Pengyu Wang, Jing Wang, Minyi Guo", v[...]
+    {t:"ACE-GCN: A Fast Data-Driven FPGA Accelerator for GCN Embedding", ab:"TRETS", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Pengyu Wang, Chuanming Shao, Jinyang Guo, Jing Wang, Guoyong Shi", venue[...]
+    {t:"DRAGON: Dynamic Recurrent Accelerator for Graph Online Convolution", ab:"TODAES", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Taolei Wang, Jinyang Guo, Pengyu Wang, Chuanming Shao, Jing Wang, G[...]
+    {t:"Grus: Toward Unified-Memory-Efficient, High-Performance Graph Processing on GPU", ab:"TACO", lv:"CCF A", au:"Pengyu Wang, Jing Wang, Chao Li, Jianzong Wang, Haojin Zhu, Minyi Guo", venue:"ACM [...]
+    {t:"DR Refresh: Releasing DRAM Potential by Enabling Read Accesses under Refresh", ab:"TC", lv:"CCF A", au:"Yuhai Cao, Chao Li, Jing Wang, Weigong Zhang, Quan Chen, Jingwen Leng, Bin Yao, Yao Shen[...]
+    {t:"Edge-Oriented Computing Paradigms: A Survey on Architecture Design and System Management", ab:"CSUR", lv:"顶级综述", au:"Chao Li, Yushu Xue, Jing Wang, Weigong Zhang, Tao Li", venue:"ACM C[...]
   ],
   "短文与Poster": [
-    {t:"LiveGraph: High-Performance On-FPGA Dynamic Graph Updating Framework", ab:"FCCM", lv:"", au:"Yufeng Luo, Peikun Hong, Jing Wang, Feiyang Wu, Chao Li, Minyi Guo", venue:"IEEE 34th Annual International Symposium on Field-Programmable Custom Computing Machines", date:"2026", d:"2026-12", award:"", link:"https://ieeexplore.ieee.org/document/11552661"},
-    {t:"Accelerating Large-Scale Out-of-GPU-Core GNN Training with Two-Level Historical Caching", ab:"APPT", lv:"CCF C", fa:"一作", au:"Jing Wang, Taolei Wang, Juntao Huang, Yibo Liu, Xinkai Wang, Marius Kreutzer, Chao Li, Minyi Guo", venue:"Proc. the International Symposium on Advanced Parallel Processing Technology", date:"July 2025", d:"2025-07", award:"", link:"https://doi.org/10.1007/978-981-95-1021-4_22"},
-    {t:"ParLeiden: Boosting Parallelism of Distributed Leiden Algorithm on Large-scale Graphs", ab:"SC", lv:"CCF A", fa:"共一", au:"Yongmin Hu, Jing Wang, Cheng Zhao, Yibo Liu, Cheng Chen, Xiaoliang Cong, Chao Li", venue:"Proc. International Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2023", d:"2023-11", award:"", link:"https://sc23.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost106.html"},
-    {t:"CoWalker: High-Throughput GPU Random Walk with Fine-tuned Concurrent Query Processing", ab:"PPoPP", lv:"CCF A", au:"Cheng Xu, Pengyu Wang, Xiaofeng Hou, Jing Wang, Shixuan Sun, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu", venue:"Proc. the 28th ACM SIGPLAN Annual Symposium on Principles and Practices of Parallel Programming", date:"Feb. 2023", d:"2023-02", award:"", link:"https://doi.org/10.1145/3572848.3577482"},
-    {t:"Fargraph: Optimizing Graph Workload on RDMA-based Far Memory Architecture", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo", venue:"Proc. International Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2021", d:"2021-11", award:"", link:"https://sc21.supercomputing.org/proceedings/tech_poster/"},
-    {t:"PSL: Exploiting Parallelism, Sparsity and Locality to Accelerate Matrix Factorization on x86 Platforms", ab:"Bench", lv:"CCF C", au:"Weixin Deng, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the 2019 Int. Symp. on Benchmarking, Measuring and Optimization", date:"Nov. 2019", d:"2019-11", award:"", link:"http://benchcouncil.org/competition/papers/Competition_2019_paper_10.pdf"}
+    {t:"LiveGraph: High-Performance On-FPGA Dynamic Graph Updating Framework", ab:"FCCM", lv:"", au:"Yufeng Luo, Peikun Hong, Jing Wang, Feiyang Wu, Chao Li, Minyi Guo", venue:"IEEE 34th Annual Intern[...]
+    {t:"Accelerating Large-Scale Out-of-GPU-Core GNN Training with Two-Level Historical Caching", ab:"APPT", lv:"CCF C", fa:"一作", au:"Jing Wang, Taolei Wang, Juntao Huang, Yibo Liu, Xinkai Wang, M[...]
+    {t:"ParLeiden: Boosting Parallelism of Distributed Leiden Algorithm on Large-scale Graphs", ab:"SC", lv:"CCF A", fa:"共一", au:"Yongmin Hu, Jing Wang, Cheng Zhao, Yibo Liu, Cheng Chen, Xiaoliang[...]
+    {t:"CoWalker: High-Throughput GPU Random Walk with Fine-tuned Concurrent Query Processing", ab:"PPoPP", lv:"CCF A", au:"Cheng Xu, Pengyu Wang, Xiaofeng Hou, Jing Wang, Shixuan Sun, Minyi Guo, Hanq[...]
+    {t:"Fargraph: Optimizing Graph Workload on RDMA-based Far Memory Architecture", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo",[...]
+    {t:"PSL: Exploiting Parallelism, Sparsity and Locality to Accelerate Matrix Factorization on x86 Platforms", ab:"Bench", lv:"CCF C", au:"Weixin Deng, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", v[...]
   ],
   "中文期刊": [
-    {t:"使用HLS开发FPGA异构加速系统: 问题、优化方法和机遇", ab:"", lv:"中文核心", au:"徐诚，郭进阳，李超，王靖，汪陶磊，赵杰茹", venue:"计算机科学与探索", date:"2023", d:"2023-06", award:"", link:"https://dl.ccf.org.cn/article/articleDetail.html?type=qkwz&_ack=2&id=6624890368280576"},
-    {t:"FPGA图计算的编程与开发环境：综述和探索", ab:"", lv:"CCF A", au:"郭进阳，邵传明，王靖，李超，朱浩瑾，过敏意", venue:"计算机研究与发展", date:"2020", d:"2020-06", award:"", link:"http://crad.ict.ac.cn/CN/10.7544/issn1000-1239.2020.20200106"},
-    {t:"面向图计算加速的内存系统优化综述", ab:"", lv:"CCF A", fa:"一作", au:"王靖，张路，王鹏宇，徐嘉鸿，李超，朱浩瑾，钱学海，过敏意", venue:"中国科学：信息科学", date:"2019", d:"2019-06", award:"", link:""}
+    {t:"使用HLS开发FPGA异构加速系统: 问题、优化方法和机遇", ab:"", lv:"中文核心", au:"徐诚，郭进阳，李超，王靖，汪陶磊，赵杰茹", venue:"计算机科学与[[...]
+    {t:"FPGA图计算的编程与开发环境：综述和探索", ab:"", lv:"CCF A", au:"郭进阳，邵传明，王靖，李超，朱浩瑾，过敏意", venue:"计算机研究与发展", date:"2020"[...]
+    {t:"面向图计算加速的内存系统优化综述", ab:"", lv:"CCF A", fa:"一作", au:"王靖，张路，王鹏宇，徐嘉鸿，李超，朱浩瑾，钱学海，过敏意", venue:"中国科[[...]
   ]
 };
 
@@ -343,8 +343,8 @@ function renderDetail() {
         ? `<span class="authors">${hl(boldName(p.au))}</span>`
         : `<span class="authors">（作者信息待补充）</span>`;
       const titleHtml = p.link
-        ? `<a class="ctitle" href="${p.link}" target="_blank" rel="noopener">“${hl(p.t)}”</a>`
-        : `<span class="ctitle">“${hl(p.t)}”</span>`;
+        ? `<a class="ctitle" href="${p.link}" target="_blank" rel="noopener">"${hl(p.t)}"</a>`
+        : `<span class="ctitle">"${hl(p.t)}"</span>`;
       const citation = `${authors}. ${titleHtml}. <span class="venue">${hl(p.venue)}${abbr}</span>${datePart}.`;
       html += `<div class="detail-card">
         <div class="detail-head">
@@ -362,7 +362,7 @@ function renderDetail() {
     html += `</div></div>`;
   }
   document.getElementById("module-detail").innerHTML = html ||
-    `<div class="empty">没有符合条件的论文${keyword ? `（关键字 “${escapeHtml(keyword)}”）` : ""}，换个关键字或筛选条件试试</div>`;
+    `<div class="empty">没有符合条件的论文${keyword ? `（关键字 "${escapeHtml(keyword)}"）` : ""}，换个关键字或筛选条件试试</div>`;
 }
 
 function onSearch() {
