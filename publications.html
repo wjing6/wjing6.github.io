@@ -1,509 +1,498 @@
 <!doctype html>
-<html lang="en">
-  <head  data-page-node-id="XNmCHFo7RpwLbeC8XnFGoh">
+<html lang="en" data-page-node-id="0tB493CXV5slmBSAUxV4Hi">
+<head data-page-node-id="3ViSUjG4EQTTGRg43gAvEz">
+  <meta charset="utf-8" data-page-node-id="Jz8z0kiFhutuWwP7RVCqcz">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" data-page-node-id="Gl9DxrUPDfYDMDsUaVUsPh">
+  <title>Jing Wang’s Homepage — Publications</title>
+
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
-    <title>Jing  Wang’s Homepage</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxcss@latest/dist/box.min.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- New GA4 tracking code, see https://support.google.com/analytics/answer/10271001#analyticsjs-enable-basic --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNJD50R0Z7"></script>
-    <script>
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNJD50R0Z7"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GNJD50R0Z7');
-    </script>
+  </script>
 
-    <!-- For all browsers -->
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
+  <!-- For all browsers -->
+  <link rel="stylesheet" href="assets/css/academicons.min.css" data-page-node-id="DBUxPaVBQFuo1t9UrzlHOA"/>
+  <link rel="stylesheet" href="assets/css/academicons.css" data-page-node-id="s29Jo4Ht2jo938pjEmJnVG"/>
 
-<meta charset="UTF-8" data-page-node-id="VVp6FlnywemP2TDCnBiQOp">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="RsuZs1IGTlkbCZ5nobqqb3">
-
-<style>
-  :root {
-    --bg: #f5f6f8;
-    --card: #ffffff;
-    --ink: #1f2430;
-    --ink-2: #5b6472;
-    --line: #e4e7ec;
-    --accent: #2b5fd9;
-    --accent-soft: #eaf0fd;
-    --gold: #b7791f;
-    --gold-soft: #fdf3e0;
-    --a-bg: #fdecec; --a-ink: #b42323;
-    --b-bg: #fff4e5; --b-ink: #a15c07;
-    --c-bg: #e8f5ee; --c-ink: #1c7a4a;
-    --s-bg: #efe9fb; --s-ink: #6b3fc4;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
- body {
-    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: var(--bg); color: var(--ink);
-    padding: 32px 20px 64px;
-  }
-  .wrap { max-width: 1080px; margin: 0 auto; }
-  header { text-align: center; margin-bottom: 22px; }
-  header h1 { font-size: 26px; letter-spacing: .5px; }
-  header p { color: var(--ink-2); margin-top: 6px; font-size: 14px; }
-
-  /* 搜索栏 */
-  .search-bar {
-    display: flex; align-items: center; gap: 10px; margin: 0 auto 12px;
-    max-width: 720px; background: var(--card); border: 1px solid var(--line);
-    border-radius: 12px; padding: 8px 14px; transition: border-color .2s, box-shadow .2s;
-  }
-  .search-bar:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-  .search-bar .icon { color: #9aa3b0; font-size: 15px; }
-  .search-bar input {
-    flex: 1; border: none; outline: none; background: transparent;
-    font-size: 14.5px; color: var(--ink); font-family: inherit;
-  }
-  .search-bar input::placeholder { color: #a6adba; }
-  .search-bar .clear {
-    border: none; background: transparent; cursor: pointer; color: #9aa3b0;
-    font-size: 16px; padding: 0 4px; display: none;
-  }
-  .search-bar .clear.show { display: block; }
-
-  /* 筛选栏 */
-  .filter-bar { display: flex; gap: 8px; justify-content: center; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
-  .filter-bar .label { font-size: 13px; color: var(--ink-2); }
-  .filter-bar button {
-    border: 1px solid var(--line); background: var(--card); color: var(--ink-2);
-    border-radius: 999px; padding: 5px 16px; font-size: 13px; cursor: pointer; transition: all .15s;
-  }
-  .filter-bar button:hover { border-color: var(--accent); color: var(--accent); }
-  .filter-bar button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); font-weight: 600; }
-
-  /* 详细版 */
-  .detail-list { display: flex; flex-direction: column; gap: 12px; }
-  .detail-card {
-    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-    padding: 18px 22px;
-  }
-  .detail-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
-  .cat-tag {
-    font-size: 12px; color: var(--ink-2); border: 1px solid var(--line);
-    border-radius: 6px; padding: 1px 8px; background: var(--bg);
-  }
-  .abbr-chip {
-    font-size: 12px; font-weight: 700; color: #fff; background: var(--accent);
-    border-radius: 5px; padding: 1px 8px; letter-spacing: .3px; white-space: nowrap;
-  }
-  .citation { font-size: 14.5px; line-height: 1.75; color: var(--ink); }
-  .citation .authors { color: var(--ink-2); }
-  .citation .authors b { color: var(--ink); font-weight: 700; }
-  .citation .ctitle { font-weight: 700; }
-  .citation .venue { font-style: italic; }
-  .citation .venue abbr { font-style: normal; font-weight: 700; }
-  .citation a.ctitle { color: var(--ink); font-weight: 700; text-decoration: none; }
-  .citation a.ctitle:hover { color: var(--accent); text-decoration: underline; }
-  mark { background: #fff1a8; color: inherit; border-radius: 3px; padding: 0 2px; }
-  .meta-row { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .badge { font-size: 12px; border-radius: 6px; padding: 2px 10px; font-weight: 600; }
-  .badge.award { background: var(--gold-soft); color: var(--gold); }
-  .badge.first { background: var(--a-bg); color: var(--a-ink); }
-
-  .lv { border-radius: 6px; padding: 2px 9px; font-size: 12px; font-weight: 700; }
-  .lv-A { background: var(--a-bg); color: var(--a-ink); }
-  .lv-B { background: var(--b-bg); color: var(--b-ink); }
-  .lv-C { background: var(--c-bg); color: var(--c-ink); }
-  .lv-S { background: var(--s-bg); color: var(--s-ink); }
-  .lv-none { background: var(--bg); color: var(--ink-2); border: 1px solid var(--line); }
-
-  /* 分组标题：可点击折叠 / 展开 */
-  .cat-block { margin-bottom: 8px; }
-  .group-title {
-    font-size: 17px; font-weight: 700; margin: 26px 0 12px; display: flex; align-items: center; gap: 10px;
-    cursor: pointer; user-select: none; padding: 4px 0;
-  }
-  .group-title:hover { color: var(--accent); }
-  .group-title .caret {
-    display: inline-block; font-size: 12px; color: var(--ink-2); width: 12px;
-    transition: transform .2s ease;
-  }
-  .group-title:hover .caret { color: var(--accent); }
-  .cat-block.collapsed .group-title .caret { transform: rotate(-90deg); }
-  .cat-block.collapsed .detail-list { display: none; }
-  .cat-block.collapsed .group-title { margin-bottom: 6px; }
-  .group-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-  .group-title .cnt { font-size: 13px; color: var(--ink-2); font-weight: 400; }
-  .group-title .tip { font-size: 12px; color: #a6adba; font-weight: 400; }
-  .filter-bar .sep { width: 1px; height: 18px; background: var(--line); margin: 0 4px; }
-
-  .empty {
-    text-align: center; color: var(--ink-2); font-size: 14px;
-    background: var(--card); border: 1px dashed var(--line); border-radius: 12px; padding: 40px 20px;
-  }
-  footer { text-align: center; color: #a6adba; font-size: 12px; margin-top: 40px; }
-</style>
-
-  </head>
-  <body>
-
-    <!-- <div class="navbar"> -->
-      <!-- <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a> -->
-    <!-- <a href="index.html"><b> About Me</b></a>
-    <a href="projects.html"><b> Projects</b></a>
-    <a href="publications.html"><b> Publications </b></a>
-    <a href="services.html"><b> Services</b></a>
-    <a href="teaching.html"><b> Teaching</b></a>
-      <a href="#contact">Contact</a>  -->
-
-  <!-- </div> -->
-  <nav class="navbar">
-    <div class="navbar-container">
-        <a href="index.html" class="navbar-brand">Jing Wang</a>
-        <ul class="navbar-menu">
-            
-            <li class="dropdown">
-              <a href="index.html">About Me</a>
-              <ul class="dropdown-menu">
-                  <li><a href="#interests">Research interests</a></li>
-                  <li><a href="#workexperience">Work experience</a></li>
-                  <li><a href="#honors">Selected honors</a></li>
-                  <li><a href="#aca-services">Services</a></li>
-                  <li><a href="#projects">Projects</a></li>
-              </ul>
-          </li>
-            
-            <li><a href="publications.html">Publications</a></li>
-            
-            <li><a href="teaching.html">Teaching</a></li>
-
-            <li><a href="#contact">Contacts</a></li>
-        </ul>
-        <button class="navbar-toggle" id="navbar-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</nav>
-
-
-<main>
-
-
-<body data-page-node-id="S6GkPtE1X9AhvPMhxEXPGF">
-<div class="wrap" data-page-node-id="lSTdr7QSPXtovrJ0teXvUh">
-  <header data-page-node-id="YCfbRERY3gY9erne1f0Uto">
-    <h1 data-page-node-id="jwWj9hrFmpdgHAlDWEokjN">Jing Wang (王靖) · 论文成果汇总</h1>
-    <p data-page-node-id="YZxOEKGEigEV0pArJXEKd3">Publications · 更新于 2026-09-05</p>
-  </header>
-
-  <div class="search-bar" data-page-node-id="XTDz9Ni62rn3548yW9tglG">
-    <span class="icon" data-page-node-id="CnE7VSxNsDUHG5mPooiLyE">🔍</span>
-    <input id="search" type="text" placeholder="搜索题目 / 作者 / 会议名称 / 级别 / 奖项，如 ICPP、Jing Wang、disaggregated" oninput="onSearch()" data-page-node-id="EcAxSrYo1RuVGwyZSc8gew">
-    <button class="clear" id="clearBtn" onclick="clearSearch()" data-page-node-id="M9sh0UKvXp22LgVEr0IbYE">✕</button>
-  </div>
-
-  <div class="filter-bar" data-page-node-id="UsL3vMLe1hBkjRxH1KOHQ1">
-    <span class="label" data-page-node-id="pw6oBW2kZo20uZKQNmdcqV">作者：</span>
-    <button id="f-all" class="active" onclick="setFilter(false)" data-page-node-id="UBUV0Pk9eycCQqTH1YMdGN">全部</button>
-    <button id="f-first" onclick="setFilter(true)" data-page-node-id="UFk0CRIvbQcO1gfRt0NcqE">一作文章</button>
-    <span class="sep" data-page-node-id="Sep0000000000000001"></span>
-    <span class="label" data-page-node-id="Lbl0000000000000001">级别：</span>
-    <button id="lv-all" class="active" onclick="setLevel('')" data-page-node-id="LvA0000000000000001">全部</button>
-    <button id="lv-a" onclick="setLevel('CCF A')" data-page-node-id="LvB0000000000000001">CCF A</button>
-    <button id="lv-b" onclick="setLevel('CCF B')" data-page-node-id="LvC0000000000000001">CCF B</button>
-  </div>
-
-  <section id="module-detail" data-page-node-id="hoa5YaxC7JdSeUpqY9QLpr"></section>
-
-  <footer data-page-node-id="j46XAZPR8YqB7m1Y0zrAwG">数据来源：Jing_Wang_成果汇总_v2.xlsx · 点击论文题目可跳转至原文链接（如有）</footer>
-</div>
-
-<script>
-/* fa: 第一作者身份 —— "一作" / "共一"（共同一作）；无该字段表示非第一作者 */
-const DATA = {
-  "会议": [
-    {t:"MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading", ab:"ASPLOS", lv:"CCF A", au:"Peng Tang, Jiacheng Liu, Xiaofeng Hou, Yifei Pu, Jing Wang, Pheng-Ann Heng, Chao Li, Minyi Guo", venue:"Proc. the 31st International Conference on Architectural Support for Programming Languages and Operating Systems", date:"2026, Accepted", d:"2026-12", award:"", link:"https://dl.acm.org/doi/10.1145/3779212.3790187"},
-    {t:"AUM: Unleashing the Efficiency Potential of Shared Processors with Accelerator Units for LLM Serving", ab:"HPCA", lv:"CCF A", au:"Xinkai Wang, Chao Li, Yiming Zhuansun, Jinyang Guo, Xiaofeng Hou, Jing Wang, Luping Wang, Weigao Chen, Cheng Huang, Guodong Yang, Liping Zhang, Minyi Guo", venue:"Proc. the 32nd IEEE International Symposium on High-Performance Computer Architecture", date:"2026, Accepted", d:"2026-12", award:"", link:""},
-    {t:"BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale", ab:"HPDC", lv:"CCF A", au:"Chengying Huan, Ziheng Meng, Zhengyi Yang, Yongchao Liu, Jie Zhang, Qing Wang, Jing Wang, Shaonan Ma, Zhibin Wang, Mingxing Zhang, Rong Gu, Baokun Wang, Guihai Chen, Chen Tian", venue:"ACM International Symposium on High-Performance Parallel and Distributed Computing", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3806645.3807585"},
-    {t:"SensE: From Sampled-Input Execution to Stream-Aware Edge Multimodal MoE Inference", ab:"ICCD", lv:"CCF B", au:"Cheng Xu, Xiaofeng Hou, Chao Li, Wenfeng Wang, Xinfeng Xia, Jing Wang, Jiacheng Liu, Minyi Guo", venue:"International Conference on Computer Design", date:"Accepted", d:"2026-11", award:"", link:""},
-    {t:"HACache: Leveraging Read Performance with Cache in a Heterogeneous Array", ab:"ICCD", lv:"CCF B", au:"Yaqi Li, Jialin Liu, Dingcui Yu, Edwin Sha, Qingfeng Zhuge, Jing Wang, Liang Shi", venue:"International Conference on Computer Design", date:"Accepted", d:"2026-11", award:"", link:""},
-    {t:"Graph.hls: A Domain-Specific Language for Easy and Efficient Graph Accelerator Design", ab:"ISCA", lv:"CCF A", au:"Feiyang Wu, Xuxiao Yang, Zhuohang Bian, Jing Wang, Ruifan Xu, Guangyu Sun, Yun Liang, Youwei Zhuo", venue:"International Symposium on Computer Architecture", date:"", d:"2026-10", award:"", link:""},
-    {t:"Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool", ab:"ICPP", lv:"CCF B", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Xinkai Wang, Taolei Wang, Jinyang Guo, Minyi Guo, Jie Meng, Shuangfu Zeng", venue:"Proc. the 55th International Conference on Parallel Processing", date:"September 2026", d:"2026-09", award:"", link:""},
-    {t:"TriCooling-Sim: Efficient Thermal Simulation for High-Density Micro AI Data Centers", ab:"NPC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"Proc. the 21st IFIP International Conference on Network and Parallel Computing", date:"Nov. 2025", d:"2025-11", award:"Best Student Paper Award", link:"https://dl.acm.org/doi/abs/10.1007/978-3-032-10466-3_19"},
-    {t:"CGO: Cloud Game Orchestration via Resource Preception and CODEC Optimization", ab:"NPC", lv:"CCF C", au:"Taolei Wang, Chao Li, Jing Wang, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 21st IFIP International Conference on Network and Parallel Computing", date:"Nov. 2025", d:"2025-11", award:"", link:"https://dl.acm.org/doi/10.1007/978-3-032-10466-3_4"},
-    {t:"AsymServe: Demystifying and Optimizing LLM Serving Efficiency on CPU Acceleration Units", ab:"APPT", lv:"CCF C", au:"Xinkai Wang, Yiming Zhuansun, Chao Li, Jing Wang, Xiaofeng Hou, Lingyu Sun, Luping Wang, Minyi Guo", venue:"Proc. the International Symposium on Advanced Parallel Processing Technology", date:"July 2025", d:"2025-07", award:"", link:"https://doi.org/10.1007/978-981-95-1021-4_17"},
-    {t:"Boosting Data Center Performance via Intelligently Managed Multi-backend Disaggregated Memory", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Yiming Zhuansun, Wang Yuan, Cheng Xu, Xiaofeng Hou, Minyi Guo, Yang Hu, Yaqian Zhao", venue:"Proc. Int. Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2024", d:"2024-11", award:"", link:"https://doi.org/10.1109/SC41406.2024.00043"},
-    {t:"FlowWalker: A Memory-efficient and High-performance GPU-based Dynamic Graph Random Walk Framework", ab:"VLDB", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Cheng Xu, Cheng Chen, Yibo Liu, Jing Wang, Cheng Zhao, Xiaofeng Hou, Minyi Guo, Bingsheng He, Xiaoliang Cong", venue:"Proc. the 50th International Conference on Very Large Databases", date:"Aug. 2024", d:"2024-08", award:"", link:"https://doi.org/10.14778/3659437.3659438"},
-    {t:"M2SN: Adaptive and Dynamic Multi-modal Shortcut Network Architecture for Latency-aware Applications", ab:"ICME", lv:"CCF B", au:"Yifei Pu, Chi Wang, Xiaofeng Hou, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Chao Li", venue:"Proc. the IEEE International Conference on Multimedia and Expo", date:"July 2024", d:"2024-07", award:"Oral", link:"https://doi.org/10.1109/ICME57554.2024.10687384"},
-    {t:"CoCG: Fine-grained Cloud Game Co-location on Heterogeneous Platform", ab:"IPDPS", lv:"CCF B", au:"Taolei Wang, Jing Wang, Chao Li, Cheng Xu, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 38th International Parallel and Distributed Processing Symposium", date:"May 2024", d:"2024-05", award:"", link:"https://ieeexplore.ieee.org/document/10579195"},
-    {t:"Improving the Efficiency of Serverless Computing via Core-Level Power Management", ab:"CCGrid", lv:"CCF C", au:"Du Liu, Jing Wang, Xinkai Wang, Chao Li, Lu Zhang, Xiaofeng Hou, Xiaoxiang Shi, Minyi Guo", venue:"Proc. the 24th ACM/IEEE International Symposium on Cluster, Cloud and Internet Computing", date:"May 2024", d:"2024-05", award:"", link:"https://ieeexplore.ieee.org/document/10701381"},
-    {t:"Not All Resources are Visible: Exploiting Fragmented Shadow Resources in Shared-State Scheduler Architecture", ab:"SoCC", lv:"CCF B", au:"Xinkai Wang, Hao He, Yuancheng Li, Chao Li, Xiaofeng Hou, Jing Wang, Quan Chen, Jingwen Leng, Minyi Guo, Leibo Wang", venue:"Proc. the 14th ACM Symposium on Cloud Computing", date:"Nov. 2023", d:"2023-11", award:"", link:"https://doi.org/10.1145/3620678.3624650"},
-    {t:"HyFarM: Task Orchestration on Hybrid Far Memory for High Performance Per Bit", ab:"ICCD", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Junyi Mei, Hao He, Taolei Wang, Pengyu Wang, Lu Zhang, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu", venue:"Proc. the 40th International Conference on Computer Design", date:"Oct. 2022", d:"2022-10", award:"", link:"https://doi.org/10.1109/ICCD56317.2022.00016"},
-    {t:"Excavating the Potential of Graph Workload on RDMA-based Far Memory Architecture", ab:"IPDPS", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo", venue:"Proc. the 36th International Parallel and Distributed Processing Symposium", date:"May 2022", d:"2022-05", award:"Invited for Journal Publication", link:"https://ieeexplore.ieee.org/document/9820708"},
-    {t:"Oversubscribing GPU Unified Virtual Memory: Implications and Suggestions", ab:"ICPE", lv:"CCF C", au:"Chuanming Shao, Jinyang Guo, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the 13th ACM/SPEC International Conference on Performance Engineering", date:"Apr. 2022", d:"2022-04", award:"Best Paper Award Runner-Up", link:"https://doi.org/10.1145/3489525.3511691"},
-    {t:"Skywalker: Efficient Alias-method-based Graph Sampling and Random Walk on GPUs", ab:"PACT", lv:"CCF B", au:"Pengyu Wang, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Jingwen Leng, Quan Chen, Minyi Guo", venue:"Proc. the 30th International Conference on Parallel Architectures and Compilation Techniques", date:"Sep. 2021", d:"2021-09", award:"", link:"https://doi.org/10.1109/PACT52795.2021.00029"},
-    {t:"DR DRAM: Accelerating Memory-Read-Intensive Applications", ab:"ICCD", lv:"CCF B", au:"Yuhai Cao, Chao Li, Quan Chen, Jingwen Leng, Minyi Guo, Jing Wang, Weigong Zhang", venue:"Proc. the 36th IEEE International Conference on Computer Design", date:"Oct. 2018", d:"2018-10", award:"", link:"https://doi.org/10.1109/ICCD.2018.00053"}
-  ],
-  "期刊": [
-    {t:"Survey of Disaggregated Memory: Cross-Layer Technique Insights for Next-Generation Datacenters", ab:"CSUR", lv:"顶级综述", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Jinyang Guo, Hanzhang Yang, Yiming Zhuansun, Minyi Guo", venue:"ACM Computing Surveys", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3807443"},
-    {t:"DGS: A GPU-based Adaptive Graph Sampling Framework", ab:"TACO", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Xinkai Wang, Jing Wang, Xiaofeng Hou, Minyi Guo, Yongchao Liu, Chuntao Hong", venue:"ACM Transactions on Architecture and Code Optimization", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3817060"},
-    {t:"TriCooling-CAT: A Carbon Analysis Toolkit for SoC-Cluster Micro AI Data Center Design", ab:"TCC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"IEEE Transactions on Cloud Computing", date:"Accepted", d:"2026-11", award:"", link:""},
-    {t:"COMPOSE: Cross-Layer Modeling and Design Space Exploration for Efficient Computational Sensor Systems", ab:"TACO", lv:"CCF A", au:"", venue:"ACM Transactions on Architecture and Code Optimization", date:"Major revision", d:"2026-06", award:"", link:""},
-    {t:"PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving", ab:"TACO", lv:"CCF A", au:"Wenfeng Wang, Xiaofeng Hou, Peng Tang, Hengyi Zhou, Jing Wang, Xinkai Wang, Chao Li, Minyi Guo", venue:"ACM Transactions on Architecture and Code Optimization", date:"Major revision", d:"2026-05", award:"", link:"https://arxiv.org/abs/2603.23049"},
-    {t:"MMBypass: Towards Efficient Multi-modal AI Computing with Adaptive Bypass Network", ab:"JPDC", lv:"CCF B", au:"Yifei Pu, Xinfeng Xia, Chi Wang, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Jingling Yuan, Chao Li", venue:"Journal of Parallel and Distributed Computing", date:"2025, Accepted", d:"2025-12", award:"", link:"https://doi.org/10.1016/j.jpdc.2025.105078"},
-    {t:"Enhancing High-Throughput GPU Random Walks Through Multi-Task Concurrency Orchestration", ab:"TACO", lv:"CCF A", au:"Cheng Xu, Chao Li, Xiaofeng Hou, Junyi Mei, Jing Wang, Pengyu Wang, Shixuan Sun, Minyi Guo, Baoping Hao", venue:"ACM Transactions on Architecture and Code Optimization", date:"Vol 22, Issue 1, 2025", d:"2025-03", award:"", link:"https://doi.org/10.1145/3711820"},
-    {t:"Optimizing GPU-based Graph Sampling and Random Walk for Efficiency and Scalability", ab:"TC", lv:"CCF A", au:"Pengyu Wang, Cheng Xu, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Xiaofeng Hou, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 72, Issue 9, 2023", d:"2023-09", award:"", link:"https://doi.org/10.1109/TC.2023.3251860"},
-    {t:"Fargraph+: Excavating the Parallelism of Graph Processing Workload on RDMA-based Far Memory System", ab:"JPDC", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Yibo Liu, Taolei Wang, Junyi Mei, Lu Zhang, Pengyu Wang, Minyi Guo", venue:"Journal of Parallel and Distributed Computing", date:"July 2023", d:"2023-07", award:"", link:"https://doi.org/10.1016/j.jpdc.2023.02.015"},
-    {t:"Tapping into NFV Environment for Opportunistic Serverless Edge Function Deployment", ab:"TC", lv:"CCF A", au:"Lu Zhang, Weiqi Feng, Chao Li, Xiaofeng Hou, Pengyu Wang, Jing Wang, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 71, Issue 10, 2022", d:"2022-10", award:"", link:"https://doi.org/10.1109/TC.2021.3132776"},
-    {t:"ACE-GCN: A Fast Data-Driven FPGA Accelerator for GCN Embedding", ab:"TRETS", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Pengyu Wang, Chuanming Shao, Jinyang Guo, Jing Wang, Guoyong Shi", venue:"ACM Transactions on Reconfigurable Technology and Systems", date:"Vol 14, Issue 4, 2022", d:"2022-10", award:"", link:"https://doi.org/10.1145/3470536"},
-    {t:"DRAGON: Dynamic Recurrent Accelerator for Graph Online Convolution", ab:"TODAES", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Taolei Wang, Jinyang Guo, Pengyu Wang, Chuanming Shao, Jing Wang, Guoyong Shi, Xiangwen Liu, Hanqing Wu", venue:"ACM Transactions on Design Automation of Electronic Systems", date:"Vol 28, Issue 1, 2022", d:"2022-01", award:"", link:"https://doi.org/10.1145/3524124"},
-    {t:"Grus: Toward Unified-Memory-Efficient, High-Performance Graph Processing on GPU", ab:"TACO", lv:"CCF A", au:"Pengyu Wang, Jing Wang, Chao Li, Jianzong Wang, Haojin Zhu, Minyi Guo", venue:"ACM Transactions on Architecture and Code Optimization", date:"Vol 18, Issue 2, 2021", d:"2021-04", award:"", link:"https://doi.org/10.1145/3444844"},
-    {t:"DR Refresh: Releasing DRAM Potential by Enabling Read Accesses under Refresh", ab:"TC", lv:"CCF A", au:"Yuhai Cao, Chao Li, Jing Wang, Weigong Zhang, Quan Chen, Jingwen Leng, Bin Yao, Yao Shen, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 68, Issue 11, 2019", d:"2019-11", award:"", link:"https://doi.org/10.1109/TC.2019.2914679"},
-    {t:"Edge-Oriented Computing Paradigms: A Survey on Architecture Design and System Management", ab:"CSUR", lv:"顶级综述", au:"Chao Li, Yushu Xue, Jing Wang, Weigong Zhang, Tao Li", venue:"ACM Computing Surveys", date:"Vol 51, Issue 2, 2018", d:"2018-04", award:"", link:""}
-  ],
-  "短文与Poster": [
-    {t:"LiveGraph: High-Performance On-FPGA Dynamic Graph Updating Framework", ab:"FCCM", lv:"", au:"Yufeng Luo, Peikun Hong, Jing Wang, Feiyang Wu, Chao Li, Minyi Guo", venue:"IEEE 34th Annual International Symposium on Field-Programmable Custom Computing Machines", date:"2026", d:"2026-12", award:"", link:"https://ieeexplore.ieee.org/document/11552661"},
-    {t:"Accelerating Large-Scale Out-of-GPU-Core GNN Training with Two-Level Historical Caching", ab:"APPT", lv:"CCF C", fa:"一作", au:"Jing Wang, Taolei Wang, Juntao Huang, Yibo Liu, Xinkai Wang, Marius Kreutzer, Chao Li, Minyi Guo", venue:"Proc. the International Symposium on Advanced Parallel Processing Technology", date:"July 2025", d:"2025-07", award:"", link:"https://doi.org/10.1007/978-981-95-1021-4_22"},
-    {t:"ParLeiden: Boosting Parallelism of Distributed Leiden Algorithm on Large-scale Graphs", ab:"SC", lv:"CCF A", fa:"共一", au:"Yongmin Hu, Jing Wang, Cheng Zhao, Yibo Liu, Cheng Chen, Xiaoliang Cong, Chao Li", venue:"Proc. International Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2023", d:"2023-11", award:"", link:"https://sc23.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost106.html"},
-    {t:"CoWalker: High-Throughput GPU Random Walk with Fine-tuned Concurrent Query Processing", ab:"PPoPP", lv:"CCF A", au:"Cheng Xu, Pengyu Wang, Xiaofeng Hou, Jing Wang, Shixuan Sun, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu", venue:"Proc. the 28th ACM SIGPLAN Annual Symposium on Principles and Practices of Parallel Programming", date:"Feb. 2023", d:"2023-02", award:"", link:"https://doi.org/10.1145/3572848.3577482"},
-    {t:"Fargraph: Optimizing Graph Workload on RDMA-based Far Memory Architecture", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo", venue:"Proc. International Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2021", d:"2021-11", award:"", link:"https://sc21.supercomputing.org/proceedings/tech_poster/"},
-    {t:"PSL: Exploiting Parallelism, Sparsity and Locality to Accelerate Matrix Factorization on x86 Platforms", ab:"Bench", lv:"CCF C", au:"Weixin Deng, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the 2019 Int. Symp. on Benchmarking, Measuring and Optimization", date:"Nov. 2019", d:"2019-11", award:"", link:"http://benchcouncil.org/competition/papers/Competition_2019_paper_10.pdf"}
-  ],
-  "中文期刊": [
-    {t:"使用HLS开发FPGA异构加速系统: 问题、优化方法和机遇", ab:"", lv:"中文核心", au:"徐诚，郭进阳，李超，王靖，汪陶磊，赵杰茹", venue:"计算机科学与探索", date:"2023", d:"2023-06", award:"", link:"https://dl.ccf.org.cn/article/articleDetail.html?type=qkwz&_ack=2&id=6624890368280576"},
-    {t:"FPGA图计算的编程与开发环境：综述和探索", ab:"", lv:"CCF A", au:"郭进阳，邵传明，王靖，李超，朱浩瑾，过敏意", venue:"计算机研究与发展", date:"2020", d:"2020-06", award:"", link:"http://crad.ict.ac.cn/CN/10.7544/issn1000-1239.2020.20200106"},
-    {t:"面向图计算加速的内存系统优化综述", ab:"", lv:"CCF A", fa:"一作", au:"王靖，张路，王鹏宇，徐嘉鸿，李超，朱浩瑾，钱学海，过敏意", venue:"中国科学：信息科学", date:"2019", d:"2019-06", award:"", link:""}
-  ]
-};
-
-let keyword = "";
-let onlyFirst = false;
-let lvFilter = "";             // "" | "CCF A" | "CCF B"
-const collapsed = new Set();   // 记录被折叠的分组名称
-
-const lvClass = lv => lv.includes("CCF A") || lv === "顶级综述" ? "lv-A" : lv.includes("CCF B") ? "lv-B" : lv.includes("CCF C") || lv === "中文核心" ? "lv-C" : "lv-none";
-const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-const escapeHtml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const boldName = s => s.replace(/Jing Wang/g, "<b>Jing Wang</b>").replace(/王靖/g, "<b>王靖</b>");
-function hl(s) {
-  if (!s) return "";
-  if (!keyword) return String(s);
-  return String(s).replace(new RegExp(escRe(keyword), "gi"), m => `<mark>${m}</mark>`);
-}
-/* 时间排序：固定最新优先（降序） */
-const sorted = list => [...list].sort((a, b) => b.d.localeCompare(a.d));
-
-function matches(p) {
-  if (onlyFirst && !p.fa) return false;
-  if (lvFilter && p.lv !== lvFilter) return false;
-  if (!keyword) return true;
-  const hay = [p.t, p.au, p.venue, p.ab, p.lv, p.date, p.award].join(" ").toLowerCase();
-  return hay.includes(keyword.toLowerCase());
-}
-
-function renderDetail() {
-  let html = "";
-  for (const [cat, list] of Object.entries(DATA)) {
-    const hits = sorted(list.filter(matches));
-    if (!hits.length) continue;
-    const isCollapsed = collapsed.has(cat);
-    html += `<div class="cat-block${isCollapsed ? " collapsed" : ""}">
-      <div class="group-title" onclick="toggleGroup('${cat}')" title="点击折叠 / 展开该分组">
-        <span class="caret">▼</span>
-        <span>${cat}</span>
-        <span class="cnt">${hits.length} 篇</span>
-        <span class="tip">${isCollapsed ? "已折叠 · 点击展开" : ""}</span>
-      </div>
-      <div class="detail-list">`;
-    for (const p of hits) {
-      const abbr = p.ab ? ` <abbr>(${hl(p.ab)})</abbr>` : "";
-      const datePart = p.date ? `, ${hl(p.date)}` : "";
-      const authors = p.au
-        ? `<span class="authors">${hl(boldName(p.au))}</span>`
-        : `<span class="authors">（作者信息待补充）</span>`;
-      const titleHtml = p.link
-        ? `<a class="ctitle" href="${p.link}" target="_blank" rel="noopener">“${hl(p.t)}”</a>`
-        : `<span class="ctitle">“${hl(p.t)}”</span>`;
-      const citation = `${authors}. ${titleHtml}. <span class="venue">${hl(p.venue)}${abbr}</span>${datePart}.`;
-      html += `<div class="detail-card">
-        <div class="detail-head">
-          <span class="cat-tag">${cat}</span>
-          <span class="lv ${lvClass(p.lv)}">${hl(p.lv) || "—"}</span>
-          ${p.ab ? `<span class="abbr-chip">${hl(p.ab)}</span>` : ""}
-        </div>
-        <div class="citation">${citation}</div>
-        ${(p.award || p.fa) ? `<div class="meta-row">
-          ${p.fa ? `<span class="badge first">${p.fa === "共一" ? "共同一作" : "第一作者"}</span>` : ""}
-          ${p.award ? `<span class="badge award">🏆 ${hl(p.award)}</span>` : ""}
-        </div>` : ""}
-      </div>`;
+  <style>
+    /* ============ 全局 ============ */
+    :root {
+      --bg: #f5f6f8;
+      --card: #ffffff;
+      --ink: #1f2430;
+      --ink-2: #5b6472;
+      --line: #e4e7ec;
+      --accent: #2b5fd9;
+      --accent-soft: #eaf0fd;
+      --gold: #b7791f;
+      --gold-soft: #fdf3e0;
+      --a-bg: #fdecec; --a-ink: #b42323;
+      --b-bg: #fff4e5; --b-ink: #a15c07;
+      --c-bg: #e8f5ee; --c-ink: #1c7a4a;
+      --s-bg: #efe9fb; --s-ink: #6b3fc4;
+      --nav-h: 56px;
     }
-    html += `</div></div>`;
-  }
-  document.getElementById("module-detail").innerHTML = html ||
-    `<div class="empty">没有符合条件的论文${keyword ? `（关键字 “${escapeHtml(keyword)}”）` : ""}，换个关键字或筛选条件试试</div>`;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--ink);
+      padding: calc(var(--nav-h) + 32px) 20px 0; /* 顶部留出固定导航栏的空间 */
+    }
 
-function onSearch() {
-  keyword = document.getElementById("search").value.trim();
-  document.getElementById("clearBtn").classList.toggle("show", !!keyword);
-  renderDetail();
-}
+    /* ============ 导航栏（原依赖外部 styles.css，此处内联补全） ============ */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h);
+      background: #ffffff; border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 4px rgba(31,36,48,.06);
+      z-index: 1000;
+    }
+    .navbar-container {
+      max-width: 1080px; height: 100%; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px;
+    }
+    .navbar-brand {
+      font-size: 18px; font-weight: 700; color: var(--ink); text-decoration: none;
+    }
+    .navbar-brand:hover { color: var(--accent); }
+    .navbar-menu {
+      display: flex; list-style: none; gap: 4px; align-items: center;
+    }
+    .navbar-menu > li { position: relative; }
+    .navbar-menu a {
+      display: block; padding: 8px 14px; font-size: 14.5px;
+      color: var(--ink-2); text-decoration: none; border-radius: 8px;
+    }
+    .navbar-menu a:hover { color: var(--accent); background: var(--accent-soft); }
+    .navbar-menu > li.current > a {
+      color: var(--accent); font-weight: 600; background: var(--accent-soft);
+    }
+    .dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 0; min-width: 190px;
+      background: #fff; border: 1px solid var(--line); border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(31,36,48,.10); list-style: none; padding: 6px;
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a { padding: 8px 12px; font-size: 14px; }
 
-function clearSearch() {
-  document.getElementById("search").value = "";
-  onSearch();
-  document.getElementById("search").focus();
-}
+    .navbar-toggle {
+      display: none; background: none; border: none; cursor: pointer; padding: 6px;
+    }
+    .navbar-toggle span {
+      display: block; width: 22px; height: 2px; background: var(--ink);
+      margin: 5px 0; border-radius: 2px; transition: transform .2s, opacity .2s;
+    }
+    @media (max-width: 768px) {
+      .navbar-toggle { display: block; }
+      .navbar-menu {
+        display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
+        flex-direction: column; align-items: stretch;
+        background: #fff; border-bottom: 1px solid var(--line);
+        box-shadow: 0 8px 24px rgba(31,36,48,.10); padding: 8px 12px 14px;
+      }
+      .navbar-menu.open { display: flex; }
+      .dropdown-menu {
+        position: static; box-shadow: none; border: none; padding-left: 14px;
+      }
+    }
 
-function setFilter(first) {
-  onlyFirst = first;
-  document.getElementById("f-all").classList.toggle("active", !first);
-  document.getElementById("f-first").classList.toggle("active", first);
-  renderDetail();
-}
+    /* ============ 论文列表 ============ */
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 22px; }
+    header h1 { font-size: 26px; letter-spacing: .5px; }
+    header p { color: var(--ink-2); margin-top: 6px; font-size: 14px; }
 
-/* 级别筛选："" / "CCF A" / "CCF B"，与作者筛选、搜索可叠加 */
-function setLevel(lv) {
-  lvFilter = lv;
-  document.getElementById("lv-all").classList.toggle("active", lv === "");
-  document.getElementById("lv-a").classList.toggle("active", lv === "CCF A");
-  document.getElementById("lv-b").classList.toggle("active", lv === "CCF B");
-  renderDetail();
-}
+    /* 搜索栏 */
+    .search-bar {
+      display: flex; align-items: center; gap: 10px; margin: 0 auto 12px;
+      max-width: 720px; background: var(--card); border: 1px solid var(--line);
+      border-radius: 12px; padding: 8px 14px; transition: border-color .2s, box-shadow .2s;
+    }
+    .search-bar:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .search-bar .icon { color: #9aa3b0; font-size: 15px; }
+    .search-bar input {
+      flex: 1; border: none; outline: none; background: transparent;
+      font-size: 14.5px; color: var(--ink); font-family: inherit;
+    }
+    .search-bar input::placeholder { color: #a6adba; }
+    .search-bar .clear {
+      border: none; background: transparent; cursor: pointer; color: #9aa3b0;
+      font-size: 16px; padding: 0 4px; display: none;
+    }
+    .search-bar .clear.show { display: block; }
 
-/* 折叠 / 展开：按分组名记录状态 */
-function toggleGroup(cat) {
-  if (collapsed.has(cat)) collapsed.delete(cat); else collapsed.add(cat);
-  renderDetail();
-}
+    /* 筛选栏 */
+    .filter-bar { display: flex; gap: 8px; justify-content: center; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+    .filter-bar .label { font-size: 13px; color: var(--ink-2); }
+    .filter-bar button {
+      border: 1px solid var(--line); background: var(--card); color: var(--ink-2);
+      border-radius: 999px; padding: 5px 16px; font-size: 13px; cursor: pointer; transition: all .15s;
+    }
+    .filter-bar button:hover { border-color: var(--accent); color: var(--accent); }
+    .filter-bar button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+    .filter-bar .sep { width: 1px; height: 18px; background: var(--line); margin: 0 4px; }
 
-renderDetail();
-</script>
+    /* 详细版 */
+    .detail-list { display: flex; flex-direction: column; gap: 12px; }
+    .detail-card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 18px 22px;
+    }
+    .detail-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .cat-tag {
+      font-size: 12px; color: var(--ink-2); border: 1px solid var(--line);
+      border-radius: 6px; padding: 1px 8px; background: var(--bg);
+    }
+    .abbr-chip {
+      font-size: 12px; font-weight: 700; color: #fff; background: var(--accent);
+      border-radius: 5px; padding: 1px 8px; letter-spacing: .3px; white-space: nowrap;
+    }
+    .citation { font-size: 14.5px; line-height: 1.75; color: var(--ink); }
+    .citation .authors { color: var(--ink-2); }
+    .citation .authors b { color: var(--ink); font-weight: 700; }
+    .citation .venue { font-style: italic; }
+    .citation .venue abbr { font-style: normal; font-weight: 700; }
+    .citation a.ctitle { color: var(--ink); font-weight: 700; text-decoration: none; }
+    .citation a.ctitle:hover { color: var(--accent); text-decoration: underline; }
+    mark { background: #fff1a8; color: inherit; border-radius: 3px; padding: 0 2px; }
+    .meta-row { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .badge { font-size: 12px; border-radius: 6px; padding: 2px 10px; font-weight: 600; }
+    .badge.award { background: var(--gold-soft); color: var(--gold); }
+    .badge.first { background: var(--a-bg); color: var(--a-ink); }
+
+    .lv { border-radius: 6px; padding: 2px 9px; font-size: 12px; font-weight: 700; }
+    .lv-A { background: var(--a-bg); color: var(--a-ink); }
+    .lv-B { background: var(--b-bg); color: var(--b-ink); }
+    .lv-C { background: var(--c-bg); color: var(--c-ink); }
+    .lv-none { background: var(--bg); color: var(--ink-2); border: 1px solid var(--line); }
+
+    /* 分组标题：可点击折叠 / 展开 */
+    .cat-block { margin-bottom: 8px; }
+    .group-title {
+      font-size: 17px; font-weight: 700; margin: 26px 0 12px; display: flex; align-items: center; gap: 10px;
+      cursor: pointer; user-select: none; padding: 4px 0;
+    }
+    .group-title:hover { color: var(--accent); }
+    .group-title .caret {
+      display: inline-block; font-size: 12px; color: var(--ink-2); width: 12px;
+      transition: transform .2s ease;
+    }
+    .group-title:hover .caret { color: var(--accent); }
+    .cat-block.collapsed .group-title .caret { transform: rotate(-90deg); }
+    .cat-block.collapsed .detail-list { display: none; }
+    .cat-block.collapsed .group-title { margin-bottom: 6px; }
+    .group-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+    .group-title .cnt { font-size: 13px; color: var(--ink-2); font-weight: 400; }
+    .group-title .tip { font-size: 12px; color: #a6adba; font-weight: 400; }
+
+    .empty {
+      text-align: center; color: var(--ink-2); font-size: 14px;
+      background: var(--card); border: 1px dashed var(--line); border-radius: 12px; padding: 40px 20px;
+    }
+
+    /* ============ 页脚（原依赖外部 styles.css，此处内联补全） ============ */
+    .footer {
+      margin-top: 48px; background: #ffffff; border-top: 1px solid var(--line);
+      padding: 36px 20px 28px; color: var(--ink-2);
+    }
+    .footer-container {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+    }
+    .footer .content-section b { display: block; color: var(--ink); font-size: 14.5px; margin-bottom: 8px; }
+    .footer .content-section a {
+      display: inline-block; color: var(--accent); text-decoration: none;
+      font-size: 14px; line-height: 2;
+    }
+    .footer .content-section a:hover { text-decoration: underline; }
+    .footer .social-row i { width: 18px; text-align: center; margin-right: 6px; }
+    .footer-copyright {
+      max-width: 1080px; margin: 24px auto 0; padding-top: 16px;
+      border-top: 1px solid var(--line); text-align: center;
+      color: #a6adba; font-size: 12.5px;
+    }
+    footer.page-foot { text-align: center; color: #a6adba; font-size: 12px; margin: 40px 0 16px; }
+
+    @media (max-width: 600px) {
+      body { padding-left: 12px; padding-right: 12px; }
+      .detail-card { padding: 14px 14px; }
+      header h1 { font-size: 21px; }
+    }
+  </style>
+</head>
+
+<body data-page-node-id="QUv3TMd4I7FJKlHURDwAEx">
+  <nav class="navbar" data-page-node-id="Du2HI3fmz7C2DH9El8EM2F">
+    <div class="navbar-container" data-page-node-id="5IoNa04CGvfu0zYDelTFna">
+      <a href="index.html" class="navbar-brand" data-page-node-id="DTeIJYZBcrAf4sEw24ZmqG">Jing Wang</a>
+      <ul class="navbar-menu" id="navbar-menu" data-page-node-id="XoKyrzVGr5eF3NoPjz5Ijk">
+        <li class="dropdown" data-page-node-id="5qOarcPKpuOmzqXrJNr80c">
+          <a href="index.html" data-page-node-id="JCxuGEdsBIiePBeyYUioHx">About Me</a>
+          <ul class="dropdown-menu" data-page-node-id="4Ns0rnebED9k5PHuvMdtrc">
+            <li data-page-node-id="y2zAg5e0bYfDibPLP8DoLg"><a href="index.html#interests" data-page-node-id="iMRLQnnXbA9bGnS3RHyhek">Research interests</a></li>
+            <li data-page-node-id="CmD6C268KHMe0Uwu4MlnYd"><a href="index.html#workexperience" data-page-node-id="iBAs5aaI5CYF7lpOiliqwM">Work experience</a></li>
+            <li data-page-node-id="XsrAUZ6HEbJrqWmKVL25uW"><a href="index.html#honors" data-page-node-id="UzxX6KxgHZFnJEBli0eSGu">Selected honors</a></li>
+            <li data-page-node-id="7RFtdwsvl0eHZQjME8GajX"><a href="index.html#aca-services" data-page-node-id="GWUkhPTzt0EHWFEI7VKoiW">Services</a></li>
+            <li data-page-node-id="bIQOa7M0JLVsD6SlQuvfmw"><a href="index.html#projects" data-page-node-id="uchvLAV8dVtizjoIo0hddK">Projects</a></li>
+          </ul>
+        </li>
+        <li class="current" data-page-node-id="B1Yr0zTf1X0X5B7MsxSo8i"><a href="publications.html" data-page-node-id="dpyPMDzYSJ7Fj1cprNQFHo">Publications</a></li>
+        <li data-page-node-id="Q47jLGEEDKrCSIGE5ozhie"><a href="teaching.html" data-page-node-id="2CR7kbbRT74jff79uHpstw">Teaching</a></li>
+        <li data-page-node-id="5BaeuitYmTm8cwTRZ8bTtq"><a href="#contact" data-page-node-id="pfQiOynvzb9HaigSVacEqr">Contacts</a></li>
+      </ul>
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu" data-page-node-id="Sifm2HlTrEg5eKJdAPtCQu">
+        <span data-page-node-id="82ObqWbtAuS1Od4HBdu2sA"></span>
+        <span data-page-node-id="rVHShLaZR0EwnHWaXgM1AN"></span>
+        <span data-page-node-id="LDJOASmwXnLgADDlENIrXx"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main data-page-node-id="OB9VOmJtumSwFRpVPEVqaH">
+    <div class="wrap" data-page-node-id="WeSGOUeyUOFY6AcgtbVE2U">
+      <header data-page-node-id="WtQ5TcB2kz3SRR6lw082Fd">
+        <h1 data-page-node-id="q4nWTH3FCGDXObegO08OIM">Jing Wang (王靖) · 论文成果汇总</h1>
+        <p data-page-node-id="2Um7f1HHn0xPnF3tDEolXV">Publications · 更新于 2026-09-05</p>
+      </header>
+
+      <div class="search-bar" data-page-node-id="gUiAdwfaIL9mmzmZru8cOy">
+        <span class="icon" data-page-node-id="buuGTxczXFGkLCGh4hChWr">🔍</span>
+        <input id="search" type="text" placeholder="搜索题目 / 作者 / 会议名称 / 级别 / 奖项，如 ICPP、Jing Wang、disaggregated" oninput="onSearch()" data-page-node-id="BAYYoUnFLhC8Sv5hUsg7uc">
+        <button class="clear" id="clearBtn" onclick="clearSearch()" data-page-node-id="OwFioUyL6m8uVDPeX7ff3Q">✕</button>
+      </div>
+
+      <div class="filter-bar" data-page-node-id="VEA9iOz6OktztDNfOjfyPZ">
+        <span class="label" data-page-node-id="3Od29G8KGgk5PSNKdUvd8b">作者：</span>
+        <button id="f-all" class="active" onclick="setFilter(false)" data-page-node-id="qTQeBCX9T6NT7AyQCuPwWe">全部</button>
+        <button id="f-first" onclick="setFilter(true)" data-page-node-id="kEFnDyc1Vqv44vvDPgp9Bu">一作文章</button>
+        <span class="sep" data-page-node-id="CzOUBLQDNeU00BTHS8Re1G"></span>
+        <span class="label" data-page-node-id="6zneZlmBmcQ4AGEtBrUqh1">级别：</span>
+        <button id="lv-all" class="active" onclick="setLevel('')" data-page-node-id="QBY6lWpBTs1om2BFJdqPQj">全部</button>
+        <button id="lv-a" onclick="setLevel('CCF A')" data-page-node-id="3gqWsxvCwQG9S7HTAAGjYI">CCF A</button>
+        <button id="lv-b" onclick="setLevel('CCF B')" data-page-node-id="pUPwQp1ebrM6JVPT06ptAq">CCF B</button>
+      </div>
+
+      <section id="module-detail" data-page-node-id="QBzKH5rxHATMCISuPyr8cn"></section>
+
+      <footer class="page-foot" data-page-node-id="mQzX3Ng09SzZ2GVAUAK3Ka">数据来源：Jing_Wang_成果汇总_v2.xlsx · 点击论文题目可跳转至原文链接（如有）</footer>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact" data-page-node-id="7dEEemAtFvNLxGcFgcgCMX">
+    <div class="footer-container" data-page-node-id="Zc3cT9UPdxDeRJw6n5cKD8">
+      <section id="foot-social" class="content-section" data-page-node-id="5vO4l3p1mRh7RAey8QeEzz">
+        <b data-page-node-id="XSymNmg2gAgamUuCD2gmVW">Social</b>
+        <div class="social-row" data-page-node-id="aMoEaNEclLpg1jUH3BcXa1">
+          <a href="mailto:jing618@sjtu.edu.cn" data-page-node-id="JHyYLgzJix4lF1uqDiyGVK"><i class="fa fa-envelope" data-page-node-id="QKhNG8a2HrHivqkhd2niLU"></i> jing618@sjtu.edu.cn</a><br data-page-node-id="FtKNAp1CZImyO3fH90mXPH">
+          <a href="https://scholar.google.com/citations?user=WV5Ak_YAAAAJ" target="_blank" rel="noopener" data-page-node-id="T0foUYU2WFA5X82IXkHGk8"><i class="ai ai-fw ai-google-scholar-square" data-page-node-id="3BF8FfYWohEh91TQiseaut"></i> Google Scholar</a><br data-page-node-id="o1Q2QhmqONadH08yXloUh6">
+          <a href="https://orcid.org/0000-0001-7260-0521" target="_blank" rel="noopener" data-page-node-id="tpTMud84FDZZRjSsXfueZ0"><i class="ai ai-fw ai-orcid-square" data-page-node-id="8VWGAuMhJXzLuUjbutAO6X"></i> ORCID</a><br data-page-node-id="sQltF75iBkaD0nbQSEibdB">
+          <a href="https://github.com/wjing6" target="_blank" rel="noopener" data-page-node-id="tlid55ND4HiIHfBTmHuDVY"><i class="fa fa-fw fa-github-square" data-page-node-id="iPSmQm2P0LJgcwR5GCmu0c"></i> Personal GitHub</a><br data-page-node-id="pIE7CyYmzdaDGxHtFlK4y0">
+          <a href="https://github.com/wjing6" target="_blank" rel="noopener" data-page-node-id="fITKCNLy0YmfXWLEBaRyXQ"><i class="fa fa-fw fa-github-square" data-page-node-id="msx3IGlbX9rpEFeAZvwx4C"></i> SAIL Group GitHub</a><br data-page-node-id="6QKFAxHncGvtr5AA2LdutM">
+        </div>
+      </section>
+
+      <section id="foot-cv" class="content-section" data-page-node-id="tHJt6eLCWybkp4vkHJzMQe">
+        <b data-page-node-id="trxrpd5ZJ5DnrUKB2kcIUQ">CV</b>
+        <div class="social-row" data-page-node-id="13tALihTSGUkRNhu4IqvE0">
+          <a href="myresearch/CV_Jing_Wang_englishxx.pdf" target="_blank" rel="noopener" data-page-node-id="enUK4PHTGBSFYZIokeC6mD"><i class="fa fa-file-pdf-o" data-page-node-id="69MxnqA1ZhM6KhUxf7Vxcy"></i> English version</a><br data-page-node-id="ERbxGzeejVFFpiBYSZEu07">
+          <a href="myresearch/王靖-中文简历-202303.pdf" target="_blank" rel="noopener" data-page-node-id="F3yXtjl0iLWqxWIHq9CPaj"><i class="fa fa-file-pdf-o" data-page-node-id="FInlfbT5lS58d2yshjsHVI"></i> 中文版</a>
+        </div>
+      </section>
+
+      <section id="foot-contact" class="content-section" data-page-node-id="he7HFmWBQG5ZEgcGRkAWyI">
+        <b data-page-node-id="oKYeg7fU4yOAtLGD1Ca1AJ">Contact Us</b>
+        <div class="social-row" data-page-node-id="2MM90xAtzK9MWtsQVsE4pi">
+          <a href="https://www.cs.sjtu.edu.cn/sail/index.html" target="_blank" rel="noopener" data-page-node-id="7jYojboIv4vRcN5YO7NFJm">Sustainable Architectures and Intelligence Laboratory (SAIL)</a><br data-page-node-id="D6O6o2ZFtWxZJADORTWzDy">
+          <a href="http://epcc.sjtu.edu.cn" target="_blank" rel="noopener" data-page-node-id="4U7e34p7Pyr4IPgs6glsEO">Emerging Parallel Computing Center (EPCC)</a><br data-page-node-id="UXdaaoeQedVfaMuIfg2eIp">
+          <a href="https://www.cs.sjtu.edu.cn/" target="_blank" rel="noopener" data-page-node-id="GnFiqxVWJoRTJsUrh5GToN">School of Computer Science</a><br data-page-node-id="HI75PsxbdZSGBsVuOT12RJ">
+          <a href="https://www.seiee.sjtu.edu.cn/" target="_blank" rel="noopener" data-page-node-id="yAqGjTdiM1OrSs5sFCRJcE">School of Electronic and Electrical Engineering (SEIEE)</a><br data-page-node-id="3eoR9CE4DcnPvzBaCEQL71">
+          <a href="http://sjtu.edu.cn" target="_blank" rel="noopener" data-page-node-id="NdaHoH9SbZZF50DuDrvt8j">Shanghai Jiao Tong University (SJTU)</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer-copyright" data-page-node-id="0n9LwWxBLC8OsE1QmRk3qE">
+      <p data-page-node-id="FsWiOIKn983ltVsr3oKfSr">&copy; MemSea Group, 2025, All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ============ 导航栏交互（原依赖外部 script.js，此处内联补全） ============ */
+    document.getElementById('navbar-toggle').addEventListener('click', function () {
+      document.getElementById('navbar-menu').classList.toggle('open');
+    });
+  </script>
+
+  <script>
+    /* fa: 第一作者身份 —— "一作" / "共一"（共同一作）；无该字段表示非第一作者 */
+    const DATA = {
+      "会议": [
+        {t:"MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading", ab:"ASPLOS", lv:"CCF A", au:"Peng Tang, Jiacheng Liu, Xiaofeng Hou, Yifei Pu, Jing Wang, Pheng-Ann Heng, Chao Li, Minyi Guo", venue:"Proc. the 31st International Conference on Architectural Support for Programming Languages and Operating Systems", date:"2026, Accepted", d:"2026-12", award:"", link:"https://dl.acm.org/doi/10.1145/3779212.3790187"},
+        {t:"AUM: Unleashing the Efficiency Potential of Shared Processors with Accelerator Units for LLM Serving", ab:"HPCA", lv:"CCF A", au:"Xinkai Wang, Chao Li, Yiming Zhuansun, Jinyang Guo, Xiaofeng Hou, Jing Wang, Luping Wang, Weigao Chen, Cheng Huang, Guodong Yang, Liping Zhang, Minyi Guo", venue:"Proc. the 32nd IEEE International Symposium on High-Performance Computer Architecture", date:"2026, Accepted", d:"2026-12", award:"", link:""},
+        {t:"BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale", ab:"HPDC", lv:"CCF A", au:"Chengying Huan, Ziheng Meng, Zhengyi Yang, Yongchao Liu, Jie Zhang, Qing Wang, Jing Wang, Shaonan Ma, Zhibin Wang, Mingxing Zhang, Rong Gu, Baokun Wang, Guihai Chen, Chen Tian", venue:"ACM International Symposium on High-Performance Parallel and Distributed Computing", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3806645.3807585"},
+        {t:"SensE: From Sampled-Input Execution to Stream-Aware Edge Multimodal MoE Inference", ab:"ICCD", lv:"CCF B", au:"Cheng Xu, Xiaofeng Hou, Chao Li, Wenfeng Wang, Xinfeng Xia, Jing Wang, Jiacheng Liu, Minyi Guo", venue:"International Conference on Computer Design", date:"Accepted", d:"2026-11", award:"", link:""},
+        {t:"HACache: Leveraging Read Performance with Cache in a Heterogeneous Array", ab:"ICCD", lv:"CCF B", au:"Yaqi Li, Jialin Liu, Dingcui Yu, Edwin Sha, Qingfeng Zhuge, Jing Wang, Liang Shi", venue:"International Conference on Computer Design", date:"Accepted", d:"2026-11", award:"", link:""},
+        {t:"Graph.hls: A Domain-Specific Language for Easy and Efficient Graph Accelerator Design", ab:"ISCA", lv:"CCF A", au:"Feiyang Wu, Xuxiao Yang, Zhuohang Bian, Jing Wang, Ruifan Xu, Guangyu Sun, Yun Liang, Youwei Zhuo", venue:"International Symposium on Computer Architecture", date:"", d:"2026-10", award:"", link:""},
+        {t:"Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool", ab:"ICPP", lv:"CCF B", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Xinkai Wang, Taolei Wang, Jinyang Guo, Minyi Guo, Jie Meng, Shuangfu Zeng", venue:"Proc. the 55th International Conference on Parallel Processing", date:"September 2026", d:"2026-09", award:"", link:""},
+        {t:"TriCooling-Sim: Efficient Thermal Simulation for High-Density Micro AI Data Centers", ab:"NPC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"Proc. the 21st IFIP International Conference on Network and Parallel Computing", date:"Nov. 2025", d:"2025-11", award:"Best Student Paper Award", link:"https://dl.acm.org/doi/abs/10.1007/978-3-032-10466-3_19"},
+        {t:"CGO: Cloud Game Orchestration via Resource Preception and CODEC Optimization", ab:"NPC", lv:"CCF C", au:"Taolei Wang, Chao Li, Jing Wang, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 21st IFIP International Conference on Network and Parallel Computing", date:"Nov. 2025", d:"2025-11", award:"", link:"https://dl.acm.org/doi/10.1007/978-3-032-10466-3_4"},
+        {t:"AsymServe: Demystifying and Optimizing LLM Serving Efficiency on CPU Acceleration Units", ab:"APPT", lv:"CCF C", au:"Xinkai Wang, Yiming Zhuansun, Chao Li, Jing Wang, Xiaofeng Hou, Lingyu Sun, Luping Wang, Minyi Guo", venue:"Proc. the International Symposium on Advanced Parallel Processing Technology", date:"July 2025", d:"2025-07", award:"", link:"https://doi.org/10.1007/978-981-95-1021-4_17"},
+        {t:"Boosting Data Center Performance via Intelligently Managed Multi-backend Disaggregated Memory", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Yiming Zhuansun, Wang Yuan, Cheng Xu, Xiaofeng Hou, Minyi Guo, Yang Hu, Yaqian Zhao", venue:"Proc. Int. Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2024", d:"2024-11", award:"", link:"https://doi.org/10.1109/SC41406.2024.00043"},
+        {t:"FlowWalker: A Memory-efficient and High-performance GPU-based Dynamic Graph Random Walk Framework", ab:"VLDB", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Cheng Xu, Cheng Chen, Yibo Liu, Jing Wang, Cheng Zhao, Xiaofeng Hou, Minyi Guo, Bingsheng He, Xiaoliang Cong", venue:"Proc. the 50th International Conference on Very Large Databases", date:"Aug. 2024", d:"2024-08", award:"", link:"https://doi.org/10.14778/3659437.3659438"},
+        {t:"M2SN: Adaptive and Dynamic Multi-modal Shortcut Network Architecture for Latency-aware Applications", ab:"ICME", lv:"CCF B", au:"Yifei Pu, Chi Wang, Xiaofeng Hou, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Chao Li", venue:"Proc. the IEEE International Conference on Multimedia and Expo", date:"July 2024", d:"2024-07", award:"Oral", link:"https://doi.org/10.1109/ICME57554.2024.10687384"},
+        {t:"CoCG: Fine-grained Cloud Game Co-location on Heterogeneous Platform", ab:"IPDPS", lv:"CCF B", au:"Taolei Wang, Jing Wang, Chao Li, Cheng Xu, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 38th International Parallel and Distributed Processing Symposium", date:"May 2024", d:"2024-05", award:"", link:"https://ieeexplore.ieee.org/document/10579195"},
+        {t:"Improving the Efficiency of Serverless Computing via Core-Level Power Management", ab:"CCGrid", lv:"CCF C", au:"Du Liu, Jing Wang, Xinkai Wang, Chao Li, Lu Zhang, Xiaofeng Hou, Xiaoxiang Shi, Minyi Guo", venue:"Proc. the 24th ACM/IEEE International Symposium on Cluster, Cloud and Internet Computing", date:"May 2024", d:"2024-05", award:"", link:"https://ieeexplore.ieee.org/document/10701381"},
+        {t:"Not All Resources are Visible: Exploiting Fragmented Shadow Resources in Shared-State Scheduler Architecture", ab:"SoCC", lv:"CCF B", au:"Xinkai Wang, Hao He, Yuancheng Li, Chao Li, Xiaofeng Hou, Jing Wang, Quan Chen, Jingwen Leng, Minyi Guo, Leibo Wang", venue:"Proc. the 14th ACM Symposium on Cloud Computing", date:"Nov. 2023", d:"2023-11", award:"", link:"https://doi.org/10.1145/3620678.3624650"},
+        {t:"HyFarM: Task Orchestration on Hybrid Far Memory for High Performance Per Bit", ab:"ICCD", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Junyi Mei, Hao He, Taolei Wang, Pengyu Wang, Lu Zhang, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu", venue:"Proc. the 40th International Conference on Computer Design", date:"Oct. 2022", d:"2022-10", award:"", link:"https://doi.org/10.1109/ICCD56317.2022.00016"},
+        {t:"Excavating the Potential of Graph Workload on RDMA-based Far Memory Architecture", ab:"IPDPS", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo", venue:"Proc. the 36th International Parallel and Distributed Processing Symposium", date:"May 2022", d:"2022-05", award:"Invited for Journal Publication", link:"https://ieeexplore.ieee.org/document/9820708"},
+        {t:"Oversubscribing GPU Unified Virtual Memory: Implications and Suggestions", ab:"ICPE", lv:"CCF C", au:"Chuanming Shao, Jinyang Guo, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the 13th ACM/SPEC International Conference on Performance Engineering", date:"Apr. 2022", d:"2022-04", award:"Best Paper Award Runner-Up", link:"https://doi.org/10.1145/3489525.3511691"},
+        {t:"Skywalker: Efficient Alias-method-based Graph Sampling and Random Walk on GPUs", ab:"PACT", lv:"CCF B", au:"Pengyu Wang, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Jingwen Leng, Quan Chen, Minyi Guo", venue:"Proc. the 30th International Conference on Parallel Architectures and Compilation Techniques", date:"Sep. 2021", d:"2021-09", award:"", link:"https://doi.org/10.1109/PACT52795.2021.00029"},
+        {t:"DR DRAM: Accelerating Memory-Read-Intensive Applications", ab:"ICCD", lv:"CCF B", au:"Yuhai Cao, Chao Li, Quan Chen, Jingwen Leng, Minyi Guo, Jing Wang, Weigong Zhang", venue:"Proc. the 36th IEEE International Conference on Computer Design", date:"Oct. 2018", d:"2018-10", award:"", link:"https://doi.org/10.1109/ICCD.2018.00053"}
+      ],
+      "期刊": [
+        {t:"Survey of Disaggregated Memory: Cross-Layer Technique Insights for Next-Generation Datacenters", ab:"CSUR", lv:"顶级综述", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Jinyang Guo, Hanzhang Yang, Yiming Zhuansun, Minyi Guo", venue:"ACM Computing Surveys", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3807443"},
+        {t:"DGS: A GPU-based Adaptive Graph Sampling Framework", ab:"TACO", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Xinkai Wang, Jing Wang, Xiaofeng Hou, Minyi Guo, Yongchao Liu, Chuntao Hong", venue:"ACM Transactions on Architecture and Code Optimization", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3817060"},
+        {t:"TriCooling-CAT: A Carbon Analysis Toolkit for SoC-Cluster Micro AI Data Center Design", ab:"TCC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"IEEE Transactions on Cloud Computing", date:"Accepted", d:"2026-11", award:"", link:""},
+        {t:"COMPOSE: Cross-Layer Modeling and Design Space Exploration for Efficient Computational Sensor Systems", ab:"TACO", lv:"CCF A", au:"", venue:"ACM Transactions on Architecture and Code Optimization", date:"Major revision", d:"2026-06", award:"", link:""},
+        {t:"PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving", ab:"TACO", lv:"CCF A", au:"Wenfeng Wang, Xiaofeng Hou, Peng Tang, Hengyi Zhou, Jing Wang, Xinkai Wang, Chao Li, Minyi Guo", venue:"ACM Transactions on Architecture and Code Optimization", date:"Major revision", d:"2026-05", award:"", link:"https://arxiv.org/abs/2603.23049"},
+        {t:"MMBypass: Towards Efficient Multi-modal AI Computing with Adaptive Bypass Network", ab:"JPDC", lv:"CCF B", au:"Yifei Pu, Xinfeng Xia, Chi Wang, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Jingling Yuan, Chao Li", venue:"Journal of Parallel and Distributed Computing", date:"2025, Accepted", d:"2025-12", award:"", link:"https://doi.org/10.1016/j.jpdc.2025.105078"},
+        {t:"Enhancing High-Throughput GPU Random Walks Through Multi-Task Concurrency Orchestration", ab:"TACO", lv:"CCF A", au:"Cheng Xu, Chao Li, Xiaofeng Hou, Junyi Mei, Jing Wang, Pengyu Wang, Shixuan Sun, Minyi Guo, Baoping Hao", venue:"ACM Transactions on Architecture and Code Optimization", date:"Vol 22, Issue 1, 2025", d:"2025-03", award:"", link:"https://doi.org/10.1145/3711820"},
+        {t:"Optimizing GPU-based Graph Sampling and Random Walk for Efficiency and Scalability", ab:"TC", lv:"CCF A", au:"Pengyu Wang, Cheng Xu, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Xiaofeng Hou, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 72, Issue 9, 2023", d:"2023-09", award:"", link:"https://doi.org/10.1109/TC.2023.3251860"},
+        {t:"Fargraph+: Excavating the Parallelism of Graph Processing Workload on RDMA-based Far Memory System", ab:"JPDC", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Yibo Liu, Taolei Wang, Junyi Mei, Lu Zhang, Pengyu Wang, Minyi Guo", venue:"Journal of Parallel and Distributed Computing", date:"July 2023", d:"2023-07", award:"", link:"https://doi.org/10.1016/j.jpdc.2023.02.015"},
+        {t:"Tapping into NFV Environment for Opportunistic Serverless Edge Function Deployment", ab:"TC", lv:"CCF A", au:"Lu Zhang, Weiqi Feng, Chao Li, Xiaofeng Hou, Pengyu Wang, Jing Wang, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 71, Issue 10, 2022", d:"2022-10", award:"", link:"https://doi.org/10.1109/TC.2021.3132776"},
+        {t:"ACE-GCN: A Fast Data-Driven FPGA Accelerator for GCN Embedding", ab:"TRETS", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Pengyu Wang, Chuanming Shao, Jinyang Guo, Jing Wang, Guoyong Shi", venue:"ACM Transactions on Reconfigurable Technology and Systems", date:"Vol 14, Issue 4, 2022", d:"2022-10", award:"", link:"https://doi.org/10.1145/3470536"},
+        {t:"DRAGON: Dynamic Recurrent Accelerator for Graph Online Convolution", ab:"TODAES", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Taolei Wang, Jinyang Guo, Pengyu Wang, Chuanming Shao, Jing Wang, Guoyong Shi, Xiangwen Liu, Hanqing Wu", venue:"ACM Transactions on Design Automation of Electronic Systems", date:"Vol 28, Issue 1, 2022", d:"2022-01", award:"", link:"https://doi.org/10.1145/3524124"},
+        {t:"Grus: Toward Unified-Memory-Efficient, High-Performance Graph Processing on GPU", ab:"TACO", lv:"CCF A", au:"Pengyu Wang, Jing Wang, Chao Li, Jianzong Wang, Haojin Zhu, Minyi Guo", venue:"ACM Transactions on Architecture and Code Optimization", date:"Vol 18, Issue 2, 2021", d:"2021-04", award:"", link:"https://doi.org/10.1145/3444844"},
+        {t:"DR Refresh: Releasing DRAM Potential by Enabling Read Accesses under Refresh", ab:"TC", lv:"CCF A", au:"Yuhai Cao, Chao Li, Jing Wang, Weigong Zhang, Quan Chen, Jingwen Leng, Bin Yao, Yao Shen, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 68, Issue 11, 2019", d:"2019-11", award:"", link:"https://doi.org/10.1109/TC.2019.2914679"},
+        {t:"Edge-Oriented Computing Paradigms: A Survey on Architecture Design and System Management", ab:"CSUR", lv:"顶级综述", au:"Chao Li, Yushu Xue, Jing Wang, Weigong Zhang, Tao Li", venue:"ACM Computing Surveys", date:"Vol 51, Issue 2, 2018", d:"2018-04", award:"", link:""}
+      ],
+      "短文与Poster": [
+        {t:"LiveGraph: High-Performance On-FPGA Dynamic Graph Updating Framework", ab:"FCCM", lv:"", au:"Yufeng Luo, Peikun Hong, Jing Wang, Feiyang Wu, Chao Li, Minyi Guo", venue:"IEEE 34th Annual International Symposium on Field-Programmable Custom Computing Machines", date:"2026", d:"2026-12", award:"", link:"https://ieeexplore.ieee.org/document/11552661"},
+        {t:"Accelerating Large-Scale Out-of-GPU-Core GNN Training with Two-Level Historical Caching", ab:"APPT", lv:"CCF C", fa:"一作", au:"Jing Wang, Taolei Wang, Juntao Huang, Yibo Liu, Xinkai Wang, Marius Kreutzer, Chao Li, Minyi Guo", venue:"Proc. the International Symposium on Advanced Parallel Processing Technology", date:"July 2025", d:"2025-07", award:"", link:"https://doi.org/10.1007/978-981-95-1021-4_22"},
+        {t:"ParLeiden: Boosting Parallelism of Distributed Leiden Algorithm on Large-scale Graphs", ab:"SC", lv:"CCF A", fa:"共一", au:"Yongmin Hu, Jing Wang, Cheng Zhao, Yibo Liu, Cheng Chen, Xiaoliang Cong, Chao Li", venue:"Proc. International Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2023", d:"2023-11", award:"", link:"https://sc23.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost106.html"},
+        {t:"CoWalker: High-Throughput GPU Random Walk with Fine-tuned Concurrent Query Processing", ab:"PPoPP", lv:"CCF A", au:"Cheng Xu, Pengyu Wang, Xiaofeng Hou, Jing Wang, Shixuan Sun, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu", venue:"Proc. the 28th ACM SIGPLAN Annual Symposium on Principles and Practices of Parallel Programming", date:"Feb. 2023", d:"2023-02", award:"", link:"https://doi.org/10.1145/3572848.3577482"},
+        {t:"Fargraph: Optimizing Graph Workload on RDMA-based Far Memory Architecture", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo", venue:"Proc. International Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2021", d:"2021-11", award:"", link:"https://sc21.supercomputing.org/proceedings/tech_poster/"},
+        {t:"PSL: Exploiting Parallelism, Sparsity and Locality to Accelerate Matrix Factorization on x86 Platforms", ab:"Bench", lv:"CCF C", au:"Weixin Deng, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the 2019 Int. Symp. on Benchmarking, Measuring and Optimization", date:"Nov. 2019", d:"2019-11", award:"", link:"http://benchcouncil.org/competition/papers/Competition_2019_paper_10.pdf"}
+      ],
+      "中文期刊": [
+        {t:"使用HLS开发FPGA异构加速系统: 问题、优化方法和机遇", ab:"", lv:"中文核心", au:"徐诚，郭进阳，李超，王靖，汪陶磊，赵杰茹", venue:"计算机科学与探索", date:"2023", d:"2023-06", award:"", link:"https://dl.ccf.org.cn/article/articleDetail.html?type=qkwz&_ack=2&id=6624890368280576"},
+        {t:"FPGA图计算的编程与开发环境：综述和探索", ab:"", lv:"CCF A", au:"郭进阳，邵传明，王靖，李超，朱浩瑾，过敏意", venue:"计算机研究与发展", date:"2020", d:"2020-06", award:"", link:"http://crad.ict.ac.cn/CN/10.7544/issn1000-1239.2020.20200106"},
+        {t:"面向图计算加速的内存系统优化综述", ab:"", lv:"CCF A", fa:"一作", au:"王靖，张路，王鹏宇，徐嘉鸿，李超，朱浩瑾，钱学海，过敏意", venue:"中国科学：信息科学", date:"2019", d:"2019-06", award:"", link:""}
+      ]
+    };
+
+    let keyword = "";
+    let onlyFirst = false;
+    let lvFilter = "";             // "" | "CCF A" | "CCF B"
+    const collapsed = new Set();   // 记录被折叠的分组名称
+
+    const lvClass = lv => lv.includes("CCF A") || lv === "顶级综述" ? "lv-A" : lv.includes("CCF B") ? "lv-B" : lv.includes("CCF C") || lv === "中文核心" ? "lv-C" : "lv-none";
+    const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const escapeHtml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    const boldName = s => s.replace(/Jing Wang/g, "<b>Jing Wang</b>").replace(/王靖/g, "<b>王靖</b>");
+    function hl(s) {
+      if (!s) return "";
+      if (!keyword) return String(s);
+      return String(s).replace(new RegExp(escRe(keyword), "gi"), m => `<mark>${m}</mark>`);
+    }
+    /* 时间排序：固定最新优先（降序） */
+    const sorted = list => [...list].sort((a, b) => b.d.localeCompare(a.d));
+
+    function matches(p) {
+      if (onlyFirst && !p.fa) return false;
+      if (lvFilter && p.lv !== lvFilter) return false;
+      if (!keyword) return true;
+      const hay = [p.t, p.au, p.venue, p.ab, p.lv, p.date, p.award].join(" ").toLowerCase();
+      return hay.includes(keyword.toLowerCase());
+    }
+
+    function renderDetail() {
+      let html = "";
+      for (const [cat, list] of Object.entries(DATA)) {
+        const hits = sorted(list.filter(matches));
+        if (!hits.length) continue;
+        const isCollapsed = collapsed.has(cat);
+        html += `<div class="cat-block${isCollapsed ? " collapsed" : ""}">
+          <div class="group-title" onclick="toggleGroup('${cat}')" title="点击折叠 / 展开该分组">
+            <span class="caret">▼</span>
+            <span>${cat}</span>
+            <span class="cnt">${hits.length} 篇</span>
+            <span class="tip">${isCollapsed ? "已折叠 · 点击展开" : ""}</span>
+          </div>
+          <div class="detail-list">`;
+        for (const p of hits) {
+          const abbr = p.ab ? ` <abbr>(${hl(p.ab)})</abbr>` : "";
+          const datePart = p.date ? `, ${hl(p.date)}` : "";
+          const authors = p.au
+            ? `<span class="authors">${hl(boldName(p.au))}</span>`
+            : `<span class="authors">（作者信息待补充）</span>`;
+          const titleHtml = p.link
+            ? `<a class="ctitle" href="${p.link}" target="_blank" rel="noopener">“${hl(p.t)}”</a>`
+            : `<span class="ctitle">“${hl(p.t)}”</span>`;
+          const citation = `${authors}. ${titleHtml}. <span class="venue">${hl(p.venue)}${abbr}</span>${datePart}.`;
+          html += `<div class="detail-card">
+            <div class="detail-head">
+              <span class="cat-tag">${cat}</span>
+              <span class="lv ${lvClass(p.lv)}">${hl(p.lv) || "—"}</span>
+              ${p.ab ? `<span class="abbr-chip">${hl(p.ab)}</span>` : ""}
+            </div>
+            <div class="citation">${citation}</div>
+            ${(p.award || p.fa) ? `<div class="meta-row">
+              ${p.fa ? `<span class="badge first">${p.fa === "共一" ? "共同一作" : "第一作者"}</span>` : ""}
+              ${p.award ? `<span class="badge award">🏆 ${hl(p.award)}</span>` : ""}
+            </div>` : ""}
+          </div>`;
+        }
+        html += `</div></div>`;
+      }
+      document.getElementById("module-detail").innerHTML = html ||
+        `<div class="empty">没有符合条件的论文${keyword ? `（关键字 “${escapeHtml(keyword)}”）` : ""}，换个关键字或筛选条件试试</div>`;
+    }
+
+    function onSearch() {
+      keyword = document.getElementById("search").value.trim();
+      document.getElementById("clearBtn").classList.toggle("show", !!keyword);
+      renderDetail();
+    }
+
+    function clearSearch() {
+      document.getElementById("search").value = "";
+      onSearch();
+      document.getElementById("search").focus();
+    }
+
+    function setFilter(first) {
+      onlyFirst = first;
+      document.getElementById("f-all").classList.toggle("active", !first);
+      document.getElementById("f-first").classList.toggle("active", first);
+      renderDetail();
+    }
+
+    /* 级别筛选："" / "CCF A" / "CCF B"，与作者筛选、搜索可叠加 */
+    function setLevel(lv) {
+      lvFilter = lv;
+      document.getElementById("lv-all").classList.toggle("active", lv === "");
+      document.getElementById("lv-a").classList.toggle("active", lv === "CCF A");
+      document.getElementById("lv-b").classList.toggle("active", lv === "CCF B");
+      renderDetail();
+    }
+
+    /* 折叠 / 展开：按分组名记录状态 */
+    function toggleGroup(cat) {
+      if (collapsed.has(cat)) collapsed.delete(cat); else collapsed.add(cat);
+      renderDetail();
+    }
+
+    renderDetail();
+  </script>
 </body>
-
-
-
-
-<!-- <div class="box" id="sample-boxes">
-
-<section id="service1" class="content-section">
-  <h1>服务1</h1>
-  <p>这里有关于服务1的内容。</p>
-</section>
-
-<section id="service2" class="content-section">
-  <h1>服务2</h1>
-  <p>这里有关于服务2的内容。</p>
-</section>
-
-<section id="service3" class="content-section">
-  <h1>服务3</h1>
-  <p>这里有关于服务3的内容。</p>
-</section>
-
-</div> -->
-
-
-</main>
-
-<footer class="footer" id="contact">
-  <div class="footer-container">
-    <!-- <section id="about">
-      <h1>关于我们</h1>
-      <p>我们是一个充满激情的团队。</p>
-  </section>
-  <section id="services">
-      <h1>我们的服务</h1>
-      <p>提供多种专业服务。</p>
-  </section>
-  <section id="contact">
-      <h1>联系我们</h1>
-      <p>有任何问题，请随时联系我们。</p>
-  </section> -->
-
-
-    <section id="foot-social" class="content-section">
-      <b>Social</b><br>
-        <div class="social-row">
-          <a href="jing618@sjtu.edu.cn" target="_blank"><i class="fa fa-envelope"></i> jing618@sjtu.edu.cn</a><br>
-          
-          <a href="https://scholar.google.com/citations?user=WV5Ak_YAAAAJ" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Google Scholar</a><br>
-          <a href="https://orcid.org/0000-0001-7260-0521" target="_blank"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
-          <!--  <a href="http://ideas.repec.org/f/pra541.html"><i class="fa fa-fw fa-share-alt-square"></i> RePEc</a><br>   -->
-          <a href="https://github.com/wjing6" target="_blank"><i class="fa fa-fw fa-github-square"></i> Personal GitHub</a><br>
-          <a href="https://github.com/wjing6" target="_blank"><i class="fa fa-fw fa-github-square"></i> SAIL Group GitHub</a><br>
-        
-          <!--<a href="http://twitter.com/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter </a><br> -->
-          <!--<a href="http://linkedin.com/in/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br> -->
-          <br>
-        </div>
-      </section>
-
-
-
-      <section id="foot-social" class="content-section">
-      <b>CV: </b>
-        <div class="social-row">
-          <a href="myresearch/CV_Jing_Wang_englishxx.pdf"  target="_blank"><i class="fa fa-file-pdf-o"></i> English version</a>
-          <br>
-          <a href="myresearch/王靖-中文简历-202303.pdf"  target="_blank"><i class="fa fa-file-pdf-o"></i> 中文版</a> 
-        </div>
-      </section>
-      
-      <section id="foot-social" class="content-section">
-        <b>Contact US: </b>
-        <div class="social-row"></div>
-        <a href="https://www.cs.sjtu.edu.cn/sail/index.html">Sustainable Architectures and Intelligence Laboratory (SAIL)</a>
-        <br>
-         <a href="http://epcc.sjtu.edu.cn">Emerging Parallel Computing Center (EPCC)</a>
-          <br>
-
-          <a href="https://www.cs.sjtu.edu.cn/">School of Computer Science</a>
-          <br>
-         <a href="https://www.seiee.sjtu.edu.cn/">School of Electronic and Electrical Engineering (SEIEE)</a> 
-         <br>
-
-
-         <a href="http://sjtu.edu.cn">Shanghai Jiao Tong University (SJTU)</a> 
-      
-      </section>
-  </div>
-  
-
-  <div> 
-    <section id="foot-social" class="content-section" >
-    <p>&copy; MemSea Group, 2025, All rights reserved. </p>
-  </section>
-  </div>
-</footer>
-
-
-    <!-- <script src="javascripts/scale.fix.js"></script> -->
-    <script src="javascripts/script.js"></script>
-
-
-
-  </body>
 </html>
