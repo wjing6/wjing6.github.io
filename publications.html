@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+  <head  data-page-node-id="XNmCHFo7RpwLbeC8XnFGoh">
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,127 @@
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
 
+<meta charset="UTF-8" data-page-node-id="VVp6FlnywemP2TDCnBiQOp">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="RsuZs1IGTlkbCZ5nobqqb3">
+
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card: #ffffff;
+    --ink: #1f2430;
+    --ink-2: #5b6472;
+    --line: #e4e7ec;
+    --accent: #2b5fd9;
+    --accent-soft: #eaf0fd;
+    --gold: #b7791f;
+    --gold-soft: #fdf3e0;
+    --a-bg: #fdecec; --a-ink: #b42323;
+    --b-bg: #fff4e5; --b-ink: #a15c07;
+    --c-bg: #e8f5ee; --c-ink: #1c7a4a;
+    --s-bg: #efe9fb; --s-ink: #6b3fc4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--ink);
+    padding: 32px 20px 64px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 22px; }
+  header h1 { font-size: 26px; letter-spacing: .5px; }
+  header p { color: var(--ink-2); margin-top: 6px; font-size: 14px; }
+
+  /* 搜索栏 */
+  .search-bar {
+    display: flex; align-items: center; gap: 10px; margin: 0 auto 12px;
+    max-width: 720px; background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 8px 14px; transition: border-color .2s, box-shadow .2s;
+  }
+  .search-bar:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .search-bar .icon { color: #9aa3b0; font-size: 15px; }
+  .search-bar input {
+    flex: 1; border: none; outline: none; background: transparent;
+    font-size: 14.5px; color: var(--ink); font-family: inherit;
+  }
+  .search-bar input::placeholder { color: #a6adba; }
+  .search-bar .clear {
+    border: none; background: transparent; cursor: pointer; color: #9aa3b0;
+    font-size: 16px; padding: 0 4px; display: none;
+  }
+  .search-bar .clear.show { display: block; }
+
+  /* 筛选栏 */
+  .filter-bar { display: flex; gap: 8px; justify-content: center; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+  .filter-bar .label { font-size: 13px; color: var(--ink-2); }
+  .filter-bar button {
+    border: 1px solid var(--line); background: var(--card); color: var(--ink-2);
+    border-radius: 999px; padding: 5px 16px; font-size: 13px; cursor: pointer; transition: all .15s;
+  }
+  .filter-bar button:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-bar button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+  /* 详细版 */
+  .detail-list { display: flex; flex-direction: column; gap: 12px; }
+  .detail-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 22px;
+  }
+  .detail-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+  .cat-tag {
+    font-size: 12px; color: var(--ink-2); border: 1px solid var(--line);
+    border-radius: 6px; padding: 1px 8px; background: var(--bg);
+  }
+  .abbr-chip {
+    font-size: 12px; font-weight: 700; color: #fff; background: var(--accent);
+    border-radius: 5px; padding: 1px 8px; letter-spacing: .3px; white-space: nowrap;
+  }
+  .citation { font-size: 14.5px; line-height: 1.75; color: var(--ink); }
+  .citation .authors { color: var(--ink-2); }
+  .citation .authors b { color: var(--ink); font-weight: 700; }
+  .citation .ctitle { font-weight: 700; }
+  .citation .venue { font-style: italic; }
+  .citation .venue abbr { font-style: normal; font-weight: 700; }
+  .citation a.ctitle { color: var(--ink); font-weight: 700; text-decoration: none; }
+  .citation a.ctitle:hover { color: var(--accent); text-decoration: underline; }
+  mark { background: #fff1a8; color: inherit; border-radius: 3px; padding: 0 2px; }
+  .meta-row { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .badge { font-size: 12px; border-radius: 6px; padding: 2px 10px; font-weight: 600; }
+  .badge.award { background: var(--gold-soft); color: var(--gold); }
+  .badge.first { background: var(--a-bg); color: var(--a-ink); }
+
+  .lv { border-radius: 6px; padding: 2px 9px; font-size: 12px; font-weight: 700; }
+  .lv-A { background: var(--a-bg); color: var(--a-ink); }
+  .lv-B { background: var(--b-bg); color: var(--b-ink); }
+  .lv-C { background: var(--c-bg); color: var(--c-ink); }
+  .lv-S { background: var(--s-bg); color: var(--s-ink); }
+  .lv-none { background: var(--bg); color: var(--ink-2); border: 1px solid var(--line); }
+
+  /* 分组标题：可点击折叠 / 展开 */
+  .cat-block { margin-bottom: 8px; }
+  .group-title {
+    font-size: 17px; font-weight: 700; margin: 26px 0 12px; display: flex; align-items: center; gap: 10px;
+    cursor: pointer; user-select: none; padding: 4px 0;
+  }
+  .group-title:hover { color: var(--accent); }
+  .group-title .caret {
+    display: inline-block; font-size: 12px; color: var(--ink-2); width: 12px;
+    transition: transform .2s ease;
+  }
+  .group-title:hover .caret { color: var(--accent); }
+  .cat-block.collapsed .group-title .caret { transform: rotate(-90deg); }
+  .cat-block.collapsed .detail-list { display: none; }
+  .cat-block.collapsed .group-title { margin-bottom: 6px; }
+  .group-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .group-title .cnt { font-size: 13px; color: var(--ink-2); font-weight: 400; }
+  .group-title .tip { font-size: 12px; color: #a6adba; font-weight: 400; }
+  .filter-bar .sep { width: 1px; height: 18px; background: var(--line); margin: 0 4px; }
+
+  .empty {
+    text-align: center; color: var(--ink-2); font-size: 14px;
+    background: var(--card); border: 1px dashed var(--line); border-radius: 12px; padding: 40px 20px;
+  }
+  footer { text-align: center; color: #a6adba; font-size: 12px; margin-top: 40px; }
+</style>
 
   </head>
   <body>
@@ -89,583 +210,200 @@
 <main>
 
 
-
-
-  <div class="box" id="publications">
-
-  <section id="introduction">
-
-    <h1 id="conferencepaper" >Conference Papers</h1>
-  
-  <table class="lh-base">
-  
-    <tbody>
-    <tr>
-    <td valign="top" align="right"><b> Conference</b> <br></td>
-    <td valigh="top" align="left"><b> Paper Content</b></td>
-    </tr>
-
-  <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>HPCA'26</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="" target="_blank">[pdf]</a> 
-          <a href="" target="_blank">[code]</a> <br>
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1109/hpca68181.2026.11408539" >AUM: Unleashing the Efficiency Potential of Shared Processors with Accelerator Units for LLM Serving</a>
-          <br>
-          <i color="#75787B" style="text-decoration: underline">Authors: </i> Xinkai Wang, Chao Li, Yiming Zhuansun, Jinyang Guo, Xiaofeng Hou, <b>Jing Wang</b>, Luping Wang, Weigao Chen, Cheng Huang, Guodong Yang, Liping Zhang, Minyi Guo.
-          <br><i color="#75787B" style="text-decoration: underline">Conference: </i> Proceedings of the 32nd IEEE International Symposium on High-Performance Computer Architecture (HPCA), Feb. 2026.
-      </tr>
-
-  <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>ASPLOS'26</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="" target="_blank">[pdf]</a> 
-          <a href="" target="_blank">[code]</a> <br>
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/10.1145/3779212.3790187" >MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading</a>
-          <br>
-          <i color="#75787B" style="text-decoration: underline">Authors: </i> Peng Tang, Jiacheng Liu, Xiaofeng Hou, Yifei Pu, <b>Jing Wang</b>, Pheng-Ann Heng, Chao Li, Minyi Guo.
-          <br><i color="#75787B" style="text-decoration: underline">Conference: </i> Proceedings of the 31st International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), March 2026.
-      </tr>
-
-  <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>NPC'25</b><br> (Best Student Paper Award)</td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="" target="_blank">[pdf]</a> 
-          <a href="" target="_blank">[code]</a> <br>
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1007/978-3-032-10466-3_19" >TriCooling-Sim: Efficient Thermal Simulation for High-Density Micro AI Data Centers</a>
-          <br>
-          <i color="#75787B" style="text-decoration: underline">Authors: </i> Jinyang Guo, Xinkai Wang, <b>Jing Wang</b>, Xiaofeng Hou, Chao Li, Minyi Guo.
-          <br><i color="#75787B" style="text-decoration: underline">Conference: </i> Proceedings of the 21st IFIP International Conference on Network and Parallel Computing (NPC), Nov. 2025.
-      </tr>
-
-  <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>NPC'25</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="" target="_blank">[pdf]</a> 
-          <a href="" target="_blank">[code]</a> <br>
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1007/978-3-032-10466-3_4" >CGO: Cloud Game Orchestration via Resource Preception and CODEC Optimization</a>
-          <br>
-          <i color="#75787B" style="text-decoration: underline">Authors: </i> Taolei Wang, Chao Li, <b>Jing Wang</b>, Xiaofeng Hou, Minyi Guo.
-          <br><i color="#75787B" style="text-decoration: underline">Conference: </i> Proceedings of the 21st IFIP International Conference on Network and Parallel Computing (NPC), Nov. 2025.
-      </tr>
-
-  <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>APPT'25</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="" target="_blank">[pdf]</a> 
-          <a href="" target="_blank">[code]</a> <br>
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1007/978-981-95-1021-4_17" >AsymServe: Demystifying and Optimizing LLM Serving Efficiency on CPU Acceleration Units</a>
-          <br>
-          <i color="#75787B" style="text-decoration: underline">Authors: </i> Xinkai Wang, Yiming Zhuansun, Chao Li, Jing Wang, Xiaofeng Hou, Lingyu Sun, Luping Wang, Minyi Guo.
-          <br><i color="#75787B" style="text-decoration: underline">Conference: </i> Proceedings of the International Symposium on Advanced Parallel Processing Technology (APPT), July 2025.
-      </tr>
-
-  <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>APPT'25</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="" target="_blank">[pdf]</a> 
-          <a href="" target="_blank">[code]</a> <br>
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1007/978-981-95-1021-4_22" >Accelerating Large-Scale Out-of-GPU-Core GNN Training with Two-Level Historical Caching</a>
-          <br>
-          <i color="#75787B" style="text-decoration: underline">Authors: </i> Jing Wang, Taolei Wang, Juntao Huang, Yibo Liu, Xinkai Wang, Marius Kreutzer, Chao Li, Minyi Guo.
-          <br><i color="#75787B" style="text-decoration: underline">Conference: </i> Proceedings of the International Symposium on Advanced Parallel Processing Technology (APPT), July 2025.
-      </tr>
-
-    <tr>
-      
-        <td valign="top" align="right"><b>SC'24</b><br></td>
-        
-        <td align="left">
-          <p style="margin:0"> 
-            <a href="https://dl.acm.org/doi/10.1109/SC41406.2024.00043" target="_blank">[ACM link]</a> 
-          <a href="myresearch/conference papers/slide of xDM-Jing Wang.pdf" target="_blank">[slides] </a> 
-          <a href="myresearch/conference papers/poster of xdm.pdf" target="_blank">[poster]</a>
-           <a href="" target="_blank">[talk] </a>
-           <a href="https://github.com/wjing6/Multi-backend-DM" target="_blank">[code]</a> <br>
-           <!--paper name-->
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/abstract/document/10793140" >Boosting Data Center Performance via Intelligently Managed Multi-backend Disaggregated Memory</a>
-          <br>
-          <i color="#75787B" style="text-decoration: underline">Authors: </i> <b>Jing Wang</b>, Hanzhang Yang, Chao Li, Yiming Zhuansun, Wang Yuan, Cheng Xu, Xiaofeng Hou, Minyi Guo, Yang Hu, Yaqian Zhao.
-          <br><i color="#75787B" style="text-decoration: underline">Conference: </i> International Conference for High Performance Computing, Networking, Storage and Analysis (SC), 2024.  
-        </tr>
-  
-  <!--paper -->
-    <tr>
-      
-          <td valign="top" align="right"><b>VLDB'24</b><br></td>
-          
-          <td align="left">
-            <p style="margin:0"> 
-            <a href="myresearch/conference papers/slides-Flowwalker-vldb24.pdf" target="_blank">[slides] </a> 
-             <a href="https://github.com/junyimei/flowwalker-artifact" target="_blank">[code]</a>
-            <br>
-            <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/10.14778/3659437.3659438" >FlowWalker: A Memory-efficient and High-performance GPU-based Dynamic Graph Random Walk Framework</a>
-            <br>
-            <i color="#75787B" style="text-decoration: underline">Authors: </i> Junyi Mei, Shixuan Sun, Chao Li, Cheng Xu, Cheng Chen, Yibo Liu, <b>Jing Wang</b>, Cheng Zhao, Xiaofeng Hou, Minyi Guo, Bingsheng He, Xiaoliang Cong.
-            <br><i color="#75787B" style="text-decoration: underline">Conference: </i> Proceedings of the Very Large Data Bases Endowment (VLDB), 2024.  
-        </tr>
-
-  <!--paper -->
-  <tr>
-      
-    <td valign="top" align="right"><b>IPDPS'24</b><br></td>
-    
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="myresearch/conference papers/poster of xdm.pdf" target="_blank">[slides] </a> 
-       <a href=" " target="_blank">[code]</a>
-       <br>
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/document/10579195" >CoCG: Fine-grained Cloud Game Co-location on Heterogeneous Platform</a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i> Taolei Wang, <b>Jing Wang</b>, Chao Li, Cheng Xu, Xiaofeng Hou, Minyi Guo.
-      <br><i color="#75787B" style="text-decoration: underline">Conference: </i> IEEE International Parallel and Distributed Processing Symposium (IPDPS), 2024. 
-  </tr>
-
-<!--paper -->
-  <tr>
-      
-    <td valign="top" align="right"><b>CCGrid'24</b><br></td>
-    
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="myresearch/conference papers/slide-CCGRID-wj.pdf" target="_blank">[slides] </a> 
-       <a href=" " target="_blank">[code]</a>
-       <br>
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/document/10701381" >Improving the Efficiency of Serverless Computing via Core-Level Power Management</a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors:</i>  Du Liu, <b>Jing Wang</b>, Xinkai Wang, Chao Li, Lu Zhang, Xiaofeng Hou, Xiaoxiang Shi, Minyi Guo. 
-      <br><i color="#75787B" style="text-decoration: underline">Conference:  </i>International Symposium on Cluster, Cloud and Internet Computing (CCGrid), 2024. 
-  </tr>
-
-<!--paper -->
-<tr>  
-  <td valign="top" align="right"><b>ICME'24</b><br></td>
-  
-  <td align="left">
-    <p style="margin:0"> 
-    <a href=" " target="_blank">[slides] </a> 
-     <a href=" " target="_blank">[code]</a>
-     <br>
-    <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/document/10687384" >$M^2$SN: Adaptive and Dynamic Multi-modal Shortcut Network Architecture for Latency-aware Applications</a>
-    <br>
-    <i color="#75787B" style="text-decoration: underline">Authors:</i>  Yifei Pu, Chi Wang, Xiaofeng Hou, Cheng Xu, Jiacheng Liu,<b>Jing Wang</b>, Minyi Guo, Chao Li.
-    <br><i color="#75787B" style="text-decoration: underline">Conference:  </i> International Conference on Multimedia and Expo (ICME), 2024. 
-</tr>
-
-  <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>SoCC'23</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="" target="_blank">[pdf]</a> 
-          <a href="" target="_blank">[code]</a> <br>
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1145/3620678.3624650" >Not All Resources are Visible: Exploiting Fragmented Shadow Resources in Shared-State Scheduler Architecture</a>
-          <br>
-          <i color="#75787B" style="text-decoration: underline">Authors: </i> Xinkai Wang, Hao He, Yuancheng Li, Chao Li, Xiaofeng Hou, <b>Jing Wang</b>, Quan Chen, Jingwen Leng, Minyi Guo, Leibo Wang.
-          <br><i color="#75787B" style="text-decoration: underline">Conference: </i> Proceedings of the 14th ACM Symposium on Cloud Computing (SoCC), Nov. 2023.
-      </tr>
-
-<!--paper -->
-<tr>  
-  <td valign="top" align="right"><b>IPDPS'22</b><br></td>
-  
-  <td align="left">
-    <p style="margin:0"> 
-    <a href="myresearch/conference papers/slides-IPDPS22_JingWang_pre.pdf" target="_blank">[slides] </a> 
-     <a href="https://github.com/wjing6/fargraph-rdma" target="_blank">[code]</a>
-     <a href="https://www.bilibili.com/video/BV1c14y1E7rU?t=5.4" target="_blank">[video]</a> 
-     <br>
-    <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/document/10687384" >Excavating the Potential of Graph Workload on RDMA-based Far Memory Architecture</a>
-    <br>
-    <i color="#75787B" style="text-decoration: underline">Authors:</i> <b>Jing Wang</b>, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang,  Junyi Mei, Minyi Guo.
-    <br><i color="#75787B" style="text-decoration: underline">Conference:  </i> International Parallel and Distributed Processing Symposium (IPDPS), 2022. 
-</tr>
-
-
-<!--paper -->
-<tr>  
-  <td valign="top" align="right"><b>ICCD'22</b><br></td>
-  <td align="left">
-    <p style="margin:0"> 
-    <a href="myresearch/conference papers/slide-ICCD22_JingWang_pre.pdf" target="_blank">[slides] </a> 
-     <a href="https://github.com/wjing6/hyfarm" target="_blank">[code]</a>
-     <a href="https://www.bilibili.com/video/BV1kN4y1c7rk?t=5.2" target="_blank">[video]</a> 
-     <br>
-    <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/document/9978358" >HyFarM: Task Orchestration on Hybrid Far Memory for High Performance Per Bit</a>
-    <br>
-    <i color="#75787B" style="text-decoration: underline">Authors:</i> <b>Jing Wang</b>, Chao Li, Junyi Mei, Hao He, Taolei Wang, Pengyu Wang, Lu Zhang, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu.
-    <br><i color="#75787B" style="text-decoration: underline">Conference:  </i> International Conference on Computer Design (ICCD), 2022. 
-</tr>
-
-<!--paper -->
-<tr>  
-  <td valign="top" align="right"><b>ICPE'22</b><br> (Best Paper Award)</td>
-  <td align="left">
-    <p style="margin:0"> 
-    <a href="myresearch/conference papers/ICPE_shaochuanming.pdf" target="_blank">[pdf] </a> 
-     <a href="https://github.com/wjing6/hyfarm" target="_blank">[code]</a>
-
-     <br>
-    <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/10.1145/3489525.3511691" >Oversubscribing GPU Unified Virtual Memory: Implications and Suggestions</a>
-    <br>
-    <i color="#75787B" style="text-decoration: underline">Authors:</i> Chuanming Shao, Jinyang Guo, Pengyu Wang, <b>Jing Wang</b>, Chao Li, Minyi Guo.
-    <br><i color="#75787B" style="text-decoration: underline">Conference:  </i> International Conference on Performance Engineering (ICPE), 2022. 
-</tr>
-
-<!--paper -->
-<tr>  
-  <td valign="top" align="right"><b>PACT'21</b><br></td>
-  <td align="left">
-    <p style="margin:0"> 
-    <a href="myresearch/conference papers/PACT21_skywalker.pdf" target="_blank">[pdf] </a> 
-     <a href="https://github.com/wpybtw/Skywalker" target="_blank">[code]</a>
-
-     <br>
-    <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/document/9563020" >Skywalker: Efficient
-      Alias-method-based Graph Sampling and Random Walk on GPUs</a>
-    <br>
-    <i color="#75787B" style="text-decoration: underline">Authors:</i>  Pengyu Wang, Chao Li, <b>Jing Wang</b>, Taolei Wang, Lu Zhang, Jingwen Leng, Quan Chen, Minyi Guo.
-    <br><i color="#75787B" style="text-decoration: underline">Conference:  </i> International Conference on Parallel Architectures and Compilation Techniques (PACT), 2021. 
-</tr>
-  </tbody></table>
-
-    
-</section>
-
-
-<section id="introduction">
-
-  <h1 id="journalpaper" >Journal Articles</h1>
-
-<table class="lh-base">
-
-  <tbody>
-  <tr>
-  <td valign="top" align="right"><b> Journal</b> <br></td>
-  <td valigh="top" align="left"><b> Paper Content</b></td>
-  </tr>
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>CSUR'26</b><br> (accepted)</td>
-    <td align="left">
-      <p style="margin:0"> 
-       <a href="" target="_blank">[pdf]</a> <br>
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1145/3807443" >Survey of Disaggregated Memory: Cross-Layer Technique Insights for Next-Generation Datacenters</a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i> <b>Jing Wang</b>, Chao Li, Taolei Wang, Jinyang Guo, Hanzhang Yang, Yiming Zhuansun, and Minyi Guo.
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i>  ACM Computing Survey (CSUR), accepted, 2026.
-  </tr>
-
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>JPDC'25</b><br> (accepted)</td>
-    <td align="left">
-      <p style="margin:0"> 
-       <a href="" target="_blank">[pdf]</a> <br>
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1016/j.jpdc.2025.105078" >MMBypass: Towards Efficient Multi-modal AI Computing with Adaptive Bypass Network</a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i> Yifei Pu, Xinfeng Xia, Chi Wang, Cheng Xu, Jiacheng Liu, <b>Jing Wang</b>, Minyi Guo, Jingling Yuan, Chao Li.
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i> Journal of Parallel and Distributed Computing (JPDC), accepted, 2025.
-  </tr>
-
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>TACO'25</b><br></td>
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="" target="_blank">[pdf]</a> 
-       <a href="" target="_blank">[code]</a> <br>
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.1145/3711820" >Enhancing High-Throughput GPU Random Walks Through Multi-Task Concurrency Orchestration</a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i> Cheng Xu, Chao Li, Xiaofeng Hou, Junyi Mei, <b>Jing Wang</b>, Pengyu Wang, Shixuan Sun, Minyi Guo, Baoping Hao.
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i> ACM Transactions on Architecture and Code Optimization (TACO), Vol 22, Issue 1, 2025.
-  </tr>
-
-
-<!--paper -->
-<tr>
-  <td valign="top" align="right"><b>TACO'24</b><br></td>
-  <td align="left">
-    <p style="margin:0"> 
-     <a href=" " target="_blank">[code]</a> <br>
-     <!--paper name-->
-    <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/10.1145/3711820" >Enhancing High-Throughput GPU Random Walks Through Multi-Task Concurrency Orchestration</a>
-    <br>
-    <i color="#75787B" style="text-decoration: underline">Authors: </i> Cheng Xu, Chao Li, Xiaofeng Hou, Junyi Mei, <b>Jing Wang</b>, Pengyu Wang, Shixuan Sun, Minyi Guo, Baoping Hao
-    <br><i color="#75787B" style="text-decoration: underline">Journal: </i> Transactions on Architecture and Code Optimization (TACO), 2024.  
-  </tr>
-
-
-
-<!--paper -->
-  <tr>
-      <td valign="top" align="right"><b>JPDC'23</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-        <a href="myresearch/JPDC2023_Fargraph+_JingWang.pdf" target="_blank">[pdf] </a> 
-         <a href="https://github.com/wjing6/fargraph-rdma" target="_blank">[code]</a> <br>
-         <!--paper name-->
-        <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/10.1016/j.jpdc.2023.02.015" >Fargraph+: Excavating the Parallelism of Graph Computing Workload on RDMA-based Far Memory System</a>
-        <br>
-        <i color="#75787B" style="text-decoration: underline">Authors: </i> <b>Jing Wang</b>, Chao Li, Yibo Liu, Taolei Wang, Junyi Mei, Lu Zhang, Pengyu Wang, Minyi Guo.
-        <br><i color="#75787B" style="text-decoration: underline">Journal: </i> Journal of Parallel Distributed Computing (JPDC), 2023.  
-      </tr>
-
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>TODAES'23</b><br></td>
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="myresearch/DRAGON-jose.pdf" target="_blank">[pdf] </a> 
-       <a href=" " target="_blank">[code]</a> <br>
-       <!--paper name-->
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/10.1145/3524124" >DRAGON: Dynamic Recurrent Accelerator for Graph Online Convolution </a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i><br>José Romero Hung, Chao Li, Taolei Wang, Jinyang Guo, Pengyu Wang, Chuanming Shao, <b>Jing Wang</b>, Guoyong Shi, Xiangwen Liu, Hanqing Wu.
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i> Transactions on Design Automation of Electronic Systems (TODAES), 2023.  
-    </tr>
-
-
-  
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>TACO'21</b><br></td>
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="myresearch/taco21-grus.pdf" target="_blank">[pdf] </a> 
-       <a href="https://github.com/wpybtw/Grus_framework" target="_blank">[code]</a> <br>
-       <!--paper name-->
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/10.1145/3444844" >Grus: Toward
-        Unified-memory-efficient High-performance Graph Processing on GPU</a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i> Pengyu Wang, <b>Jing Wang</b>, Chao Li, Jianzong Wang, Haojin Zhu, Minyi Guo.
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i> Transactions on Architecture and Code Optimization (TACO), 2021.  
-    </tr>
-
-
-
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>TC'21</b><br></td>
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="myresearch/TC21-NEMO-zhanglu.pdf" target="_blank">[pdf] </a> 
-       <a href=" " target="_blank">[code]</a> <br>
-       <!--paper name-->
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/document/9638338" >Tapping into nfv
-        environment for opportunistic serverless edge function deployment </a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i>Lu Zhang, Weiqi Feng, Chao Li, Xiaofeng Hou, Pengyu Wang, <b>Jing Wang</b>, Minyi Guo.
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i> Transactions on Computers (TC), 2021.  
-    </tr>
-
-
-
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>TRETS'21</b><br></td>
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="myresearch/ACEGCN-jose.pdf" target="_blank">[pdf] </a> 
-       <a href=" " target="_blank">[code]</a> <br>
-       <!--paper name-->
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/abs/10.1145/3470536" >ACE-GCN: A Fast data-driven FPGA accelerator for GCN embedding</a>
-      <br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i><br>José Romero Hung, Chao Li, Pengyu Wang, Chuanming Shao, Jinyang Guo, <b>Jing Wang</b>, Guoyong Shi.
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i> Transactions on Reconfigurable Technology and Systems (TRETS) , 2021.  
-    </tr>
-  
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>JCRD'20</b><br></td>
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="myresearch/survey-guojinyang.pdf" target="_blank">[pdf] </a> 
-       <a href=" " target="_blank">[code]</a> <br>
-       <!--paper name-->
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://crad.ict.ac.cn/CN/10.7544/issn1000-1239.2020.20200106" >Programming and Developing Environment for FPGA Graph Processing: Survey and Exploration </a>
-      <br>FPGA图计算的编程与开发环境：综述和探索<br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i> Jinyang Guo, Chuanming Shao, <b>Jing Wang </b>, Chao Li ,  Haojin Zhu,  Minyi Guo. 
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i> 计算机研究与发展，Journal of Computer Research and Development (JCRD), 2020.  
-    </tr>
-  
-
-  <!--paper -->
-  <tr>
-    <td valign="top" align="right"><b>SCIS'19</b><br></td>
-    <td align="left">
-      <p style="margin:0"> 
-      <a href="myresearch/SCIS-wangjing-graphsurvey.pdf" target="_blank">[slides] </a> 
-       <a href="https://github.com/wpybtw/Grus_framework" target="_blank">[code]</a> <br>
-       <!--paper name-->
-      <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.sciengine.com/SSI/doi/10.1360/N112018-00281" >Memory System Optimization for Graph Processing: A Survey </a>
-      <br>面向图计算的内存系统优化技术综述<br>
-      <i color="#75787B" style="text-decoration: underline">Authors: </i><b>Jing Wang</b>, Lu Zhang, Pengyu Wang, Jiahong Xu, Chao Li, Haojin Zhu, Xuehai Qian, Minyi Guo.
-      <br><i color="#75787B" style="text-decoration: underline">Journal: </i> 中国科学信息科学, Science China Information Science (SCIS), 2019.  
-    </tr>
-
-
-
-
-  </tbody></table>
-</section>
-
-
-
-
-<section id="poster">
-
-  <h1 id="poster" >Short Paper/ Research Poster</h1>
-
-<table class="lh-base">
-  <tbody>
-  <tr>
-  <td valign="top" align="right"><b> Conference</b> <br></td>
-  <td valigh="top" align="left"><b>  Poster Content</b></td>
-  </tr>
-
-
-<!--paper -->
-<tr>
-  <td valign="top" align="right"><b>PPoPP'23</b><br></td>
-  <td align="left">
-    <p style="margin:0"> 
-      <a href="myresearch/cowalker-xucheng.pdf">[poster] </a> 
-    <a href="myresearch/cowalker-xucheng.pdf">[pdf] </a> 
-     <a href=" ">[code]</a> <br>
-     <a href="https://ppopp23.sigplan.org/details/PPoPP-2023-papers/37/POSTER-High-Throughput-GPU-Random-Walk-with-Fine-tuned-Concurrent-Query-Processing#:~:text=CoWalker%20introduces%20a%20multi-level%20concurrent%20execution%20model%20and,memory%20access%20pattern%2C%20which%20leads%20to%20higher%20throughput.">Program</a>
-     <!--paper name-->
-    <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.acm.org/doi/10.1145/3572848.3577482" >CoWalker: High-Throughput GPU Random Walk with Fine-tuned Concurrent Query Processing</a>
-    <br>
-    <i color="#75787B" style="text-decoration: underline">Authors: </i> Cheng Xu, Chao Li, Pengyu Wang, Xiaofeng Hou, <b>Jing Wang</b>, Shixuan Sun, Minyi Guo, and Dongbai Chen, and  Xiangwen Liu.
-    <br><i color="#75787B" style="text-decoration: underline">Conference: </i> International Conference for Principles and Practice of Parallel Programming (PPoPP), research poster, 2023.  
-  </tr>
-
-
-
-  <!--paper -->
-  <tr>
-      <td valign="top" align="right"><b>SC'23</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="myresearch/sc2023-poster-parleiden-v3.pdf">[poster]</a> 
-          <a href="myresearch/sc23_ParLeiden_content.pdf">[content]</a> 
-         <a href=" ">[code]</a> <br>
-         <!--paper name-->
-        <a style="margin:0; font-size:100%; font-weight:bold" href="https://sc23.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost106.html" >ParLeiden: Boosting Parallelism of Distributed Leiden Algorithm on Large-scale Graphs</a>
-        <br>
-        <i color="#75787B" style="text-decoration: underline">Authors: </i>Yongmin Hu*, <b>Jing Wang*</b>, Cheng Zhao, Yibo Liu, Cheng Chen, Xiaoliang Cong,  Chao Li.
-        <br><i color="#75787B" style="text-decoration: underline">Conference: </i> International Conference for High Performance Computing, Networking, Storage, and Analysis (SC), research poster, 2023.  
-      </tr>
-
-
-
-    <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>SC'21</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="myresearch/SC2020_poster.pdf">[poster]</a> 
-          <a href="myresearch/SC2020_content.pdf">[content]</a> 
-         <a href=" ">[code]</a> <br>
-         <!--paper name-->
-        <a style="margin:0; font-size:100%; font-weight:bold" href="https://sc21.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost156.html" >Fargraph: Optimizing Graph Workload on RDMA-based Far Memory</a>
-        <br>
-        <i color="#75787B" style="text-decoration: underline">Authors: </i><b>Jing Wang</b>, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, and Minyi Guo.
-        <br><i color="#75787B" style="text-decoration: underline">Conference: </i> International Conference for High Performance Computing, Networking, Storage, and Analysis (SC), research poster, 2021.  
-      </tr>
-
-
-
-    <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>Benchconcil'19</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-          <a href="https://www.benchcouncil.org/bench2019/program.html">[program]</a>
-        <a href="https://www.benchcouncil.org/bench2019/file/slides/challenge3.pdf">[pdf]</a>
-         <a href=" ">[code]</a> <br>
-         <!--paper name-->
-        <a style="margin:0; font-size:100%; font-weight:bold" href="https://sc21.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost156.html" >Exploiting parallelism, sparsity and locality to accelerate matrix factorization on x86 platform</a>
-        <br>
-        <i color="#75787B" style="text-decoration: underline">Authors: </i>Weixin Deng, Pengyu Wang, <b>Jing Wang</b>, and Chao Li.
-        <br><i color="#75787B" style="text-decoration: underline">Conference: </i> International Symposium on Benchmarking, Measuring and Optimizing (BenchCouncil), Stutent Challenge, First Prize, 2019.  
-      </tr>
-
-
-    <!--paper -->
-    <tr>
-      <td valign="top" align="right"><b>CCCF'23</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-        <a href="myresearch/Taming_Memory_With_Disaggregation.pdf">[pdf]</a>
-         <a href=" ">[code]</a> <br>
-         <!--paper name-->
-        <a style="margin:0; font-size:100%; font-weight:bold" href="https://dl.ccf.org.cn/article/articleDetail.html?type=xhtx_thesis&_ack=1&id=6262527077517312" >Translation of "Taming Memory With Disaggregation", 驾驭内存：分离式内存</a>
-        <br>
-        <i color="#75787B" style="text-decoration: underline">Authors: </i>Weixin Deng, Pengyu Wang, <b>Jing Wang</b>, and Chao Li.
-        <br><i color="#75787B" style="text-decoration: underline">Conference: </i> 中国计算机协会通讯,CCCF, 2023.  
-      </tr>
-  
-  </tbody></table>
-</section>
-
-
-<section id="ongoingpaper">
-
-  <h1 id="ongoingpaper" >Ongoing Papers </h1>
-
-<table class="lh-base">
-
-  <tbody>
-  <tr>
-  <td valign="top" align="right"><b> Conference</b> <br></td>
-  <td valigh="top" align="left"><b>  Paper Content</b></td>
-  </tr>
-<!--paper -->
-  <tr>
-      <td valign="top" align="right"><b>Arxiv</b><br></td>
-      <td align="left">
-        <p style="margin:0"> 
-        <a href="myresearch/Survey_of_Disaggregated_Memory (3).pdf" target="_blank">[pdf] </a> 
-         <!--paper name-->
-         <br>
-        <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/abs/2503.20275" >Survey of Disaggregated Memory: Cross-layer Technique Insights for Next-Generation Datacenters</a> 
-        <br>
-        <i color="#75787B" style="text-decoration: underline">Authors: </i><b>Jing Wang</b>, Chao Li, Taolei Wang, Jinyang Guo, Hanzhang Yang, Yiming Zhuansun, Minyi Guo.
-      </tr>
-
-<!--paper -->
-<tr>
-  <td valign="top" align="right"><b>Arxiv</b><br></td>
-  <td align="left">
-    <p style="margin:0"> 
-    <a href="myresearch/JPDC2023_Fargraph+_JingWang.pdf" target="_blank">[pdf] </a> 
-    <br>
-     <!--paper name-->
-    <a style="margin:0; font-size:100%; font-weight:bold" href="https://arxiv.org/pdf/2202.12479.pdf" >On The Design of a Light-weight FPGA Programming Framework for Graph Applications</a> 
-    <br>
-    <i color="#75787B" style="text-decoration: underline">Authors: </i><b>Jing Wang</b>,Jinyang Guo, and Chao Li.
-  </tr>
-  </tbody></table>
-</section>
-
-
-
-
+<body data-page-node-id="S6GkPtE1X9AhvPMhxEXPGF">
+<div class="wrap" data-page-node-id="lSTdr7QSPXtovrJ0teXvUh">
+  <header data-page-node-id="YCfbRERY3gY9erne1f0Uto">
+    <h1 data-page-node-id="jwWj9hrFmpdgHAlDWEokjN">Jing Wang (王靖) · 论文成果汇总</h1>
+    <p data-page-node-id="YZxOEKGEigEV0pArJXEKd3">Publications · 更新于 2026-09-05</p>
+  </header>
+
+  <div class="search-bar" data-page-node-id="XTDz9Ni62rn3548yW9tglG">
+    <span class="icon" data-page-node-id="CnE7VSxNsDUHG5mPooiLyE">🔍</span>
+    <input id="search" type="text" placeholder="搜索题目 / 作者 / 会议名称 / 级别 / 奖项，如 ICPP、Jing Wang、disaggregated" oninput="onSearch()" data-page-node-id="EcAxSrYo1RuVGwyZSc8gew">
+    <button class="clear" id="clearBtn" onclick="clearSearch()" data-page-node-id="M9sh0UKvXp22LgVEr0IbYE">✕</button>
   </div>
+
+  <div class="filter-bar" data-page-node-id="UsL3vMLe1hBkjRxH1KOHQ1">
+    <span class="label" data-page-node-id="pw6oBW2kZo20uZKQNmdcqV">作者：</span>
+    <button id="f-all" class="active" onclick="setFilter(false)" data-page-node-id="UBUV0Pk9eycCQqTH1YMdGN">全部</button>
+    <button id="f-first" onclick="setFilter(true)" data-page-node-id="UFk0CRIvbQcO1gfRt0NcqE">一作文章</button>
+    <span class="sep" data-page-node-id="Sep0000000000000001"></span>
+    <span class="label" data-page-node-id="Lbl0000000000000001">级别：</span>
+    <button id="lv-all" class="active" onclick="setLevel('')" data-page-node-id="LvA0000000000000001">全部</button>
+    <button id="lv-a" onclick="setLevel('CCF A')" data-page-node-id="LvB0000000000000001">CCF A</button>
+    <button id="lv-b" onclick="setLevel('CCF B')" data-page-node-id="LvC0000000000000001">CCF B</button>
+  </div>
+
+  <section id="module-detail" data-page-node-id="hoa5YaxC7JdSeUpqY9QLpr"></section>
+
+  <footer data-page-node-id="j46XAZPR8YqB7m1Y0zrAwG">数据来源：Jing_Wang_成果汇总_v2.xlsx · 点击论文题目可跳转至原文链接（如有）</footer>
+</div>
+
+<script>
+/* fa: 第一作者身份 —— "一作" / "共一"（共同一作）；无该字段表示非第一作者 */
+const DATA = {
+  "会议": [
+    {t:"MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading", ab:"ASPLOS", lv:"CCF A", au:"Peng Tang, Jiacheng Liu, Xiaofeng Hou, Yifei Pu, Jing Wang, Pheng-Ann Heng, Chao Li, Minyi Guo", venue:"Proc. the 31st International Conference on Architectural Support for Programming Languages and Operating Systems", date:"2026, Accepted", d:"2026-12", award:"", link:"https://dl.acm.org/doi/10.1145/3779212.3790187"},
+    {t:"AUM: Unleashing the Efficiency Potential of Shared Processors with Accelerator Units for LLM Serving", ab:"HPCA", lv:"CCF A", au:"Xinkai Wang, Chao Li, Yiming Zhuansun, Jinyang Guo, Xiaofeng Hou, Jing Wang, Luping Wang, Weigao Chen, Cheng Huang, Guodong Yang, Liping Zhang, Minyi Guo", venue:"Proc. the 32nd IEEE International Symposium on High-Performance Computer Architecture", date:"2026, Accepted", d:"2026-12", award:"", link:""},
+    {t:"BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale", ab:"HPDC", lv:"CCF A", au:"Chengying Huan, Ziheng Meng, Zhengyi Yang, Yongchao Liu, Jie Zhang, Qing Wang, Jing Wang, Shaonan Ma, Zhibin Wang, Mingxing Zhang, Rong Gu, Baokun Wang, Guihai Chen, Chen Tian", venue:"ACM International Symposium on High-Performance Parallel and Distributed Computing", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3806645.3807585"},
+    {t:"SensE: From Sampled-Input Execution to Stream-Aware Edge Multimodal MoE Inference", ab:"ICCD", lv:"CCF B", au:"Cheng Xu, Xiaofeng Hou, Chao Li, Wenfeng Wang, Xinfeng Xia, Jing Wang, Jiacheng Liu, Minyi Guo", venue:"International Conference on Computer Design", date:"Accepted", d:"2026-11", award:"", link:""},
+    {t:"HACache: Leveraging Read Performance with Cache in a Heterogeneous Array", ab:"ICCD", lv:"CCF B", au:"Yaqi Li, Jialin Liu, Dingcui Yu, Edwin Sha, Qingfeng Zhuge, Jing Wang, Liang Shi", venue:"International Conference on Computer Design", date:"Accepted", d:"2026-11", award:"", link:""},
+    {t:"Graph.hls: A Domain-Specific Language for Easy and Efficient Graph Accelerator Design", ab:"ISCA", lv:"CCF A", au:"Feiyang Wu, Xuxiao Yang, Zhuohang Bian, Jing Wang, Ruifan Xu, Guangyu Sun, Yun Liang, Youwei Zhuo", venue:"International Symposium on Computer Architecture", date:"", d:"2026-10", award:"", link:""},
+    {t:"Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool", ab:"ICPP", lv:"CCF B", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Xinkai Wang, Taolei Wang, Jinyang Guo, Minyi Guo, Jie Meng, Shuangfu Zeng", venue:"Proc. the 55th International Conference on Parallel Processing", date:"September 2026", d:"2026-09", award:"", link:""},
+    {t:"TriCooling-Sim: Efficient Thermal Simulation for High-Density Micro AI Data Centers", ab:"NPC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"Proc. the 21st IFIP International Conference on Network and Parallel Computing", date:"Nov. 2025", d:"2025-11", award:"Best Student Paper Award", link:"https://dl.acm.org/doi/abs/10.1007/978-3-032-10466-3_19"},
+    {t:"CGO: Cloud Game Orchestration via Resource Preception and CODEC Optimization", ab:"NPC", lv:"CCF C", au:"Taolei Wang, Chao Li, Jing Wang, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 21st IFIP International Conference on Network and Parallel Computing", date:"Nov. 2025", d:"2025-11", award:"", link:"https://dl.acm.org/doi/10.1007/978-3-032-10466-3_4"},
+    {t:"AsymServe: Demystifying and Optimizing LLM Serving Efficiency on CPU Acceleration Units", ab:"APPT", lv:"CCF C", au:"Xinkai Wang, Yiming Zhuansun, Chao Li, Jing Wang, Xiaofeng Hou, Lingyu Sun, Luping Wang, Minyi Guo", venue:"Proc. the International Symposium on Advanced Parallel Processing Technology", date:"July 2025", d:"2025-07", award:"", link:"https://doi.org/10.1007/978-981-95-1021-4_17"},
+    {t:"Boosting Data Center Performance via Intelligently Managed Multi-backend Disaggregated Memory", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Hanzhang Yang, Chao Li, Yiming Zhuansun, Wang Yuan, Cheng Xu, Xiaofeng Hou, Minyi Guo, Yang Hu, Yaqian Zhao", venue:"Proc. Int. Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2024", d:"2024-11", award:"", link:"https://doi.org/10.1109/SC41406.2024.00043"},
+    {t:"FlowWalker: A Memory-efficient and High-performance GPU-based Dynamic Graph Random Walk Framework", ab:"VLDB", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Cheng Xu, Cheng Chen, Yibo Liu, Jing Wang, Cheng Zhao, Xiaofeng Hou, Minyi Guo, Bingsheng He, Xiaoliang Cong", venue:"Proc. the 50th International Conference on Very Large Databases", date:"Aug. 2024", d:"2024-08", award:"", link:"https://doi.org/10.14778/3659437.3659438"},
+    {t:"M2SN: Adaptive and Dynamic Multi-modal Shortcut Network Architecture for Latency-aware Applications", ab:"ICME", lv:"CCF B", au:"Yifei Pu, Chi Wang, Xiaofeng Hou, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Chao Li", venue:"Proc. the IEEE International Conference on Multimedia and Expo", date:"July 2024", d:"2024-07", award:"Oral", link:"https://doi.org/10.1109/ICME57554.2024.10687384"},
+    {t:"CoCG: Fine-grained Cloud Game Co-location on Heterogeneous Platform", ab:"IPDPS", lv:"CCF B", au:"Taolei Wang, Jing Wang, Chao Li, Cheng Xu, Xiaofeng Hou, Minyi Guo", venue:"Proc. the 38th International Parallel and Distributed Processing Symposium", date:"May 2024", d:"2024-05", award:"", link:"https://ieeexplore.ieee.org/document/10579195"},
+    {t:"Improving the Efficiency of Serverless Computing via Core-Level Power Management", ab:"CCGrid", lv:"CCF C", au:"Du Liu, Jing Wang, Xinkai Wang, Chao Li, Lu Zhang, Xiaofeng Hou, Xiaoxiang Shi, Minyi Guo", venue:"Proc. the 24th ACM/IEEE International Symposium on Cluster, Cloud and Internet Computing", date:"May 2024", d:"2024-05", award:"", link:"https://ieeexplore.ieee.org/document/10701381"},
+    {t:"Not All Resources are Visible: Exploiting Fragmented Shadow Resources in Shared-State Scheduler Architecture", ab:"SoCC", lv:"CCF B", au:"Xinkai Wang, Hao He, Yuancheng Li, Chao Li, Xiaofeng Hou, Jing Wang, Quan Chen, Jingwen Leng, Minyi Guo, Leibo Wang", venue:"Proc. the 14th ACM Symposium on Cloud Computing", date:"Nov. 2023", d:"2023-11", award:"", link:"https://doi.org/10.1145/3620678.3624650"},
+    {t:"HyFarM: Task Orchestration on Hybrid Far Memory for High Performance Per Bit", ab:"ICCD", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Junyi Mei, Hao He, Taolei Wang, Pengyu Wang, Lu Zhang, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu", venue:"Proc. the 40th International Conference on Computer Design", date:"Oct. 2022", d:"2022-10", award:"", link:"https://doi.org/10.1109/ICCD56317.2022.00016"},
+    {t:"Excavating the Potential of Graph Workload on RDMA-based Far Memory Architecture", ab:"IPDPS", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo", venue:"Proc. the 36th International Parallel and Distributed Processing Symposium", date:"May 2022", d:"2022-05", award:"Invited for Journal Publication", link:"https://ieeexplore.ieee.org/document/9820708"},
+    {t:"Oversubscribing GPU Unified Virtual Memory: Implications and Suggestions", ab:"ICPE", lv:"CCF C", au:"Chuanming Shao, Jinyang Guo, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the 13th ACM/SPEC International Conference on Performance Engineering", date:"Apr. 2022", d:"2022-04", award:"Best Paper Award Runner-Up", link:"https://doi.org/10.1145/3489525.3511691"},
+    {t:"Skywalker: Efficient Alias-method-based Graph Sampling and Random Walk on GPUs", ab:"PACT", lv:"CCF B", au:"Pengyu Wang, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Jingwen Leng, Quan Chen, Minyi Guo", venue:"Proc. the 30th International Conference on Parallel Architectures and Compilation Techniques", date:"Sep. 2021", d:"2021-09", award:"", link:"https://doi.org/10.1109/PACT52795.2021.00029"},
+    {t:"DR DRAM: Accelerating Memory-Read-Intensive Applications", ab:"ICCD", lv:"CCF B", au:"Yuhai Cao, Chao Li, Quan Chen, Jingwen Leng, Minyi Guo, Jing Wang, Weigong Zhang", venue:"Proc. the 36th IEEE International Conference on Computer Design", date:"Oct. 2018", d:"2018-10", award:"", link:"https://doi.org/10.1109/ICCD.2018.00053"}
+  ],
+  "期刊": [
+    {t:"Survey of Disaggregated Memory: Cross-Layer Technique Insights for Next-Generation Datacenters", ab:"CSUR", lv:"顶级综述", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Jinyang Guo, Hanzhang Yang, Yiming Zhuansun, Minyi Guo", venue:"ACM Computing Surveys", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3807443"},
+    {t:"DGS: A GPU-based Adaptive Graph Sampling Framework", ab:"TACO", lv:"CCF A", au:"Junyi Mei, Shixuan Sun, Chao Li, Xinkai Wang, Jing Wang, Xiaofeng Hou, Minyi Guo, Yongchao Liu, Chuntao Hong", venue:"ACM Transactions on Architecture and Code Optimization", date:"2026, Accepted", d:"2026-12", award:"", link:"https://doi.org/10.1145/3817060"},
+    {t:"TriCooling-CAT: A Carbon Analysis Toolkit for SoC-Cluster Micro AI Data Center Design", ab:"TCC", lv:"CCF C", au:"Jinyang Guo, Xinkai Wang, Jing Wang, Xiaofeng Hou, Chao Li, Minyi Guo", venue:"IEEE Transactions on Cloud Computing", date:"Accepted", d:"2026-11", award:"", link:""},
+    {t:"COMPOSE: Cross-Layer Modeling and Design Space Exploration for Efficient Computational Sensor Systems", ab:"TACO", lv:"CCF A", au:"", venue:"ACM Transactions on Architecture and Code Optimization", date:"Major revision", d:"2026-06", award:"", link:""},
+    {t:"PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving", ab:"TACO", lv:"CCF A", au:"Wenfeng Wang, Xiaofeng Hou, Peng Tang, Hengyi Zhou, Jing Wang, Xinkai Wang, Chao Li, Minyi Guo", venue:"ACM Transactions on Architecture and Code Optimization", date:"Major revision", d:"2026-05", award:"", link:"https://arxiv.org/abs/2603.23049"},
+    {t:"MMBypass: Towards Efficient Multi-modal AI Computing with Adaptive Bypass Network", ab:"JPDC", lv:"CCF B", au:"Yifei Pu, Xinfeng Xia, Chi Wang, Cheng Xu, Jiacheng Liu, Jing Wang, Minyi Guo, Jingling Yuan, Chao Li", venue:"Journal of Parallel and Distributed Computing", date:"2025, Accepted", d:"2025-12", award:"", link:"https://doi.org/10.1016/j.jpdc.2025.105078"},
+    {t:"Enhancing High-Throughput GPU Random Walks Through Multi-Task Concurrency Orchestration", ab:"TACO", lv:"CCF A", au:"Cheng Xu, Chao Li, Xiaofeng Hou, Junyi Mei, Jing Wang, Pengyu Wang, Shixuan Sun, Minyi Guo, Baoping Hao", venue:"ACM Transactions on Architecture and Code Optimization", date:"Vol 22, Issue 1, 2025", d:"2025-03", award:"", link:"https://doi.org/10.1145/3711820"},
+    {t:"Optimizing GPU-based Graph Sampling and Random Walk for Efficiency and Scalability", ab:"TC", lv:"CCF A", au:"Pengyu Wang, Cheng Xu, Chao Li, Jing Wang, Taolei Wang, Lu Zhang, Xiaofeng Hou, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 72, Issue 9, 2023", d:"2023-09", award:"", link:"https://doi.org/10.1109/TC.2023.3251860"},
+    {t:"Fargraph+: Excavating the Parallelism of Graph Processing Workload on RDMA-based Far Memory System", ab:"JPDC", lv:"CCF B", fa:"一作", au:"Jing Wang, Chao Li, Yibo Liu, Taolei Wang, Junyi Mei, Lu Zhang, Pengyu Wang, Minyi Guo", venue:"Journal of Parallel and Distributed Computing", date:"July 2023", d:"2023-07", award:"", link:"https://doi.org/10.1016/j.jpdc.2023.02.015"},
+    {t:"Tapping into NFV Environment for Opportunistic Serverless Edge Function Deployment", ab:"TC", lv:"CCF A", au:"Lu Zhang, Weiqi Feng, Chao Li, Xiaofeng Hou, Pengyu Wang, Jing Wang, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 71, Issue 10, 2022", d:"2022-10", award:"", link:"https://doi.org/10.1109/TC.2021.3132776"},
+    {t:"ACE-GCN: A Fast Data-Driven FPGA Accelerator for GCN Embedding", ab:"TRETS", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Pengyu Wang, Chuanming Shao, Jinyang Guo, Jing Wang, Guoyong Shi", venue:"ACM Transactions on Reconfigurable Technology and Systems", date:"Vol 14, Issue 4, 2022", d:"2022-10", award:"", link:"https://doi.org/10.1145/3470536"},
+    {t:"DRAGON: Dynamic Recurrent Accelerator for Graph Online Convolution", ab:"TODAES", lv:"CCF B", au:"Jose Romero Hung, Chao Li, Taolei Wang, Jinyang Guo, Pengyu Wang, Chuanming Shao, Jing Wang, Guoyong Shi, Xiangwen Liu, Hanqing Wu", venue:"ACM Transactions on Design Automation of Electronic Systems", date:"Vol 28, Issue 1, 2022", d:"2022-01", award:"", link:"https://doi.org/10.1145/3524124"},
+    {t:"Grus: Toward Unified-Memory-Efficient, High-Performance Graph Processing on GPU", ab:"TACO", lv:"CCF A", au:"Pengyu Wang, Jing Wang, Chao Li, Jianzong Wang, Haojin Zhu, Minyi Guo", venue:"ACM Transactions on Architecture and Code Optimization", date:"Vol 18, Issue 2, 2021", d:"2021-04", award:"", link:"https://doi.org/10.1145/3444844"},
+    {t:"DR Refresh: Releasing DRAM Potential by Enabling Read Accesses under Refresh", ab:"TC", lv:"CCF A", au:"Yuhai Cao, Chao Li, Jing Wang, Weigong Zhang, Quan Chen, Jingwen Leng, Bin Yao, Yao Shen, Minyi Guo", venue:"IEEE Transactions on Computers", date:"Vol 68, Issue 11, 2019", d:"2019-11", award:"", link:"https://doi.org/10.1109/TC.2019.2914679"},
+    {t:"Edge-Oriented Computing Paradigms: A Survey on Architecture Design and System Management", ab:"CSUR", lv:"顶级综述", au:"Chao Li, Yushu Xue, Jing Wang, Weigong Zhang, Tao Li", venue:"ACM Computing Surveys", date:"Vol 51, Issue 2, 2018", d:"2018-04", award:"", link:""}
+  ],
+  "短文与Poster": [
+    {t:"LiveGraph: High-Performance On-FPGA Dynamic Graph Updating Framework", ab:"FCCM", lv:"", au:"Yufeng Luo, Peikun Hong, Jing Wang, Feiyang Wu, Chao Li, Minyi Guo", venue:"IEEE 34th Annual International Symposium on Field-Programmable Custom Computing Machines", date:"2026", d:"2026-12", award:"", link:"https://ieeexplore.ieee.org/document/11552661"},
+    {t:"Accelerating Large-Scale Out-of-GPU-Core GNN Training with Two-Level Historical Caching", ab:"APPT", lv:"CCF C", fa:"一作", au:"Jing Wang, Taolei Wang, Juntao Huang, Yibo Liu, Xinkai Wang, Marius Kreutzer, Chao Li, Minyi Guo", venue:"Proc. the International Symposium on Advanced Parallel Processing Technology", date:"July 2025", d:"2025-07", award:"", link:"https://doi.org/10.1007/978-981-95-1021-4_22"},
+    {t:"ParLeiden: Boosting Parallelism of Distributed Leiden Algorithm on Large-scale Graphs", ab:"SC", lv:"CCF A", fa:"共一", au:"Yongmin Hu, Jing Wang, Cheng Zhao, Yibo Liu, Cheng Chen, Xiaoliang Cong, Chao Li", venue:"Proc. International Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2023", d:"2023-11", award:"", link:"https://sc23.supercomputing.org/proceedings/tech_poster/tech_poster_pages/rpost106.html"},
+    {t:"CoWalker: High-Throughput GPU Random Walk with Fine-tuned Concurrent Query Processing", ab:"PPoPP", lv:"CCF A", au:"Cheng Xu, Pengyu Wang, Xiaofeng Hou, Jing Wang, Shixuan Sun, Minyi Guo, Hanqing Wu, Dongbai Chen, Xiangwen Liu", venue:"Proc. the 28th ACM SIGPLAN Annual Symposium on Principles and Practices of Parallel Programming", date:"Feb. 2023", d:"2023-02", award:"", link:"https://doi.org/10.1145/3572848.3577482"},
+    {t:"Fargraph: Optimizing Graph Workload on RDMA-based Far Memory Architecture", ab:"SC", lv:"CCF A", fa:"一作", au:"Jing Wang, Chao Li, Taolei Wang, Lu Zhang, Pengyu Wang, Junyi Mei, Minyi Guo", venue:"Proc. International Conference for High Performance Computing, Networking, Storage, and Analysis", date:"Nov. 2021", d:"2021-11", award:"", link:"https://sc21.supercomputing.org/proceedings/tech_poster/"},
+    {t:"PSL: Exploiting Parallelism, Sparsity and Locality to Accelerate Matrix Factorization on x86 Platforms", ab:"Bench", lv:"CCF C", au:"Weixin Deng, Pengyu Wang, Jing Wang, Chao Li, Minyi Guo", venue:"Proc. the 2019 Int. Symp. on Benchmarking, Measuring and Optimization", date:"Nov. 2019", d:"2019-11", award:"", link:"http://benchcouncil.org/competition/papers/Competition_2019_paper_10.pdf"}
+  ],
+  "中文期刊": [
+    {t:"使用HLS开发FPGA异构加速系统: 问题、优化方法和机遇", ab:"", lv:"中文核心", au:"徐诚，郭进阳，李超，王靖，汪陶磊，赵杰茹", venue:"计算机科学与探索", date:"2023", d:"2023-06", award:"", link:"https://dl.ccf.org.cn/article/articleDetail.html?type=qkwz&_ack=2&id=6624890368280576"},
+    {t:"FPGA图计算的编程与开发环境：综述和探索", ab:"", lv:"CCF A", au:"郭进阳，邵传明，王靖，李超，朱浩瑾，过敏意", venue:"计算机研究与发展", date:"2020", d:"2020-06", award:"", link:"http://crad.ict.ac.cn/CN/10.7544/issn1000-1239.2020.20200106"},
+    {t:"面向图计算加速的内存系统优化综述", ab:"", lv:"CCF A", fa:"一作", au:"王靖，张路，王鹏宇，徐嘉鸿，李超，朱浩瑾，钱学海，过敏意", venue:"中国科学：信息科学", date:"2019", d:"2019-06", award:"", link:""}
+  ]
+};
+
+let keyword = "";
+let onlyFirst = false;
+let lvFilter = "";             // "" | "CCF A" | "CCF B"
+const collapsed = new Set();   // 记录被折叠的分组名称
+
+const lvClass = lv => lv.includes("CCF A") || lv === "顶级综述" ? "lv-A" : lv.includes("CCF B") ? "lv-B" : lv.includes("CCF C") || lv === "中文核心" ? "lv-C" : "lv-none";
+const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const escapeHtml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const boldName = s => s.replace(/Jing Wang/g, "<b>Jing Wang</b>").replace(/王靖/g, "<b>王靖</b>");
+function hl(s) {
+  if (!s) return "";
+  if (!keyword) return String(s);
+  return String(s).replace(new RegExp(escRe(keyword), "gi"), m => `<mark>${m}</mark>`);
+}
+/* 时间排序：固定最新优先（降序） */
+const sorted = list => [...list].sort((a, b) => b.d.localeCompare(a.d));
+
+function matches(p) {
+  if (onlyFirst && !p.fa) return false;
+  if (lvFilter && p.lv !== lvFilter) return false;
+  if (!keyword) return true;
+  const hay = [p.t, p.au, p.venue, p.ab, p.lv, p.date, p.award].join(" ").toLowerCase();
+  return hay.includes(keyword.toLowerCase());
+}
+
+function renderDetail() {
+  let html = "";
+  for (const [cat, list] of Object.entries(DATA)) {
+    const hits = sorted(list.filter(matches));
+    if (!hits.length) continue;
+    const isCollapsed = collapsed.has(cat);
+    html += `<div class="cat-block${isCollapsed ? " collapsed" : ""}">
+      <div class="group-title" onclick="toggleGroup('${cat}')" title="点击折叠 / 展开该分组">
+        <span class="caret">▼</span>
+        <span>${cat}</span>
+        <span class="cnt">${hits.length} 篇</span>
+        <span class="tip">${isCollapsed ? "已折叠 · 点击展开" : ""}</span>
+      </div>
+      <div class="detail-list">`;
+    for (const p of hits) {
+      const abbr = p.ab ? ` <abbr>(${hl(p.ab)})</abbr>` : "";
+      const datePart = p.date ? `, ${hl(p.date)}` : "";
+      const authors = p.au
+        ? `<span class="authors">${hl(boldName(p.au))}</span>`
+        : `<span class="authors">（作者信息待补充）</span>`;
+      const titleHtml = p.link
+        ? `<a class="ctitle" href="${p.link}" target="_blank" rel="noopener">“${hl(p.t)}”</a>`
+        : `<span class="ctitle">“${hl(p.t)}”</span>`;
+      const citation = `${authors}. ${titleHtml}. <span class="venue">${hl(p.venue)}${abbr}</span>${datePart}.`;
+      html += `<div class="detail-card">
+        <div class="detail-head">
+          <span class="cat-tag">${cat}</span>
+          <span class="lv ${lvClass(p.lv)}">${hl(p.lv) || "—"}</span>
+          ${p.ab ? `<span class="abbr-chip">${hl(p.ab)}</span>` : ""}
+        </div>
+        <div class="citation">${citation}</div>
+        ${(p.award || p.fa) ? `<div class="meta-row">
+          ${p.fa ? `<span class="badge first">${p.fa === "共一" ? "共同一作" : "第一作者"}</span>` : ""}
+          ${p.award ? `<span class="badge award">🏆 ${hl(p.award)}</span>` : ""}
+        </div>` : ""}
+      </div>`;
+    }
+    html += `</div></div>`;
+  }
+  document.getElementById("module-detail").innerHTML = html ||
+    `<div class="empty">没有符合条件的论文${keyword ? `（关键字 “${escapeHtml(keyword)}”）` : ""}，换个关键字或筛选条件试试</div>`;
+}
+
+function onSearch() {
+  keyword = document.getElementById("search").value.trim();
+  document.getElementById("clearBtn").classList.toggle("show", !!keyword);
+  renderDetail();
+}
+
+function clearSearch() {
+  document.getElementById("search").value = "";
+  onSearch();
+  document.getElementById("search").focus();
+}
+
+function setFilter(first) {
+  onlyFirst = first;
+  document.getElementById("f-all").classList.toggle("active", !first);
+  document.getElementById("f-first").classList.toggle("active", first);
+  renderDetail();
+}
+
+/* 级别筛选："" / "CCF A" / "CCF B"，与作者筛选、搜索可叠加 */
+function setLevel(lv) {
+  lvFilter = lv;
+  document.getElementById("lv-all").classList.toggle("active", lv === "");
+  document.getElementById("lv-a").classList.toggle("active", lv === "CCF A");
+  document.getElementById("lv-b").classList.toggle("active", lv === "CCF B");
+  renderDetail();
+}
+
+/* 折叠 / 展开：按分组名记录状态 */
+function toggleGroup(cat) {
+  if (collapsed.has(cat)) collapsed.delete(cat); else collapsed.add(cat);
+  renderDetail();
+}
+
+renderDetail();
+</script>
+</body>
+
+
 
 
 <!-- <div class="box" id="sample-boxes">
