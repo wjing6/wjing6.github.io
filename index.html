@@ -1,389 +1,474 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" data-page-node-id="jBBAKg2ZBk0XiGrPPMx7aG">
+<head data-page-node-id="knyK9XEVqGRy3jQroDdGJS">
+  <meta charset="utf-8" data-page-node-id="MGq6ep0MSBeZhAtKk7FFQT">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" data-page-node-id="UCVWWwrlxQSOXl85er2Ro0">
+  <title>Jing Wang’s Homepage</title>
+
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
-    <title>Jing  Wang’s Homepage</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxcss@latest/dist/box.min.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- New GA4 tracking code, see https://support.google.com/analytics/answer/10271001#analyticsjs-enable-basic --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNJD50R0Z7"></script>
-    <script>
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNJD50R0Z7"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GNJD50R0Z7');
-    </script>
+  </script>
 
-    <!-- For all browsers -->
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
+  <!-- For all browsers -->
+  <link rel="stylesheet" href="assets/css/academicons.min.css" data-page-node-id="DK2Y1dLAvwRjWZdWv2YdBW"/>
+  <link rel="stylesheet" href="assets/css/academicons.css" data-page-node-id="YXOKIQXEdlG4FDr7yseXFw"/>
 
+  <style>
+    /* ============ 全局（与 publications 页面统一的设计变量） ============ */
+    :root {
+      --bg: #f5f6f8;
+      --card: #ffffff;
+      --ink: #1f2430;
+      --ink-2: #5b6472;
+      --line: #e4e7ec;
+      --accent: #2b5fd9;
+      --accent-soft: #eaf0fd;
+      --nav-h: 56px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--ink);
+      padding: calc(var(--nav-h) + 32px) 20px 0;
+      line-height: 1.7;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; }
 
-  </head>
-  <body>
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    <!-- <div class="navbar"> -->
-      <!-- <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a> -->
-    <!-- <a href="index.html"><b> About Me</b></a>
-    <a href="projects.html"><b> Projects</b></a>
-    <a href="publications.html"><b> Publications </b></a>
-    <a href="services.html"><b> Services</b></a>
-    <a href="teaching.html"><b> Teaching</b></a>
-      <a href="#contact">Contact</a>  -->
+    /* ============ 导航栏（与 publications 页面一致） ============ */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h);
+      background: #ffffff; border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 4px rgba(31,36,48,.06);
+      z-index: 1000;
+    }
+    .navbar-container {
+      max-width: 1080px; height: 100%; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px;
+    }
+    .navbar-brand { font-size: 18px; font-weight: 700; color: var(--ink); }
+    .navbar-brand:hover { color: var(--accent); text-decoration: none; }
+    .navbar-menu { display: flex; list-style: none; gap: 4px; align-items: center; }
+    .navbar-menu > li { position: relative; }
+    .navbar-menu a {
+      display: block; padding: 8px 14px; font-size: 14.5px;
+      color: var(--ink-2); text-decoration: none; border-radius: 8px;
+    }
+    .navbar-menu a:hover { color: var(--accent); background: var(--accent-soft); }
+    .navbar-menu > li.current > a { color: var(--accent); font-weight: 600; background: var(--accent-soft); }
+    .dropdown-menu {
+      display: none; position: absolute; top: 100%; left: 0; min-width: 190px;
+      background: #fff; border: 1px solid var(--line); border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(31,36,48,.10); list-style: none; padding: 6px;
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a { padding: 8px 12px; font-size: 14px; }
+    .navbar-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .navbar-toggle span {
+      display: block; width: 22px; height: 2px; background: var(--ink);
+      margin: 5px 0; border-radius: 2px; transition: transform .2s, opacity .2s;
+    }
+    @media (max-width: 768px) {
+      .navbar-toggle { display: block; }
+      .navbar-menu {
+        display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
+        flex-direction: column; align-items: stretch;
+        background: #fff; border-bottom: 1px solid var(--line);
+        box-shadow: 0 8px 24px rgba(31,36,48,.10); padding: 8px 12px 14px;
+      }
+      .navbar-menu.open { display: flex; }
+      .dropdown-menu { position: static; box-shadow: none; border: none; padding-left: 14px; }
+    }
 
-  <!-- </div> -->
-  <nav class="navbar">
-    <div class="navbar-container">
-        <a href="index.html" class="navbar-brand">Jing Wang</a>
-        <ul class="navbar-menu">
-            
-            <li class="dropdown">
-              <a href="index.html">About Me</a>
-              <ul class="dropdown-menu">
-                  <li><a href="#interests">Research interests</a></li>
-                  <li><a href="#workexperience">Work experience</a></li>
-                  <li><a href="#honors">Selected honors</a></li>
-                  <li><a href="#aca-services">Services</a></li>
-                  <li><a href="#projects">Projects</a></li>
-              </ul>
-          </li>
-            <li><a href="publications.html">Publications</a></li>
-            
-            <li><a href="teaching.html">Teaching</a></li>
+    /* ============ 卡片区块 ============ */
+    .panel {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 26px 30px; margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 19px; font-weight: 700; margin: 0 0 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+    h2 { font-size: 16px; font-weight: 700; margin: 20px 0 10px; color: var(--ink); }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
 
-            <li><a href="#contact">Contacts</a></li>
-        </ul>
-        <button class="navbar-toggle" id="navbar-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</nav>
+    /* 自我介绍 */
+    .intro { display: flex; gap: 26px; align-items: flex-start; }
+    .intro-photo {
+      width: 240px; flex-shrink: 0;
+      border-radius: 12px; overflow: hidden; border: 1px solid var(--line);
+    }
+    .intro-photo img { width: 100%; display: block; }
+    .intro-info { flex: 1; }
+    .intro-info .name { font-size: 24px; font-weight: 700; margin-bottom: 10px; letter-spacing: .5px; }
+    .intro-info b { color: var(--ink); }
+    .intro-info p { color: var(--ink-2); font-size: 14.5px; margin: 6px 0; }
+    .intro-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .tag {
+      font-size: 12.5px; color: var(--accent); background: var(--accent-soft);
+      border: 1px solid #d4e0fa; border-radius: 999px; padding: 3px 12px; font-weight: 600;
+    }
+    .intro-bio { margin-top: 16px; color: var(--ink-2); font-size: 14.5px; }
+    .intro-bio b { color: var(--ink); }
+    @media (max-width: 640px) {
+      .intro { flex-direction: column; align-items: center; }
+      .intro-photo { width: 200px; }
+      .intro-info { width: 100%; }
+    }
 
+    /* 研究方向列表 */
+    .interest-list { list-style: none; padding-left: 0; margin-top: 10px; }
+    .interest-list li {
+      background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+      padding: 8px 14px; margin: 8px 0; font-size: 14.5px; color: var(--ink);
+    }
+    .interest-list li::before { content: "▸ "; color: var(--accent); font-weight: 700; }
 
-<main>
-<!--自我介绍-->
-<div class="box" id="aboutme">
+    /* 经历时间线 */
+    .timeline { list-style: none; padding-left: 0; }
+    .timeline > li {
+      position: relative; padding: 0 0 18px 26px;
+      border-left: 2px solid var(--line); margin-left: 6px;
+    }
+    .timeline > li:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline > li::before {
+      content: ""; position: absolute; left: -7px; top: 5px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent); border: 2px solid #fff; box-shadow: 0 0 0 2px var(--accent-soft);
+    }
+    .timeline .when { font-size: 13px; color: var(--ink-2); font-family: Consolas, monospace; }
+    .timeline ul { margin-top: 4px; color: var(--ink-2); font-size: 14px; }
 
-      <section id="introduction">
-        <table border="0">
-          <h1>Jing Wang (王靖) </h1>  
-          <tr>
-            <td width="30%">
-              <img src="wangjing-photo4-nanjing.jpg" width="100%">
-            </td>
-            <td width="70%">
-               
-              <b> Assistant Professor </b>  <br>
-              School of Computer Science and Technology <br>
-              East China Normal University (华东师范大学) <br><br>
-               
-             <p>
-              <b>Email: </b>wangjing@cs.ecnu.edu.cn<br> 
-              <b>Office: </b> 华东师范大学普陀校区理科大楼<br>
-              <b>Address: </b>上海市中山北路3663号<br>
-                
-             </p>
-              <p><b>Research Area:</b> Computer Architecture</p>
-              <p><b></b></p>
-        
-            </td>
-          
-          </tr>
-        </table>
+    /* 荣誉列表 */
+    .honor-list { list-style: none; padding-left: 0; }
+    .honor-list li {
+      padding: 6px 0 6px 4px; border-bottom: 1px dashed var(--line);
+      font-size: 14.5px; color: var(--ink-2);
+    }
+    .honor-list li:last-child { border-bottom: none; }
+    .honor-list li::before { content: "🏅 "; }
 
-      <!--      <img src="wangjing-photo1.jpg" height="250" width="250" alt="Jing Wang"></h3>         -->
-      
-      <p>Since 2026.03, I become an Assistant Professor in East China Normal University. In 2023, I got my Ph.D degree from Shanghai Jiao Tong University (<a href="https://www.sjtu.edu.cn/">SJTU</a>). After graduation, I became a Postdoctoral Researcher in the School of Computer Science,  working in Sustainable Architectures and Infrastructure Laboratory (<a href="https://www.cs.sjtu.edu.cn/sail/index.html"> SAIL</a>) in Emerging Parallel Computing Center (<a href="http://epcc.sjtu.edu.cn">EPCC</a>).
-      </p> 
+    /* 项目卡片 */
+    .container-project {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px; margin: 12px 0 6px;
+    }
+    .box-project {
+      background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
+      padding: 16px 18px; transition: border-color .15s, box-shadow .15s;
+    }
+    .box-project:hover { border-color: var(--accent); box-shadow: 0 4px 14px rgba(43,95,217,.10); }
+    .box-project h3 { font-size: 15px; line-height: 1.5; margin-bottom: 4px; }
+    .box-project h3 + h3 { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+    .box-project p { font-size: 13px; color: var(--ink-2); margin-top: 6px; }
+    .box-project.ongoing { border-top: 3px solid var(--accent); }
+    .box-project.done { opacity: .82; }
 
+    /* ============ 页脚（与 publications 页面一致） ============ */
+    .footer {
+      margin-top: 48px; background: #ffffff; border-top: 1px solid var(--line);
+      padding: 36px 20px 28px; color: var(--ink-2);
+    }
+    .footer-container {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px;
+    }
+    .footer .content-section b { display: block; color: var(--ink); font-size: 14.5px; margin-bottom: 8px; }
+    .footer .content-section a {
+      display: inline-block; color: var(--accent); text-decoration: none;
+      font-size: 14px; line-height: 2;
+    }
+    .footer .content-section a:hover { text-decoration: underline; }
+    .footer .social-row i { width: 18px; text-align: center; margin-right: 6px; }
+    .footer-copyright {
+      max-width: 1080px; margin: 24px auto 0; padding-top: 16px;
+      border-top: 1px solid var(--line); text-align: center; color: #a6adba; font-size: 12.5px;
+    }
 
-      <h1 id="interests" >Research Interests:</h1>
-      <p>
-      My primary research area is <b>Memory System for Emerging Application (short as <i style="text-decoration: underline">MemSea</i>)</b>. I work hard to build wisdom, high-performance, and sustainable memory subsystems for next-generation computer architectures on the basis of heterogeneous computing, memory, storage, and network devices. Our design can serve a variety of big-data applications, including multi-modality AI training, AI content generation (AIGC), large language model (LLM), retrieval-augmented generation (RAG), graph processing, metaverse, cloud gaming, scientific computing, and others.
-      </p> 
+    @media (max-width: 600px) {
+      body { padding-left: 12px; padding-right: 12px; }
+      .panel { padding: 18px 16px; }
+    }
+  </style>
+</head>
 
-      <p>We have made some progress on far memory system design, graph processing acceleration,  resource scheduling in the cloud, task rearrangement at the edge, etc. Now, we are mainly working on the following fields:
-        <ul>
-          <li>System design on flat disaggregated memory </li>
-            <li>Acceleration of Graph-based AI workload</li>
-            <li>Exploration of out-of-xPU memory architecture </li>
-            <li>Compilation optimization of FPGA Architecture</li>
-        </ul>
-
-        (If you are interested in these research areas, please feel free to <a href="#contact"> contact me now</a>! Looking forward to your communication and joining!)
-      
-      </p>
-
-      <h1 id="workexperience" >Work experience:</h1>
-      <ul>
-         <li>2026.03 – now   <b> Assistent Professor</b>, School of Computer Science and Technology, ECNU. 
-              <ul>
-                <li> <a href="https://bdislab.tech/">Big Data and Intelligent System Lab</a> </li>
-              </ul>
-        </li>
-        <li>2024.01 – 2026.02   <b>Postdoc. (Assistent Researcher)</b>, School of Computer Science, SJTU. 
-              <ul>
-                <li> <a href="https://www.cs.sjtu.edu.cn/sail/index.html">SAIL lab</a> in <a href="http://epcc.sjtu.edu.cn">EPCC</a> </li>
-                <li>Cooperate with <a href="https://ai.sjtu.edu.cn/">AI Institute of SJTU</a></li>
-                <li>Co-Advisor: <a href="https://www.cs.sjtu.edu.cn/~lichao/">Chao Li</a>, <a href="https://icne.sjtu.edu.cn/info/1064/1078.htm">Xiaokang Yang</a> </li>
-              </ul>
-        </li>
-
-    <li>2018.9 – 2024.3 <b>Ph.D.</b>, Computer Science and Technology, SJTU. 
-          <ul>
-            <li> <a href="https://www.cs.sjtu.edu.cn/sail/index.html">SAIL lab</a> in <a href="http://epcc.sjtu.edu.cn">EPCC</a> </li>
-            <li>School of Electronic Information and Electrical Engineering (<a herf="https://www.seiee.sjtu.edu.cn/">SEIEE</a>)</li>
-            <li>Co-Advisor: Professor <a href="https://cs.sjtu.edu.cn/~guo-my/"> Minyi Guo</a>, Professor <a href="https://www.cs.sjtu.edu.cn/~lichao/cn/index-cn.html">Chao Li</a> </li>
+<body data-page-node-id="bLxfROpREmHtj3BhmBRoj4">
+  <nav class="navbar" data-page-node-id="wDyE1gSCvQVrbQFmSf6hJL">
+    <div class="navbar-container" data-page-node-id="BPxBfUUlEYWhrsjm6yLePx">
+      <a href="index.html" class="navbar-brand" data-page-node-id="27ZnXHMMCwtl9NC567saEU">Jing Wang</a>
+      <ul class="navbar-menu" id="navbar-menu" data-page-node-id="KWhyNepxUC8eJvqboqLCni">
+        <li class="dropdown current" data-page-node-id="cVzAwizfOOoqIFDrfEOzkV">
+          <a href="index.html" data-page-node-id="ux00HFaiEgbkj7WiHmImJ5">About Me</a>
+          <ul class="dropdown-menu" data-page-node-id="hyUITvSCgSYYycBonDAjDZ">
+            <li data-page-node-id="WQathnOGnRp14gIawdEYJq"><a href="#interests" data-page-node-id="w1HhBBC369n9SqgMN0xVoO">Research interests</a></li>
+            <li data-page-node-id="Zc5di3VMhcLvfEr2NGRV6V"><a href="#workexperience" data-page-node-id="hWKCyQ2mEERcyYJfZBbmMy">Work experience</a></li>
+            <li data-page-node-id="EXQocQMDpFGuJ3XOkMatpw"><a href="#honors" data-page-node-id="vjHvyn2VkazVMztXeC21CE">Selected honors</a></li>
+            <li data-page-node-id="aD4QdwxHKLkeBqiGgVds4A"><a href="#aca-services" data-page-node-id="BEZ8UtGSeguwT90NROv2oL">Services</a></li>
+            <li data-page-node-id="3CkvTK4YhC5rmA05QCX6SN"><a href="#projects" data-page-node-id="BUuKyAb8ulPy9ZFKQWlSS6">Projects</a></li>
           </ul>
-    </li>  
-
-    <li>2014.9 – 2018.7 <b>Bachelor</b> , Software Engineering, NWPU.
-      <ul>
-        <li><a href="https://ruanjian.nwpu.edu.cn/">School of Software and Microelectronics </a> in Northwestern Polytechnical University(<a href="https://www.nwpu.edu.cn/">NWPU</a>) </li>
+        </li>
+        <li data-page-node-id="iiv8m7diq6jNx9WCgplc24"><a href="publications.html" data-page-node-id="1Rjw71rhN4vAAEU6KakQQB">Publications</a></li>
+        <li data-page-node-id="7AR127PzpJd27UpBTvxSNa"><a href="teaching.html" data-page-node-id="YkusxA3Q2xAGOlvcplXGtM">Teaching</a></li>
+        <li data-page-node-id="54WHKDEESLbTx7bHRWAli0"><a href="#contact" data-page-node-id="iaz6wclSY9cd0ABimbU7MA">Contacts</a></li>
       </ul>
-    </li> 
-
-      </ul>
-
-
-      <h1 id="honors" >Selected Honors:</h1>
-      <ul> 
-        <li>Granted by Shanghai "Super Postdoc" Incentive Program, 2024~2026.</li>
-        <li>Gold Award of China International College Students'Innovation Competition (CICSIC), 2023.</li>
-        <li>Champion of National Champion of Dyson Design Award, 2022.</li>
-        <li>Gold Award in Shanghai, China International College Students "Internet +" Innovation and Entrepreneurship Competition, 2022.</li>
-        <li>Second Prize, the Second Weining Health Smart Healthcare Challenge, 2020.</li>
-        <li>First price of BenchCouncil International Artificial Intelligence System Challenges, 2019.</li>
-        <li>Second price of CCF TCARCH, 2019.</li>
-        <li>Outstanding Thesis Aware of NWPU, 2018.</li>
-        <li>Outstanding Students Scholarship, National Encouragement Scholarship, NWPU, 2015-2017.</li>
-      </ul>
-    
-
-      <h1 id="aca-services">Acadamic Services </h1>
-      <h2> CCF Services</h2>
-      <ul> 
-        <li>中国计算机学会体系结构专委 "执行委员"</li>
-        <li>中国计算机学会分布式系统专委 "执行委员"</li>
-        <li>中国计算机学会存储专委 "执行委员"</li>
-      </ul>
-      <h2>Activity Services</h2>
-      <ul> 
-        <li>Volunteer of CCF Chips 2024</li>
-        <li>Volunteer of CCF Chips 2024</li>
-        <li>Web \& Submission co-Chair of APPT (International Symposium on Advanced Parallel Processing Technology), 2021.</li>
-        <li>Online Host of ACA (Advanced Computer Architecture), 2020</li>
-        <li>Student Volunteer of CIIF'20,  NPC'19, YOCSEF'19</li>
-      </ul>
-      <h2> Reviewers</h2>
-      <ul> 
-        <li>TPDS</li>
-        <li>TSUSC</li>
-        <li>THPC</li>
-        <li>Chips</li>
-          <li>Assiciated Reviews: MICRO, ISCA, HPCA, ASPLOS, SC, ICCD</li>
-      </ul>
-</div>
-
-<!--项目-->
-<div class="box" id="projects">
-<section  class="content-section">
-  <h1 >Research Projects:</h1>
-
-  <h2><a id="project-gov" class="anchor" href="#computercode" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Government Research Projects</h2>
-  <div class="container-project" >
-    <div id="project-g1" class="box-project" >
-      <h3 style="color: rgb(2, 74, 118);">动态图计算机的高效高层次综合系统</h3>
-      <h3>任务负责人</h3>
-      <p>国家重点研发“青年科学家”项目, No.2024YFB4504300,  2024-12 至 2027-11.</p>
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu" data-page-node-id="FoeQU5AhGjfc7PG0yByCpQ">
+        <span data-page-node-id="E2L1TAg5Ni2zzVZxzfZ1D4"></span>
+        <span data-page-node-id="7NRktvPi2QYIz58qpglagf"></span>
+        <span data-page-node-id="r7qkRIMJwLv9bcGY98V7pm"></span>
+      </button>
     </div>
-  
-    <div id="project-g2" class="box-project" >
-      <h3 style="color: gray;">面向稀疏神经网络的编程框架组件（已结题）</h3>
-      <h3 style="color: gray;">参与人</h3>
-      <p>科学技术部高技术研究发展中心, 科技创新2030—重大项目子课题, No.2021AD010104, 2021-12 至 2024-11.</p>
+  </nav>
+
+  <main data-page-node-id="C0PK17o5mZi32AlzMUwAIu">
+    <div class="wrap" data-page-node-id="GGWo2WtutaoYebb4ZiBpEI">
+
+      <!-- 自我介绍 -->
+      <div class="panel" id="aboutme" data-page-node-id="d0efGFRkLpKjVCAwnsxOCj">
+        <div class="intro" data-page-node-id="5NWp5SqNmpxVaT3XP4B9ic">
+          <div class="intro-photo" data-page-node-id="LzOiUJUoUA6AXTHcl79dOX">
+            <img src="wangjing-photo4-nanjing.jpg" alt="Jing Wang" data-page-node-id="ULVKgAsqufmnswOiWHwvMB">
+          </div>
+          <div class="intro-info" data-page-node-id="LfV5fRjIPvKMlYnZFWwLPK">
+            <div class="name" data-page-node-id="lB2Ox7JJC3kQkkvqoRx4ys">Jing Wang (王靖)</div>
+            <p data-page-node-id="CneJE8ZrCltcyezYoX8HQY"><b data-page-node-id="rm4rcGMZxnupeCUISfwK3m">Assistant Professor</b><br data-page-node-id="aAfO3VhrNKL9KOQYS2NgXt">
+              School of Computer Science and Technology<br data-page-node-id="8PwDWOaBr3ceB7GZrg0E6o">
+              East China Normal University (华东师范大学)
+            </p>
+            <p data-page-node-id="JPHLEmaST1TjWXEiwzynRb">
+              <b data-page-node-id="JsyZQIKFRHgYB2eDxEZWW2">Email:</b> <a href="mailto:wangjing@cs.ecnu.edu.cn" data-page-node-id="coBSn8d0SbHmukcwAA7ZHQ">wangjing@cs.ecnu.edu.cn</a><br data-page-node-id="HS66PtZF6WO0DNrBfArojK">
+              <b data-page-node-id="LbDlw0AxCxjde06lz7IFNq">Office:</b> 华东师范大学普陀校区理科大楼<br data-page-node-id="wLlEGOzDkgQidD6F98mDvR">
+              <b data-page-node-id="4K1ODCM6MDJFuGmeLs7Qp7">Address:</b> 上海市中山北路3663号
+            </p>
+            <div class="intro-tags" data-page-node-id="5cL0ycyWGYTWCJ8i1m2tqC">
+              <span class="tag" data-page-node-id="bcHzOIFXVsCxQY1BObTeg5">Computer Architecture</span>
+              <span class="tag" data-page-node-id="wOoQtW748uw3iwS7E0pXBA">Memory Systems (MemSea)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="intro-bio" data-page-node-id="mLRfuNI3X1v6R6iJ9ZHQ4a">
+          <p data-page-node-id="Og6C0POt6EPFYCInVwdW1l">Since 2026.03, I became an Assistant Professor in East China Normal University. In 2023, I got my Ph.D degree from Shanghai Jiao Tong University (<a href="https://www.sjtu.edu.cn/" target="_blank" rel="noopener" data-page-node-id="YZrSULdHQDXzPE7gjH0O2A">SJTU</a>). After graduation, I became a Postdoctoral Researcher in the School of Computer Science, working in Sustainable Architectures and Infrastructure Laboratory (<a href="https://www.cs.sjtu.edu.cn/sail/index.html" target="_blank" rel="noopener" data-page-node-id="ytbRXvRieHRrp069a5gO7b">SAIL</a>) in Emerging Parallel Computing Center (<a href="http://epcc.sjtu.edu.cn" target="_blank" rel="noopener" data-page-node-id="pioBWXxvM1F5RmbkC4otbb">EPCC</a>).</p>
+        </div>
+      </div>
+
+      <!-- Research Interests -->
+      <div class="panel" data-page-node-id="kytEmdOwdmc2jMCDkFIuuH">
+        <h1 class="section-title" id="interests" data-page-node-id="SGMZezdkXFTSM4DcERocJy">Research Interests</h1>
+        <p data-page-node-id="gj9lbLM3hdhKLmMNpAOlww">My primary research area is <b data-page-node-id="8o2rGjbHblcpHDzICXFAaB">Memory System for Emerging Application (short as <i style="text-decoration: underline" data-page-node-id="pALP8I7jkbt9XCN4d14Rpd">MemSea</i>)</b>. I work hard to build wisdom, high-performance, and sustainable memory subsystems for next-generation computer architectures on the basis of heterogeneous computing, memory, storage, and network devices. Our design can serve a variety of big-data applications, including multi-modality AI training, AI content generation (AIGC), large language model (LLM), retrieval-augmented generation (RAG), graph processing, metaverse, cloud gaming, scientific computing, and others.</p>
+        <p style="margin-top:10px;" data-page-node-id="wyhAeS6Da4pk5V2J9olQlR">We have made some progress on far memory system design, graph processing acceleration, resource scheduling in the cloud, task rearrangement at the edge, etc. Now, we are mainly working on the following fields:</p>
+        <ul class="interest-list" data-page-node-id="jLGHQiw0m4XLUodj8oferf">
+          <li data-page-node-id="uFurCZysG8X6EjdWEjYTEf">System design on flat disaggregated memory</li>
+          <li data-page-node-id="kk4AXmGMMUE6uxy35FEwTj">Acceleration of Graph-based AI workload</li>
+          <li data-page-node-id="zsgGJtPnYFKZLjD0gon8uA">Exploration of out-of-xPU memory architecture</li>
+          <li data-page-node-id="LOQN4zRrF79VqAc1qGIkoA">Compilation optimization of FPGA Architecture</li>
+        </ul>
+        <p style="margin-top:12px;" data-page-node-id="SFwHxBNyzl8TvSxEAtAJHF">(If you are interested in these research areas, please feel free to <a href="#contact" data-page-node-id="csSrtfI6mGTZDofqMh0Bey">contact me now</a>! Looking forward to your communication and joining!)</p>
+      </div>
+
+      <!-- Work experience -->
+      <div class="panel" data-page-node-id="O01aa6OGYyyIy5260t7boJ">
+        <h1 class="section-title" id="workexperience" data-page-node-id="peFSadtUVGDdqPrYqpfo6s">Work Experience</h1>
+        <ul class="timeline" data-page-node-id="IpjeOgwUqn1qsLPNAgj2lI">
+          <li data-page-node-id="5GXAFtykEzMthCqgQcTPdE">
+            <span class="when" data-page-node-id="DV25vzFqHBHSheuIThgoAK">2026.03 – now</span><br data-page-node-id="VIKG6epztk2zCOKNUbwpPJ">
+            <b data-page-node-id="N3OteRXjDtAQHCgHiUBCeA">Assistant Professor</b>, School of Computer Science and Technology, ECNU
+            <ul data-page-node-id="bB022AgQ0onsR2OpQPLJzN">
+              <li data-page-node-id="7neZTgj19j9ZgmES39GuUf"><a href="https://bdislab.tech/" target="_blank" rel="noopener" data-page-node-id="uXBvXV4rUXHR0KlfdFS0tX">Big Data and Intelligent System Lab</a></li>
+            </ul>
+          </li>
+          <li data-page-node-id="JqwBsc3dEF7Ssxqo1Jitvi">
+            <span class="when" data-page-node-id="NaF2AfEv7VV24OUPWavl87">2024.01 – 2026.02</span><br data-page-node-id="8KhUWprAmYpb9uAF0ftCT9">
+            <b data-page-node-id="XrdNa2PBRpAH7BiMovLsg7">Postdoc. (Assistant Researcher)</b>, School of Computer Science, SJTU
+            <ul data-page-node-id="zRJGFklJbA8GzFOVy3wh41">
+              <li data-page-node-id="0tUvxUrwoGKBAOr7SNftg7"><a href="https://www.cs.sjtu.edu.cn/sail/index.html" target="_blank" rel="noopener" data-page-node-id="KFvqH1K6RwXAptvXbmMvHz">SAIL lab</a> in <a href="http://epcc.sjtu.edu.cn" target="_blank" rel="noopener" data-page-node-id="8QwMuCoR3UxPf71NAc3DV3">EPCC</a></li>
+              <li data-page-node-id="k7D1mbti4ELq3bDflZQCFV">Cooperate with <a href="https://ai.sjtu.edu.cn/" target="_blank" rel="noopener" data-page-node-id="p3YAlLuQn4aspEAyx8f3Dm">AI Institute of SJTU</a></li>
+              <li data-page-node-id="DnAIczpcToiXk83JfmLxds">Co-Advisor: <a href="https://www.cs.sjtu.edu.cn/~lichao/" target="_blank" rel="noopener" data-page-node-id="36O361B4JmVRNViy1NstO8">Chao Li</a>, <a href="https://icne.sjtu.edu.cn/info/1064/1078.htm" target="_blank" rel="noopener" data-page-node-id="83TDeny0hwmG1YopBhk0RH">Xiaokang Yang</a></li>
+            </ul>
+          </li>
+          <li data-page-node-id="C8xeVcmvQE4YHYfFuz5ERX">
+            <span class="when" data-page-node-id="kk1zYurKooG03NN4Ctkh8h">2018.9 – 2024.3</span><br data-page-node-id="bnGNrbedMgmNhC1rogCQXr">
+            <b data-page-node-id="vArTJrFGVMCOsTPM7aTmB3">Ph.D.</b>, Computer Science and Technology, SJTU
+            <ul data-page-node-id="VFKFaHmXNxeEy9gWV9ReFW">
+              <li data-page-node-id="sTCSSP1C5HH1Sag4VxIfdz"><a href="https://www.cs.sjtu.edu.cn/sail/index.html" target="_blank" rel="noopener" data-page-node-id="BFMZHftgwhRqAEEtZ6eGnG">SAIL lab</a> in <a href="http://epcc.sjtu.edu.cn" target="_blank" rel="noopener" data-page-node-id="DYRPP5uLRemJ0qT0NwVtyN">EPCC</a></li>
+              <li data-page-node-id="TIO1Qq1addl6YQoROVUQbw">School of Electronic Information and Electrical Engineering (<a href="https://www.seiee.sjtu.edu.cn/" target="_blank" rel="noopener" data-page-node-id="uYFK3B3nqH9PrJ4boyh5sQ">SEIEE</a>)</li>
+              <li data-page-node-id="JYzD8FkU2BosAUsMk8f3uO">Co-Advisor: Professor <a href="https://cs.sjtu.edu.cn/~guo-my/" target="_blank" rel="noopener" data-page-node-id="hEN00CKf7gZCZz8o5jwJRP">Minyi Guo</a>, Professor <a href="https://www.cs.sjtu.edu.cn/~lichao/cn/index-cn.html" target="_blank" rel="noopener" data-page-node-id="Mx74XVkxN5wfbMOYEqdKBx">Chao Li</a></li>
+            </ul>
+          </li>
+          <li data-page-node-id="8eIQ05rPgBQdFMXF5QtJAB">
+            <span class="when" data-page-node-id="njkjL3gDQ9o1uXqEu3XWZK">2014.9 – 2018.7</span><br data-page-node-id="A8hOlz6CRtgArmCFL2BRCj">
+            <b data-page-node-id="DyZDVAySvldbyOHWQEod6L">Bachelor</b>, Software Engineering, NWPU
+            <ul data-page-node-id="IEkplMnlxgEczG16tBvbCZ">
+              <li data-page-node-id="qkw7R2rPXHCQyMUEJqquOI"><a href="https://ruanjian.nwpu.edu.cn/" target="_blank" rel="noopener" data-page-node-id="GNx9TwFIrCVc4lKWsXmqJE">School of Software and Microelectronics</a> in Northwestern Polytechnical University (<a href="https://www.nwpu.edu.cn/" target="_blank" rel="noopener" data-page-node-id="NAWDfFVVFFWdJyRAo3G4CU">NWPU</a>)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Honors -->
+      <div class="panel" data-page-node-id="Fh8DVLEiyMBxdZWvF94qLX">
+        <h1 class="section-title" id="honors" data-page-node-id="89Y6jdeeLphXeVS3gQI7bH">Selected Honors</h1>
+        <ul class="honor-list" data-page-node-id="wCVy17VF29zfFSAoJLJfFc">
+          <li data-page-node-id="qPLde48L0lAuYtZdmfD1sp">Granted by Shanghai "Super Postdoc" Incentive Program, 2024–2026.</li>
+          <li data-page-node-id="LAqvfG0icBgH7eGsn0vkwT">Gold Award of China International College Students' Innovation Competition (CICSIC), 2023.</li>
+          <li data-page-node-id="GgKKf5omUE3pK8XhfpCtLX">National Champion of Dyson Design Award, 2022.</li>
+          <li data-page-node-id="xqVh3dHgEu7xwEcIDNX68C">Gold Award in Shanghai, China International College Students "Internet +" Innovation and Entrepreneurship Competition, 2022.</li>
+          <li data-page-node-id="a4clrvF4RtQvpiPo6sgRW0">Second Prize, the Second Weining Health Smart Healthcare Challenge, 2020.</li>
+          <li data-page-node-id="LBgNOL0eITAPoybsFLNmwN">First Prize of BenchCouncil International Artificial Intelligence System Challenges, 2019.</li>
+          <li data-page-node-id="jzApLdCa47zwRJRkvJR9yT">Second Prize of CCF TCARCH, 2019.</li>
+          <li data-page-node-id="3jA5JEch3YGPyf5AxKEbKQ">Outstanding Thesis Award of NWPU, 2018.</li>
+          <li data-page-node-id="k9Z9oEJJ1X78i8sPUjZY6s">Outstanding Students Scholarship, National Encouragement Scholarship, NWPU, 2015–2017.</li>
+        </ul>
+      </div>
+
+      <!-- Academic Services -->
+      <div class="panel" data-page-node-id="MjHnYMfuFq2zbAhB63Ag4m">
+        <h1 class="section-title" id="aca-services" data-page-node-id="aD7XM2WKX4hABhcoBEYH3W">Academic Services</h1>
+
+        <h2 data-page-node-id="6ZZcHuRserN8Hst9RmZte8">CCF Services</h2>
+        <ul data-page-node-id="53ZafnGZrk1mZgjjcT9Kdx">
+          <li data-page-node-id="CwVQJgE8KCZ8ka1dj7BQGa">中国计算机学会体系结构专委 "执行委员"</li>
+          <li data-page-node-id="JXIfTGZxMTu3vemuHUb0OS">中国计算机学会分布式系统专委 "执行委员"</li>
+          <li data-page-node-id="IP6mfwDxvE7eEWTtGmDS3l">中国计算机学会存储专委 "执行委员"</li>
+        </ul>
+
+        <h2 data-page-node-id="w24W3LZUXhb5ekHyFOhK6i">Activity Services</h2>
+        <ul data-page-node-id="unV1TzUNrCukoKmYM4rZrX">
+          <li data-page-node-id="P9AHCbr3brUzChE6nvVzBb">Volunteer of CCF Chips 2024</li>
+          <li data-page-node-id="8ZkxEcTgRANAMSKPjSNNHr">Web &amp; Submission co-Chair of APPT (International Symposium on Advanced Parallel Processing Technology), 2021</li>
+          <li data-page-node-id="LzXdWrBxBnnfPBAUoMq6ov">Online Host of ACA (Advanced Computer Architecture), 2020</li>
+          <li data-page-node-id="MmAeRgLxpDo5DEgOFSD5jH">Student Volunteer of CIIF'20, NPC'19, YOCSEF'19</li>
+        </ul>
+
+        <h2 data-page-node-id="vkOl1nFpp9J02PcyApLv1L">Reviewers</h2>
+        <ul data-page-node-id="TUoOs3ZEirsHGD5B9VRbb2">
+          <li data-page-node-id="926K9nqOFZOVXKV4UQwd9p">TPDS</li>
+          <li data-page-node-id="10OzmZHu8RqN1n8bYLVTcH">TSUSC</li>
+          <li data-page-node-id="WQoIdmID5IpJqjSNKT56DH">THPC</li>
+          <li data-page-node-id="ocnzngj9NVX8uMip8Gor4x">Chips</li>
+          <li data-page-node-id="3NV7wKXXM2jFahSLImRGtw">Associated Reviewer: MICRO, ISCA, HPCA, ASPLOS, SC, ICCD</li>
+        </ul>
+      </div>
+
+      <!-- 项目 -->
+      <div class="panel" id="projects" data-page-node-id="2BtCtEHOzf598lm5zXYx2F">
+        <h1 class="section-title" data-page-node-id="kldzTWm9WWBTcJaRdOWQAm">Research Projects</h1>
+
+        <h2 data-page-node-id="JuYnhjQD7iYAIl84oELEiP">1. Government Research Projects</h2>
+        <div class="container-project" data-page-node-id="9PPzc3L1lY3JjXmyiDqotv">
+          <div class="box-project ongoing" data-page-node-id="KoQNh3HET4T2Ije98ca6MZ">
+            <h3 style="color: var(--accent);" data-page-node-id="YWvPFawTOAZqB8wQT1p3Be">动态图计算机的高效高层次综合系统</h3>
+            <h3 data-page-node-id="McEiGSB2P9DjkpvfSiaGWc">任务负责人</h3>
+            <p data-page-node-id="UIVN2UM0aLfxknOi7eMgLS">国家重点研发"青年科学家"项目, No.2024YFB4504300, 2024-12 至 2027-11.</p>
+          </div>
+          <div class="box-project done" data-page-node-id="HVGX0FpLb8wLfDcRRCBCy1">
+            <h3 data-page-node-id="bwrdvKSOFM9SNW5vfEhySS">面向稀疏神经网络的编程框架组件（已结题）</h3>
+            <h3 data-page-node-id="XuCnEOITNotTOXIn7Ko7Ph">参与人</h3>
+            <p data-page-node-id="f6RPQec6OO9Z5KeBQuMZq4">科学技术部高技术研究发展中心, 科技创新2030—重大项目子课题, No.2021AD010104, 2021-12 至 2024-11.</p>
+          </div>
+          <div class="box-project done" data-page-node-id="BqwRX0qitv44rrHvzKl8mm">
+            <h3 data-page-node-id="CSUJ55cmNHgaSKE18u4rp1">面向图计算的通用计算机技术与系统（已结题）</h3>
+            <h3 data-page-node-id="f8znSjXUgTVVg6ii1lUHUB">参与人</h3>
+            <p data-page-node-id="9v4z3EZGHHjFWUweH7DebI">科技部, 国家重点研发项目, No.2018YFB1003503, 2018-05 至 2021-04.</p>
+          </div>
+        </div>
+
+        <h2 data-page-node-id="e2LXEM2JNCrSYR6A9KUe4K">2. National Research Funds</h2>
+        <div class="container-project" data-page-node-id="Arpkt3AoYtvGCA3DRYyHbW">
+          <div class="box-project ongoing" data-page-node-id="eSAr37opf3Au02CMQjh3T8">
+            <h3 style="color: var(--accent);" data-page-node-id="1rWSxZEqmppkz0o63xZwQK">基于可重构智能芯片的多模态边缘计算关键技术与系统平台研究</h3>
+            <h3 data-page-node-id="2U6yJ6BU2OYNgxhqp161kT">主要参与人</h3>
+            <p data-page-node-id="GBu6X0QATBt8w7rPB37xeC">国家自然科学基金委员会, 联合基金项目, No.U24A20234, 2025-01-01 至 2028-12-31.</p>
+          </div>
+          <div class="box-project ongoing" data-page-node-id="JgBQtNNsnPDeRopO1e6U9R">
+            <h3 style="color: var(--accent);" data-page-node-id="xyMdydnZDUEvUa60IiRsps">面向数算融合的高效能计算系统理论与关键技术</h3>
+            <h3 data-page-node-id="NCpkBhyhH5FIyGRsStiONH">主要参与人</h3>
+            <p data-page-node-id="AnzNYorLutEeChe8ObxNkl">国家自然科学基金委员会, 专项项目, No.62441225, 2025-01-01 至 2027-12-31.</p>
+          </div>
+          <div class="box-project done" data-page-node-id="NvVZH3kldW2g5SF4PtK7js">
+            <h3 data-page-node-id="dfoH7E7HutwHV8rwPFHOA5">多程序图计算下的可扩展异构资源管理（已结题）</h3>
+            <h3 data-page-node-id="m0g2aI6eBGRMe4YDpgY798">参与人</h3>
+            <p data-page-node-id="w5vj1tKasmP5RYy6BLQUKE">国家自然科学基金委员会, 面上项目, No.61972247, 2020-01-01 至 2023-12-31.</p>
+          </div>
+        </div>
+
+        <h2 data-page-node-id="tbd1eo8mhTEDGDDsdAxuKE">3. Entrepreneurial Research Projects</h2>
+        <div class="container-project" data-page-node-id="I6AN8i0APBXMfkNTeutOTL">
+          <div class="box-project ongoing" data-page-node-id="99HZH7W0PW6bpT9exiISCi">
+            <h3 style="color: var(--accent);" data-page-node-id="kTtufLh4kgUaMfqlwA3VC1">内存高效的图检索增强生成技术研究</h3>
+            <h3 data-page-node-id="UrcKsEu7aJ7W1oDidq77lR">技术负责人</h3>
+            <p data-page-node-id="PwwUUoZLjSlGG3DAll536N">蚂蚁集团, CCF-蚂蚁科研基金图计算专项, CCF-AFSGRF20240205, 2024-08 至 2025-08.</p>
+          </div>
+          <div class="box-project done" data-page-node-id="ooJxNaCZEV8x4iw6jcxJRO">
+            <h3 data-page-node-id="HejJgMuRU5XCktgiUu6caE">基于异构共享内存池的高性能可扩展GPU图计算系统（已结题）</h3>
+            <h3 data-page-node-id="qyBjL4r3GEwbahJKdYDkSq">技术负责人</h3>
+            <p data-page-node-id="AgCDLJFTHsg3Nryb4KJqM8">北京字跳网络技术有限公司, 学术合作项目, CT20230525001744, 2023-06 至 2024-05.</p>
+          </div>
+          <div class="box-project done" data-page-node-id="JKLbHXtnFZKN8hfZIT4VS3">
+            <h3 data-page-node-id="JjooCci27bZJpPeWocVxDq">面向云视频处理的分离式内存资源分配优化（已结题）</h3>
+            <h3 data-page-node-id="zHhSxMxmwZbAvS6bdXGbGU">技术负责人</h3>
+            <p data-page-node-id="k103nzBsHdtHEUYPxHAdEL">阿里云计算有限公司, 阿里巴巴创新研究计划（AIR）项目, ATS54DHZ1210007, 2021-05 至 2022-05.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </main>
 
-    <div id="project-g3" class="box-project">
-      <h3 style="color: gray;">面向图计算的通用计算机技术与系统（已结题）</h3>
-      <h3 style="color: gray;">参与人</h3>
-      <p>科技部, 国家重点研发项目, No.2018YFB1003503, 2018-05 至 2021-04.</p>
-    </div>
-
-  </div>
-
-
-
-
-
-  <h2><a id="project-fund" class="anchor" href="#computercode" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. National Research Funds</h2>
-  <div class="container-project" >
-
-    <div id="project-f1" class="box-project" >
-      <h3 style="color: rgb(2, 74, 118);">基于可重构智能芯片的多模态边缘计算关键技术与系统平台研究</h3>
-      <h3>主要参与人</h3>
-      <p>国家自然科学基金委员会, 联合基金项目, No.U24A20234, 2025-01-01 至 2028-12-31.</p>
-    </div>
-
-    <div id="project-f2" class="box-project" >
-      <h3 style="color: rgb(2, 74, 118);">面向数算融合的高效能计算系统理论与关键技术</h3>
-      <h3>主要参与人</h3>
-      <p>国家自然科学基金委员会, 专项项目, No.62441225, 2025-01-01 至 2027-12-31.</p>
-    </div>
-
-    <div id="project--f3" class="box-project" >
-      <h3 style="color: gray;">多程序图计算下的可扩展异构资源管理（已结题）</h3>
-      <h3 style="color: gray;">参与人</h3>
-      <p>国家自然科学基金委员会, 面上项目, No.61972247, 2020-01-01 至 2023-12-31.</p>
-    </div>
-  </div>
-
-
-<br>
-
-<h2><a id="project-entre" class="anchor" href="#computercode" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Entrepreneurial Research Projects</h2>
-
-<div class="container-project" >
-  <div id="project-e1" class="box-project" >
-    <h3  style="color: rgb(2, 74, 118);">内存高效的图检索增强生成技术研究</h3>
-    <h3>技术负责人</h3>
-    <p> 蚂蚁集团, CCF-蚂蚁科研基金图计算专项, CCF-AFSGRF20240205, 2024-08 至 2025-08.</p>
-  </div>
-
-  <div id="project-e2" class="box-project" >
-    <h3 style="color: gray;">基于异构共享内存池的高性能可扩展GPU图计算系统(已结题)</h3>
-    <h3 style="color: gray;">技术负责人 </h3>
-    <p>北京字跳网络技术有限公司, 学术合作项目, CT20230525001744, 2023-06 至 2024-05. </p>
-  </div>
-
-  <div id="project--e3" class="box-project" >
-    <h3 style="color: gray;">面向云视频处理的分离式内存资源分配优化(已结题)</h3>
-    <h3 style="color: gray;">技术负责人</h3>
-    <p>阿里云计算有限公司, 阿里巴巴创新研究计划（AIR）项目, ATS54DHZ1210007,  2021-05 至 2022-05.</p>
-  </div>
-</div>
-</section>
-
-</div>
-
-
-
-
-
-<!-- <div class="box" id="sample-boxes">
-<section id="service1" class="content-section">
-  <h1>服务1</h1>
-  <p>这里有关于服务1的内容。</p>
-</section>
-
-<section id="service2" class="content-section">
-  <h1>服务2</h1>
-  <p>这里有关于服务2的内容。</p>
-</section>
-
-<section id="service3" class="content-section">
-  <h1>服务3</h1>
-  <p>这里有关于服务3的内容。</p>
-</section>
-
-</div> -->
-
-
-</main>
-
-<footer class="footer" id="contact">
-  <div class="footer-container">
-    <!-- <section id="about">
-      <h1>关于我们</h1>
-      <p>我们是一个充满激情的团队。</p>
-  </section>
-  <section id="services">
-      <h1>我们的服务</h1>
-      <p>提供多种专业服务。</p>
-  </section>
-  <section id="contact">
-      <h1>联系我们</h1>
-      <p>有任何问题，请随时联系我们。</p>
-  </section> -->
-
-
-    <section id="foot-social" class="content-section">
-      <b>Social</b><br>
-        <div class="social-row">
-          <a href="https://github.com/wjing6" target="_blank"><i class="fa fa-envelope"></i> wangjing@cs.ecnu.edu.cn</a><br>
-          
-          <a href="https://scholar.google.com/citations?user=WV5Ak_YAAAAJ" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Google Scholar</a><br>
-          <a href="https://orcid.org/0000-0001-7260-0521" target="_blank"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
-          <!--  <a href="http://ideas.repec.org/f/pra541.html"><i class="fa fa-fw fa-share-alt-square"></i> RePEc</a><br>   -->
-          <a href="https://github.com/wjing6" target="_blank"><i class="fa fa-fw fa-github-square"></i> Personal GitHub</a><br>
-          <a href="https://github.com/wjing6" target="_blank"><i class="fa fa-fw fa-github-square"></i> SAIL Group GitHub</a><br>
-        
-          <!--<a href="http://twitter.com/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter </a><br> -->
-          <!--<a href="http://linkedin.com/in/tyleransom" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br> -->
-          <br>
+  <footer class="footer" id="contact" data-page-node-id="gu1dHWrnBGrw5UpYktWi4t">
+    <div class="footer-container" data-page-node-id="FpCkNZeGTXYa2D2zdJFbwz">
+      <section id="foot-social" class="content-section" data-page-node-id="SDMp1paj9eHD0MTdSgziBT">
+        <b data-page-node-id="VcX3MUgvOo6kLn6qCFtDi6">Social</b>
+        <div class="social-row" data-page-node-id="2CjMrKF6HcJKHfdZd6T0cu">
+          <a href="mailto:wangjing@cs.ecnu.edu.cn" data-page-node-id="uPC08769wF2LPXPO2RJV7m"><i class="fa fa-envelope" data-page-node-id="z7ompOJS5ttj78OjO30mgA"></i> wangjing@cs.ecnu.edu.cn</a><br data-page-node-id="ZimCd9nHvNU1oufDdxFzTh">
+          <a href="https://scholar.google.com/citations?user=WV5Ak_YAAAAJ" target="_blank" rel="noopener" data-page-node-id="yK78b1GFIoHNvuAYlezByQ"><i class="ai ai-fw ai-google-scholar-square" data-page-node-id="JznQ5fWlQHUbe8K9oDfoXP"></i> Google Scholar</a><br data-page-node-id="yzFLMkffqONo6T95omtuoB">
+          <a href="https://orcid.org/0000-0001-7260-0521" target="_blank" rel="noopener" data-page-node-id="3OCRHGiPdeEwXTff65fG9T"><i class="ai ai-fw ai-orcid-square" data-page-node-id="8bSAoQjd2QR0eS5PIgfQYn"></i> ORCID</a><br data-page-node-id="eCozB4XeekVM6DbRO6KiDz">
+          <a href="https://github.com/wjing6" target="_blank" rel="noopener" data-page-node-id="CO5NV1V7ASKbFkucEwmbIV"><i class="fa fa-fw fa-github-square" data-page-node-id="CYBZeR0JWs3EokuhUgaOq7"></i> Personal GitHub</a><br data-page-node-id="WhtWP5ebIJBJGtW3hxWwTo">
+          <a href="https://github.com/wjing6" target="_blank" rel="noopener" data-page-node-id="DcdQtQfVnMLd7svbXHuhvE"><i class="fa fa-fw fa-github-square" data-page-node-id="egQoT6uD7MUpr9Q2mCCb2Y"></i> SAIL Group GitHub</a><br data-page-node-id="F7zjOo02sDVv60vdGpfalH">
         </div>
       </section>
 
-
-
-      <section id="foot-social" class="content-section">
-      <b>CV: </b>
-        <div class="social-row">
-          <a href="myresearch/CV_Jing_Wang_englishxx.pdf"  target="_blank"><i class="fa fa-file-pdf-o"></i> English version</a>
-          <br>
-          <a href="myresearch/王靖-中文简历-202303.pdf"  target="_blank"><i class="fa fa-file-pdf-o"></i> 中文版</a> 
+      <section id="foot-cv" class="content-section" data-page-node-id="mCh8tO53mJqPMB4CHtzyZE">
+        <b data-page-node-id="lJNEQpUuConwyK17Gs5coA">CV</b>
+        <div class="social-row" data-page-node-id="eHopk8PfQtMJMHS18wczMr">
+          <a href="myresearch/CV_Jing_Wang_englishxx.pdf" target="_blank" rel="noopener" data-page-node-id="MNe7jBSshxucpBGWB7Idhf"><i class="fa fa-file-pdf-o" data-page-node-id="RAar6K7kE0l45lYgjjUTfF"></i> English version</a><br data-page-node-id="IwhjmPQNugTgAvDlV1l9X8">
+          <a href="myresearch/王靖-中文简历-202303.pdf" target="_blank" rel="noopener" data-page-node-id="6VDGAOhUy3YgUlhWdJ5DmU"><i class="fa fa-file-pdf-o" data-page-node-id="VWg2lVhpRb9LBFWT5dt01Y"></i> 中文版</a>
         </div>
       </section>
-      
-      <section id="foot-social" class="content-section">
-        <b>Contact US: </b>
-        <div class="social-row"></div>
-        <a href="https://www.cs.sjtu.edu.cn/sail/index.html">Sustainable Architectures and Intelligence Laboratory (SAIL)</a>
-        <br>
-         <a href="http://epcc.sjtu.edu.cn">Emerging Parallel Computing Center (EPCC)</a>
 
-      
+      <section id="foot-contact" class="content-section" data-page-node-id="HF4UtUPeXGL509SG3JZ3N7">
+        <b data-page-node-id="8Xv94hKRVmY0Uxm6BaHXwt">Contact Us</b>
+        <div class="social-row" data-page-node-id="Pm8zlUPAL9V8clyOKTMGC9">
+          <a href="https://www.cs.sjtu.edu.cn/sail/index.html" target="_blank" rel="noopener" data-page-node-id="gk5jlEbGGUTuzOElla6hz4">Sustainable Architectures and Intelligence Laboratory (SAIL)</a><br data-page-node-id="XXMqVb5OXclJKMLTr1ypKK">
+          <a href="http://epcc.sjtu.edu.cn" target="_blank" rel="noopener" data-page-node-id="MJrGtrjzGBuCxM89HXvHjZ">Emerging Parallel Computing Center (EPCC)</a><br data-page-node-id="xlGrPcs4SNRvhZcmKgDngK">
+          <a href="https://www.cs.ecnu.edu.cn/" target="_blank" rel="noopener" data-page-node-id="jCGTpqjKfAOJNOlcrl7OAR">School of Computer Science and Technology (ECNU)</a>
+        </div>
       </section>
-  </div>
-  
+    </div>
 
-  <div> 
-    <section id="foot-social" class="content-section" >
-    <p>&copy; MemSea Group, 2025, All rights reserved. </p>
-  </section>
-  </div>
-</footer>
+    <div class="footer-copyright" data-page-node-id="eml3tUvOHjmgIP2cfXpPe3">
+      <p data-page-node-id="pxu1PkyYZDKKRsu3NrcVAG">&copy; MemSea Group, 2025, All rights reserved.</p>
+    </div>
+  </footer>
 
-
-    <!-- <script src="javascripts/scale.fix.js"></script> -->
-    <script src="javascripts/script.js"></script>
-
-
-
-  </body>
+  <script>
+    /* 导航栏交互（与 publications 页面一致） */
+    document.getElementById('navbar-toggle').addEventListener('click', function () {
+      document.getElementById('navbar-menu').classList.toggle('open');
+    });
+  </script>
+</body>
 </html>
